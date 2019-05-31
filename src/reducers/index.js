@@ -3,7 +3,8 @@ import { loadingReducer } from './loadingReducer';
 
 
 const rootReducer = combineReducers({
-  isLoading: loadingReducer
+  isLoading: loadingReducer,
+  
 })
 
 export default rootReducer
