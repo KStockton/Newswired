@@ -11,10 +11,11 @@ export class Begin extends Component {
 
   render() {
     return (
-      <div >
-        <div className="begin-wrapper">
-        <hi>HI</hi>    
+      <div className="begin-wrapper">
+        <div >
+        <h1>Welcome to News Wire</h1>  
         </div>
+        <button className="begin-btn">Get Started</button>
       </div>
     )
   }
