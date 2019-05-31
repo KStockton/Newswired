@@ -6,7 +6,9 @@ const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
 export default class Main extends Component {
 
   async componentDidMount(){
-    const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`)
+    const url = 
+    fetchAllBooks()
+    // const response = await fetch(`)
     const books = await response.json()
     const cleanedBooks = cleanBooks(books)
     console.log(cleanedBooks)
