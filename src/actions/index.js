@@ -4,6 +4,6 @@ export const isLoading = (bool) => ({
 })
 
 export const getAllBooks = (books) => ({
-  type: 'ALL_NOTES',
+  type: 'ALL_BOOKS',
   books
 })

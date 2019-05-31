@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 
 export class WebSetup extends Component {
   constructor() {
@@ -10,12 +9,12 @@ export class WebSetup extends Component {
     }
   }
 
-  // componentDidMount() {
+  componentDidMount() {
   //   this.getDate()
   // }
   // static propTypes = {
   //   prop: PropTypes
-  // }
+  }
   increment = () => {
 
     this.setState({numOfSelect: this.state.numOfSelect + 1 })
@@ -42,12 +41,6 @@ export class WebSetup extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  
-})
 
-const mapDispatchToProps = {
-  
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(WebSetup)
+export default WebSetup
