@@ -1,5 +1,5 @@
 import { isLoading, getAllBooks } from '../actions/index'
-import { cleanBooks } from '../Utility/cleanBooks';
+import { cleanBooks } from '../Utility/Cleaners/cleanBooks';
 
 
 
