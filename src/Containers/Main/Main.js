@@ -1,27 +1,28 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 
-export class Main extends Component {
-  // static propTypes = {
-  //   prop: PropTypes
-  // }
+export default class Main extends Component {
+
+  async componentDidMount(){
+    
+  }
 
   render() {
+    console.log('hi')
     return (
-      <div>
-        <h1>Hi</h1>
+      <div class="Main-wrapper">
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
+        <article className="box"></article>
       </div>
     )
   }
 }
-
-const mapStateToProps = (state) => ({
-  
-})
-
-const mapDispatchToProps = {
-  
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Main)

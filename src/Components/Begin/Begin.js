@@ -10,12 +10,13 @@ export class Begin extends Component {
   }
 
   render() {
+
     return (
       <div className="begin-wrapper">
         <div >
         <h1>Welcome to News Wire</h1>  
         </div>
-        <button className="begin-btn">Get Started</button>
+        <button className="begin-btn" onClick={this.props.pageSetup}>Get Started</button>
       </div>
     )
   }
