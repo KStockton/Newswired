@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faFire, faFilm, faRss, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 
 // import PropTypes from 'prop-types'
@@ -17,19 +18,22 @@ export class Options extends Component {
     }
   }
 
+
     
-  
-  
+    
+    componentDidUpdate() {
+    // this.props.setCategories(this.state)
+    
+  }
   
   selectTopic = (event) => {
     const { name } = event.target
-    
-    this.setState({[name]: !this.state[name]})
+    this.setState({[ name ]: !this.state[name]})
   }
   
   render() {
-    let startNews = Object.values(this.state).filter(item=> item === true).length
-   
+    let numOfCategories = Object.values(this.state).filter(item=> item === true).length
+
     const {topNews, books, movieReview, latestNews} = this.state
 
     return (
@@ -38,7 +42,7 @@ export class Options extends Component {
           <h1 className="Options-title">News Wire</h1>
         </div>
         <header>
-          <p className="Options-select">Please Select Your Favorites</p>
+          <p className="Options-select">Select Your News</p>
         </header>
         <div className="Options-wrapper">
         <div className="Options-btn-wrapper">
@@ -76,7 +80,7 @@ export class Options extends Component {
               </label>
             </button>
             {latestNews && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
-        {startNews >= 3 && <NavLink to="/main">Next</NavLink>}
+        {numOfCategories >= 3 ? <NavLink to="/main" className="Options-btn">Next</NavLink> : <h3>Please Select 3 Categories</h3>}
           </div>
         </div>
       </div>
@@ -84,6 +88,14 @@ export class Options extends Component {
   }
 }
 
+export const mapStateToProps = (state) => ({
+  topic: state.topic
+})
+
+// export const mapDispatchToProps = (dispatch) ({
+//   dispatch(categories(null))
+// })
 
 
-export default Options
+
+export default connect(mapStateToProps) (Options)

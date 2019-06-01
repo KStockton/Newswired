@@ -12,22 +12,10 @@ class App extends Component{
   constructor() {
     super() 
     this.state = {
-      begin: true
+      begin: false
     }
   }
 
-  // async componentDidMount() {
-  
-  //   let url = `https://api.nytimes.com/svc/topstories/v2/science.json?api-key=${API_KEY}`
-  //   let response = await fetch(url)
-  //   if(!response.ok){
-  //     throw Error('Error retrieving data')
-  //   }
-  
-  //   let me = await response.json()
-  //   console.log(me.results[0])
-
-  // }
 
   pageSetup = () => {
     this.setState({ begin  : !this.state.begin})
@@ -38,11 +26,11 @@ class App extends Component{
 
     return (
       <div className="App">
-      {(!begin) ? <Begin pageSetup={this.pageSetup}/> : 
+      {(!begin) ? <Begin path="" pageSetup={this.pageSetup}/> : 
       <Switch>
         <Route exact path="/" component={Options}/>
         <Route path="/main" component={Main}/>
-        {/* <Route component={Error}/> */}
+        <Route component={Error}/>
       </Switch>
     }
       </div>
