@@ -12,25 +12,23 @@
 
 
 .begin-btn {
-  background-color:#3bb3e0;
   padding: 10px;
   position: relative;
-  // font-family: 'Open Sans', sans-serif;
-  text-decoration:none;
-  color: #fff;
+  text-decoration: none;
+  color: #000;
   border: solid 1px #186f8f;
-  background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
   border-radius: 5px;
   text-transform: uppercase;
   z-index: auto;
+  box-shadow: 3px 3px 2px #837a7a;
 }
 .begin-btn:hover{
-// padding-bottom:9px;
-padding-left:10px;
-padding-right:10px;
-padding-top:11px;
-// top:1px;
-background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(62,184,229)), color-stop(1, rgb(44,160,202)) );
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 11px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2cffc9), color-stop(1, #ffffff));
+    color: white;
+    background: black;
 }
 
 .begin-btn::before {
@@ -43,16 +41,15 @@ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0,
   padding: 8px;
   left: -8px;
   top: -8px;
-  /* z-index: auto; */
   border-radius: 5px;
   box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
 }
 
 .begin-btn::active {
   padding-bottom: 9px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 11px;
-    top: 1px;
-    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(62,184,229)), color-stop(1, rgb(44,160,202)) );
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 11px;
+  top: 1px;
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(62,184,229)), color-stop(1, rgb(44,160,202)) );
 }
