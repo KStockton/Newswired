@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Begin from '../Begin/Begin';
 import Options from '../../Containers/Options/Options';
 import Main from '../../Containers/Main/Main';
-import Error from  ''
+import Error from  '../Error/Error'
 // import logo from '../logo.svg';
 const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
 
@@ -12,7 +12,7 @@ class App extends Component{
   constructor() {
     super() 
     this.state = {
-      begin: true
+      begin: false
     }
   }
 
@@ -40,8 +40,9 @@ class App extends Component{
       <div className="App">
       {(begin) ? <Begin pageSetup={this.pageSetup}/> : 
       <Switch>
-        <Route path="/" component={Options}/>
+        {/* <Route path="/" component={Options}/> */}
         {/* <Route path="/" component={Main}/> */}
+        <Route component={Error}/>
       </Switch>
     }
       </div>
