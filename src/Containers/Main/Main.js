@@ -1,27 +1,41 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
+import BooksContainer from '../../Containers/BooksContainer/BooksContainer'
+const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
 
-export class Main extends Component {
-  // static propTypes = {
-  //   prop: PropTypes
-  // }
+// import { cleanBooks } from '../../Utility/cleanBooks';
+
+
+
+class Main extends Component {
+  
+
+  async componentDidMount(){
+    const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
+    this.props.fetchAllBooks(url)
+  }
+
+
 
   render() {
+
     return (
-      <div>
-        <h1>Hi</h1>
+      <div className="Main-wrapper">
+        {this.props.allBooks && <BooksContainer books={this.props.allBooks}/>}
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => ({
-  
+export const mapStateToProps = (store) => ({
+ allBooks: store.allBooks
 })
 
-const mapDispatchToProps = {
-  
-}
+export const mapDispatchToProps = (dispatch) => ({
+fetchAllBooks: (url) => dispatch(fetchAllBooks(url))
+})
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main)
+
+
+export default connect(mapStateToProps, mapDispatchToProps) (Main)
