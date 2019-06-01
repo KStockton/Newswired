@@ -1,0 +1,44 @@
+@import '../../Sass/_variables';
+
+.Options-header {
+  background-color:hsl(0, 0%, 79%);
+  margin: 0;
+  width: 100%;
+  height: 70px;
+  
+  .Options-title {
+    margin: 0;
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 8px;
+  }
+}
+
+header {
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.Options-select {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+
+.Options-wrapper {
+  background-image: $splash;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 87vh;
+  display: flex;
+  justify-content: space-evenly;
+} 
+
+.Options-fontawesome {
+  padding-right: 9px;
+  font-size: 30px;
+}
+
+

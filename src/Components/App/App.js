@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Begin from '../Begin/Begin';
-import WebSetup from '../../Containers/WebSetup/WebSetup';
+import Options from '../../Containers/Options/Options';
 import Main from '../../Containers/Main/Main';
 // import logo from '../logo.svg';
 const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
@@ -39,7 +39,7 @@ class App extends Component{
       <div className="App">
       {(begin) ? <Begin pageSetup={this.pageSetup}/> : 
       <Switch>
-        <Route path="/" component={WebSetup}/>
+        <Route path="/" component={Options}/>
         {/* <Route path="/" component={Main}/> */}
       </Switch>
     }
