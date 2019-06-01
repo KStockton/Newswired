@@ -3,17 +3,35 @@ width: 1000px;
 display: grid;
 grid-template-columns: repeat(15, 1fr);
 grid-auto-flow: row;
+
 }
 
 .book-tile {
   border-radius: 8px;
   padding: 22px;
   font-size: 150%;
+  transition: .2s all;
 }
+
+.book-wrapper:hover .book-tile {
+  opacity: .5;
+  transform: scale(.98);
+  box-shadow: none;
+}
+
+.book-wrapper:hover .book-tile:hover{
+  filter: blur (0px);
+  transform: scale(1.1);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0 px rgba(0,0,0,0.125);
+}
+
 
 .book-img {
   width: 218px;
   height: 267px;
+  box-shadow: -1px 2px 2px 4px #a99a9a;
+  border-radius: 1px;
 }
 .author {
   color: grey;
