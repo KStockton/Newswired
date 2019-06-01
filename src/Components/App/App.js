@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Begin from '../Begin/Begin';
 import Options from '../../Containers/Options/Options';
 import Main from '../../Containers/Main/Main';
+import Error from  ''
 // import logo from '../logo.svg';
 const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
 

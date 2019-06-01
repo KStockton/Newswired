@@ -1,11 +1,13 @@
 @import '../../Sass/_variables';
 
 .Options-header {
-  // background-color:hsl(0, 0%, 79%);
   background-color: #ccd0d56b;
   margin: 0;
   width: 100%;
-  height: 70px;
+  height: 123px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
   .Options-title {
     margin: 0;
@@ -26,7 +28,6 @@ header {
   font-weight: 400;
   font-size: 40px;
 }
-
 
 .Options-wrapper {
   background-image: $splash;
