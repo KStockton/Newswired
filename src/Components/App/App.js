@@ -38,11 +38,11 @@ class App extends Component{
 
     return (
       <div className="App">
-      {(begin) ? <Begin pageSetup={this.pageSetup}/> : 
+      {(!begin) ? <Begin pageSetup={this.pageSetup}/> : 
       <Switch>
-        {/* <Route path="/" component={Options}/> */}
+        <Route path="/" component={Options}/>
         {/* <Route path="/" component={Main}/> */}
-        <Route component={Error}/>
+        {/* <Route component={Error}/> */}
       </Switch>
     }
       </div>
