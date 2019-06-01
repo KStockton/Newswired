@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faFire, faFilm, faRss, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { setCategories } from '../../actions/index'
 
 
 // import PropTypes from 'prop-types'
@@ -28,6 +29,8 @@ export class Options extends Component {
   
   selectTopic = (event) => {
     const { name } = event.target
+    this.props.setCategories(name)
+
     this.setState({[ name ]: !this.state[name]})
   }
   
@@ -92,10 +95,10 @@ export const mapStateToProps = (state) => ({
   topic: state.topic
 })
 
-// export const mapDispatchToProps = (dispatch) ({
-//   dispatch(categories(null))
-// })
+export const mapDispatchToProps = (dispatch) => ({
+ setCategories: (category) => dispatch(setCategories(category))
+})
 
 
 
-export default connect(mapStateToProps) (Options)
+export default connect(mapStateToProps, mapDispatchToProps) (Options)
