@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
 import BooksContainer from '../../Containers/BooksContainer/BooksContainer'
+import Loading from '../../Components/Loading/Loading';
 const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
 
 // import { cleanBooks } from '../../Utility/cleanBooks';
@@ -11,9 +12,14 @@ const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
 class Main extends Component {
   
 
-  async componentDidMount(){
-    const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
-    this.props.fetchAllBooks(url)
+  async componentDidMount() {
+    if(this.props.allBooks.length){
+//prevents a second fetch when going back and forth
+    }
+      else {
+        const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
+        this.props.fetchAllBooks(url)
+      }
   }
 
 
@@ -21,15 +27,22 @@ class Main extends Component {
   render() {
 
     return (
-      <div className="Main-wrapper">
-        {this.props.allBooks && <BooksContainer books={this.props.allBooks}/>}
+      <div className="">
+        <div className="Main-header">
+          <h1 className="Main-title">News Wire</h1>
+        </div>
+        {
+          (!this.props.isLoading) ? <BooksContainer books={this.props.allBooks}/> :
+            <Loading/>
+        }
       </div>
     )
   }
 }
 
 export const mapStateToProps = (store) => ({
- allBooks: store.allBooks
+ allBooks: store.allBooks,
+ isLoading: store.isLoading
 })
 
 export const mapDispatchToProps = (dispatch) => ({

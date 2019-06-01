@@ -1,25 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Book from '../../Components/Book/Book'
 const shortid = require('shortid')
 
-const BooksContainer = ({books}) => {
-    console.log(books)
-  const bookGrid = books.map(book => {
-    const { bookImage, rank, author, description, title, weeksOnList} = book
-    return (
-      <article key={shortid.generate()} className="book-tile">
-        <p>Rank: {rank}</p>
-        <img className="book-img" src={bookImage} alt="book"/>
-        <p className="author">{author}</p>
-        
-      </article>
+export default class BooksContainer extends Component {
+  constructor(props){
+    super()
+    this.state = {
+      cool: null
+    }
+  }
+
+  displayBooks = () => {
+    return this.props.books.map(book => {
+      return (<Book {...book} key={shortid.generate()} id={shortid.generate()}/>
     )
   })
+  }
 
-  return (
-    <div className='book-wrapper'>
-      {bookGrid}
-    </div>
-  )
+  render() {
+    const displayBooks = this.displayBooks()
+    
+    return (
+      <div className='book-wrapper'>
+        {displayBooks}
+      </div>
+    )
+  }
 }
 
-export default BooksContainer
