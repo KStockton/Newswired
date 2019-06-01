@@ -12,7 +12,7 @@ class App extends Component{
   constructor() {
     super() 
     this.state = {
-      begin: false
+      begin: true
     }
   }
 
@@ -40,8 +40,8 @@ class App extends Component{
       <div className="App">
       {(!begin) ? <Begin pageSetup={this.pageSetup}/> : 
       <Switch>
-        <Route path="/" component={Options}/>
-        {/* <Route path="/" component={Main}/> */}
+        <Route exact path="/" component={Options}/>
+        <Route path="/main" component={Main}/>
         {/* <Route component={Error}/> */}
       </Switch>
     }

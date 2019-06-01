@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faFire, faFilm, faRss, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 
 // import PropTypes from 'prop-types'
@@ -16,15 +17,18 @@ export class Options extends Component {
     }
   }
 
-  componentDidMount() {
-  }
-
+    
+  
+  
+  
   selectTopic = (event) => {
     const { name } = event.target
+    
     this.setState({[name]: !this.state[name]})
   }
-
+  
   render() {
+    let startNews = Object.values(this.state).filter(item=> item === true).length
    
     const {topNews, books, movieReview, latestNews} = this.state
 
@@ -72,6 +76,7 @@ export class Options extends Component {
               </label>
             </button>
             {latestNews && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
+        {startNews >= 3 && <NavLink to="/main">Next</NavLink>}
           </div>
         </div>
       </div>
