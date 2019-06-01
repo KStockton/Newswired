@@ -26,7 +26,7 @@ export class Options extends Component {
 
   render() {
    
-    console.log(this.state)
+    
 
     return (
       <div>
