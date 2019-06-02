@@ -23,5 +23,15 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction)
   });
 
+  it('should have a type of SET_NEWS_CATEGORY', () => {
+    const mockCategory = 'books';
+
+    const expectedAction = {
+      type: 'SET_NEWS_CATEGORY',
+      category: mockCategory
+    }
+    const result = action.setCategories(mockCategory)
+    expect(result).toEqual(expectedAction)
+  });
 
 });
