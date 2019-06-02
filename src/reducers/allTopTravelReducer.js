@@ -1,7 +1,10 @@
+import {cleanTravel} from '../Utility/Cleaners/cleanTravel'
+
 export const allTopTravelReducer = (state = [], action) => {
   switch(action.type) {
     case 'ALL_TRAVEL':
-      return [...state, action.travel]
+     const allCleanedTravel = cleanTravel(action.travel)  
+      return [...state, ...allCleanedTravel]
     default:
       return state
   } 

@@ -12,6 +12,7 @@ export const fetchTopTravel = (url) => {
     }
       const data = await response.json()
       dispatch(action.getTopTravel(data))
+      dispatch(action.isLoading(false))
     } catch(error) {
       dispatch(action.hasErrored(error.message))
     }
