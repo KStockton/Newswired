@@ -58,6 +58,7 @@
       "!src/index.js",
       "!src/setupTest.js",
       "!src/serviceWorker.js"
-    ]
+    ],
+    "setupTestFrameworkScriptFile": "./__tests__/setup.js"
   }
 }
