@@ -4,7 +4,6 @@ import Begin from '../Begin/Begin';
 import Options from '../../Containers/Options/Options';
 import Main from '../../Containers/Main/Main';
 import Error from  '../Error/Error'
-// import logo from '../logo.svg';
 const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
 
 
@@ -12,7 +11,7 @@ class App extends Component{
   constructor() {
     super() 
     this.state = {
-      begin: false
+      begin: true
     }
   }
 
@@ -39,7 +38,3 @@ class App extends Component{
 }
 
 export default App;
-
-// <header className="App-header">
-  {/* <img src={logo} className="App-logo" alt="logo"> */}
-{/* </header> */}

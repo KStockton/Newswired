@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
 import BooksContainer from '../../Containers/BooksContainer/BooksContainer'
 import Loading from '../../Components/Loading/Loading';
+import Nav from '../Nav/Nav';
 const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
 
 // import { cleanBooks } from '../../Utility/cleanBooks';
@@ -30,6 +31,7 @@ class Main extends Component {
       <div className="">
         <div className="Main-header">
           <h1 className="Main-title">News Wire</h1>
+          <Nav/>
         </div>
         {
           (!this.props.isLoading) ? <BooksContainer books={this.props.allBooks}/> :
