@@ -2,7 +2,7 @@ let previousState = {
   topNews: false,
   books: false,
   movieReview: false,
-  latestNews: false
+  travel: false
 }
 
 

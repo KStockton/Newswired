@@ -3,15 +3,14 @@ import { Switch, Route } from 'react-router-dom';
 import Begin from '../Begin/Begin';
 import Options from '../../Containers/Options/Options';
 import Main from '../../Containers/Main/Main';
-import Error from  '../Error/Error'
-const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
+import Error from  '../Error/Error';
 
 
 class App extends Component{
   constructor() {
     super() 
     this.state = {
-      begin: true
+      begin: false
     }
   }
 

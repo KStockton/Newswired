@@ -17,3 +17,8 @@ export const getTopTravel = (travel) => ({
   type: 'ALL_TRAVEL',
   travel
 })
+
+export const hasErrored = (message) => ({
+  type: 'HAS_ERROR',
+  message
+})

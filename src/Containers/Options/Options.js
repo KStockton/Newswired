@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faFire, faFilm, faRss, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpen, faFire, faFilm, faGlobeAfrica, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setCategories } from '../../actions/index'
@@ -15,12 +15,9 @@ export class Options extends Component {
       topNews: false,
       books: false,
       movieReview: false,
-      latestNews: false
+      travel: false
     }
   }
-
-
-    
     
     componentDidUpdate() {
     // this.props.setCategories(this.state)
@@ -37,7 +34,7 @@ export class Options extends Component {
   render() {
     let numOfCategories = Object.values(this.state).filter(item=> item === true).length
 
-    const {topNews, books, movieReview, latestNews} = this.state
+    const {topNews, books, movieReview, travel} = this.state
 
     return (
       <div>
@@ -76,14 +73,15 @@ export class Options extends Component {
           {movieReview && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
           </div>
           <div className="Options-btn-wrapper">
-            <button className="Options-btn" name="latestNews" onClick={this.selectTopic}>
+            <button className="Options-btn" name="travel" onClick={this.selectTopic}>
               <label htmlFor="latest-news">
-                <FontAwesomeIcon id="latest-news" className="Options-fontawesome" icon={faRss}/>
-                  The Latest News
+                <FontAwesomeIcon id="latest-news" className="Options-fontawesome" icon={faGlobeAfrica}/>
+                  Travel
               </label>
             </button>
-            {latestNews && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
-        {numOfCategories >= 3 ? <NavLink to="/main" className="Options-btn">Next</NavLink> : <h3>Please Select 3 Categories</h3>}
+            {travel && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
+            {numOfCategories >= 3 ? <NavLink to="/main" className="Options-btn">Next</NavLink> : 
+              <h3>Please Select 3 Categories</h3>}
           </div>
         </div>
       </div>
