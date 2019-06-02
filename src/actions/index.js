@@ -13,3 +13,7 @@ export const setCategories = (category) => ({
   category
 })
 
+export const getTopTravel = (travel) => ({
+  type: 'ALL_TRAVEL',
+  travel
+})

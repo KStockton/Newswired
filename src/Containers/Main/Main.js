@@ -14,13 +14,19 @@ class Main extends Component {
   
 
   async componentDidMount() {
-    if(this.props.allBooks.length){
-//prevents a second fetch when going back and forth
-    }
-      else {
-        const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
-        this.props.fetchAllBooks(url)
-      }
+
+    const travelUrl = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${API_KEY}`
+  //  let response = await fetch(Traveurls)
+    // console.log(await response.json())
+
+    this.props.fetchTopTravel(travelUrl)
+//     if(this.props.allBooks.length){
+// //prevents a second fetch when going back and forth
+//     }
+//       else {
+//         const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
+//         this.props.fetchAllBooks(url)
+//       }
   }
 
 
@@ -48,7 +54,8 @@ export const mapStateToProps = (store) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-fetchAllBooks: (url) => dispatch(fetchAllBooks(url))
+fetchAllBooks: (url) => dispatch(fetchAllBooks(url)),
+fetchTopTravel: (url) => dispatch(fetchTopTravel(url))
 })
 
 
