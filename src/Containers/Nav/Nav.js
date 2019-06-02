@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 
 class Nav extends Component {
     constructor() {
@@ -15,23 +15,27 @@ class Nav extends Component {
     }
   
   render() {
+//note sure if im making book solo page
+//if not then i dont need a menu component   
+
+
     let menu
     if(this.state.checked){
       menu = 
-      <nav className="Nav">
-        <NavLink to='/'>
-          {/* <FontAwesomeIcon  className="icon"/> */}
-            Books
-        </NavLink>
-        {/* <NavLink to='/portfolio' className="nav">  */}
-          {/* <FontAwesomeIcon icon={} className="icon"/> */}
-          {/* Portfolio */}
-        {/* </NavLink> */}
-        {/* <NavLink to='/contact' className="nav"> */}
-          {/* <FontAwesomeIcon icon={} className="icon"/> */}
-            {/* Contact */}
-        {/* </NavLink> */}
-    </nav>
+            <nav className="Nav">
+              {/* {this.props.categories['books'] && <NavLink to='/Main/Books'>
+                <FontAwesomeIcon  className="icon"/>
+                  Books
+              </NavLink>} */}
+              {/* <NavLink to='/portfolio' className="nav">  */}
+                {/* <FontAwesomeIcon icon={} className="icon"/> */}
+                {/* Portfolio */}
+              {/* </NavLink> */}
+              {/* <NavLink to='/contact' className="nav"> */}
+                {/* <FontAwesomeIcon icon={} className="icon"/> */}
+                  {/* Contact */}
+              {/* </NavLink> */}
+          </nav>
     }
     return (
       <header className="Nav-header">
@@ -46,8 +50,9 @@ class Nav extends Component {
     )
   }
 }
-export const mapStateToProps = (state) => ({
-  categories: state.categories
-})
 
-export default connect(mapStateToProps,null)(Nav)
+export const mapStateToProps = (state) => ({
+categories: state.categories
+})
+ 
+export default connect(mapStateToProps)(Nav)

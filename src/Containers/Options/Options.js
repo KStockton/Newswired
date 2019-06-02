@@ -9,32 +9,28 @@ import { setCategories } from '../../actions/index'
 // import PropTypes from 'prop-types'
 
 export class Options extends Component {
-  constructor() {
-    super()
-    this.state = {
-      topNews: false,
-      books: false,
-      movieReview: false,
-      travel: false
-    }
-  }
-    
-    componentDidUpdate() {
-    // this.props.setCategories(this.state)
-    
-  }
+  // constructor() {
+    // super()
+    // this.state = {
+    //   topNews: false,
+    //   books: false,
+    //   movieReview: false,
+    //   travel: false
+    // }
+  // }
+  
   
   selectTopic = (event) => {
     const { name } = event.target
     this.props.setCategories(name)
 
-    this.setState({[ name ]: !this.state[name]})
+    // this.setState({[ name ]: !this.state[name]})
   }
   
   render() {
-    let numOfCategories = Object.values(this.state).filter(item=> item === true).length
+    let numOfCategories = Object.values(this.props.categories).filter(item=> item === true).length
 
-    const {topNews, books, movieReview, travel} = this.state
+    const {topNews, books, movieReview, travel} = this.props.categories
 
     return (
       <div>
@@ -90,7 +86,7 @@ export class Options extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  topic: state.topic
+  categories: state.categories
 })
 
 export const mapDispatchToProps = (dispatch) => ({
