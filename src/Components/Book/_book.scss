@@ -1,6 +1,7 @@
 .book-tile {
   border-radius: 8px;
-  padding: 22px;
+  padding-top: 50px;
+  padding-left: 25px;
   font-size: 150%;
   transition: .2s all;
 }
@@ -17,15 +18,45 @@
   box-shadow: 0 8px 20px 0 px rgba(0,0,0,0.125);
 }
 
+.book-rank {
+  text-align: left;
+  font-family: 'Old Standard TT', serif;
+  font-size: 0.9rem;
+  padding: 5px 0px;
+}
 
 .book-img {
-  width: 218px;
   height: 267px;
   box-shadow: -1px 2px 2px 4px #a99a9a;
   border-radius: 1px;
 }
 .author {
-  color: grey;
+  color: #808080;
   font-size: 12px;
   text-align: left;
+  font-family: 'Noto Sans', sans-serif;
+  padding-top: 5px;
+  padding-bottom: 16px;
+}
+.book-weeks{
+  font-size: 0.8rem;
+  text-align: left;
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  padding: 7px 0px;
+}
+.book-title{
+  font-size: .9rem;
+  line-height: 1.1875rem;
+  font-weight: 700;
+  text-align: left;
+  font-family: 'Noto Sans', sans-serif;
+  padding-top: 3px;
+}
+
+.book-description {
+  font-family: 'Old Standard TT', serif;
+  text-align: left;
+  font-size: 1rem;
+  padding-top: 6px;
 }

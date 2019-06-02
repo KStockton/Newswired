@@ -28,6 +28,8 @@ class App extends Component{
       <Switch>
         <Route exact path="/" component={Options}/>
         <Route path="/main" component={Main}/>
+        {/*not sure if im rending a book component*/}  
+        {/* <Route path="/main/books" component={Books}/> */}
         <Route component={Error}/>
       </Switch>
     }

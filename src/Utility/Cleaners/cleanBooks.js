@@ -1,7 +1,7 @@
 export const cleanBooks = (uncleanBooks) => {
  const cleanedBooks = uncleanBooks.results.books.map(book => {
     return {
-        id: book.author,
+        id: book.primary_isbn10,
         rank: book.rank,
         author: book.contributor,
         bookImage: book.book_image,

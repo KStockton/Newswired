@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
 import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
-import BooksContainer from '../../Containers/BooksContainer/BooksContainer'
+import BooksContainer from '../../Containers/BooksContainer/BooksContainer';
+import TravelContainer from '../../Containers/TravelContainer/TravelContainer';
 import Loading from '../../Components/Loading/Loading';
 import Nav from '../Nav/Nav';
 const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
@@ -16,17 +17,26 @@ class Main extends Component {
 
   async componentDidMount() {
 
-    
+    const categories = Object.keys(this.props.categories)
+ let selectedTopics = categories.filter(category => this.props.categories[category] === true)
+ ///tried includes but realize that after first condition is met the next if/else statement wont run
+ selectedTopics.forEach(topic => {
+   if(topic === 'books' && this.props.allBooks.length === 0){
+     const bookUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
+     this.props.fetchAllBooks(bookUrl)
+      } else if(topic === ''){
 
-    // const travelUrl = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${API_KEY}`
-    // this.props.fetchTopTravel(travelUrl)
-    if(this.props.allBooks.length){
-// //prevents a second fetch when going back and forth
-    }
-      else {
-        const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
-        this.props.fetchAllBooks(url)
       }
+     
+     //     if(this.props.allBooks.length || this.props.allTravel.length){
+       //       // //prevents a second fetch when going back and forth
+       //     }
+       //     else {
+         //       // const travelUrl = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${API_KEY}`
+         //       // this.props.fetchTopTravel(travelUrl)
+         
+         //       }
+        })
   }
 
 
@@ -40,7 +50,10 @@ class Main extends Component {
           <Nav/>
         </div>
         {
-          (!this.props.isLoading) ? <BooksContainer books={this.props.allBooks}/> :
+          (!this.props.isLoading) ? 
+          // <TravelContainer travel={this.props.allTravel}/>
+          <BooksContainer books={this.props.allBooks}/>
+           :
             <Loading/>
         }
       </div>
@@ -50,7 +63,9 @@ class Main extends Component {
 
 export const mapStateToProps = (store) => ({
  allBooks: store.allBooks,
- isLoading: store.isLoading
+ allTravel: store.allTravel,
+ isLoading: store.isLoading,
+ categories: store.categories
 })
 
 export const mapDispatchToProps = (dispatch) => ({
