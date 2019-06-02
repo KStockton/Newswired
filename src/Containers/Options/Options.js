@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faFire, faRunning, faGlobeAfrica, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpen, faFire, faRunning, faGlobeAfrica, faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setCategories } from '../../actions/index'
@@ -9,22 +9,11 @@ import { setCategories } from '../../actions/index'
 // import PropTypes from 'prop-types'
 
 export class Options extends Component {
-  // constructor() {
-    // super()
-    // this.state = {
-    //   topNews: false,
-    //   books: false,
-    //   sportsNews: false,
-    //   travel: false
-    // }
-  // }
-  
+
   
   selectTopic = (event) => {
     const { name } = event.target
     this.props.setCategories(name)
-
-    // this.setState({[ name ]: !this.state[name]})
   }
   
   render() {
@@ -33,12 +22,13 @@ export class Options extends Component {
     const {topNews, books, sportsNews, travel} = this.props.categories
 
     return (
-      <div>
+      <div className="Options-background">
         <div className="Options-header">
           <h1 className="Options-title">News Wire</h1>
         </div>
         <header className="Options-news">
-          <p className="Options-select">Select Your News</p>
+          {/* <p className="Options-select">Select Your News</p> */}
+          <h4 className="Options-select-choice">Please Select 3 Categories</h4>
         </header>
         <div className="Options-wrapper">
         <div className="Options-btn-wrapper">
@@ -54,7 +44,7 @@ export class Options extends Component {
             <button className="Options-btn" name="books" onClick={this.selectTopic}>
               <label htmlFor="new-york-times-books">
                 <FontAwesomeIcon id="new-york-times-books" className="Options-fontawesome" icon={faBookOpen}/>
-                  New York Times Books
+                  Top NY Times Books
               </label>
             </button>
             {books && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
@@ -76,9 +66,13 @@ export class Options extends Component {
               </label>
             </button>
             {travel && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
-            {numOfCategories >= 3 ? <NavLink to="/main" className="Options-btn">Next</NavLink> : 
-              <h3>Please Select 3 Categories</h3>}
           </div>
+        </div>
+        <div className="Options-continue">
+          {numOfCategories >= 3 && 
+            <NavLink to="/main" className="Options-btn" id="next"> 
+              <FontAwesomeIcon id="latest-news" className="Options-fontawesome" icon={faArrowRight}/>
+            </NavLink>}
         </div>
       </div>
     )

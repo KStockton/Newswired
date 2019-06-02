@@ -16,6 +16,7 @@ export default class BooksContainer extends Component {
     
     return (
       <div className='book-wrapper'>
+        <h2>Top NewYork Times Books</h2>
         {displayBooks}
       </div>
     )
