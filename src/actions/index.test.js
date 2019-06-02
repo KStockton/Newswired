@@ -34,4 +34,13 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction)
   });
 
+  it('should return a message if the action.type is HAS_ERROR', () => {
+    const mockMessage = 'Something wrong has occured'
+    const expectedAction = {
+      type: 'HAS_ERROR',
+      message: mockMessage
+    }
+    const result = action.hasErrored(mockMessage)
+    expect(result).toEqual(expectedAction)
+  })
 });
