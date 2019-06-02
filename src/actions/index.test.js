@@ -43,4 +43,5 @@ describe('actions', () => {
     const result = action.hasErrored(mockMessage)
     expect(result).toEqual(expectedAction)
   })
+  
 });
