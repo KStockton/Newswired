@@ -9,7 +9,7 @@ export const fetchAllBooks = (url) => {
       dispatch(action.isLoading(true))
       const response = await fetch(url)
       if(!response.ok) {
-        throw Error(response.statusText)
+        throw new Error(response.statusText)
       }
       const books = await response.json()
       dispatch(action.isLoading(false));
