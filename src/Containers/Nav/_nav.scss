@@ -1,0 +1,62 @@
+.Nav-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Nav {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #ffffffba;
+ width: 21rem;
+ padding: 18px;
+ font-size: 18px;
+}
+
+.icon {
+ padding-right: 4px;
+}
+
+label {
+  padding: 12px;
+}
+
+.toggle {
+ position: absolute;
+ top: 71%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ opacity: 0;
+ cursor: pointer;
+} 
+
+input[type=checkbox] + label {
+ .bar {
+ display: block;
+ width: 36px;
+ height: 4px;
+ background-color: black;
+ margin: 4px;
+ transition: all 0.2s;
+ .top {
+   transform: rotate(0);
+ }
+ .middle {
+   opacity: 1
+ }
+}
+}
+input[type=checkbox]:checked + label {
+ .top {
+   transform: rotate(45deg);
+   transform-origin: 10% 10%;
+ }
+ .middle {
+   opacity: 0;
+ }
+ .bottom {
+   transform: rotate(-45deg);
+   transform-origin: 20% 100%;
+ }
+}

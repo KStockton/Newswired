@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
+import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
 import BooksContainer from '../../Containers/BooksContainer/BooksContainer'
 import Loading from '../../Components/Loading/Loading';
+import Nav from '../Nav/Nav';
 const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
 
 // import { cleanBooks } from '../../Utility/cleanBooks';
@@ -13,13 +15,16 @@ class Main extends Component {
   
 
   async componentDidMount() {
-    if(this.props.allBooks.length){
-//prevents a second fetch when going back and forth
-    }
-      else {
-        const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
-        this.props.fetchAllBooks(url)
-      }
+
+    const travelUrl = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${API_KEY}`
+    this.props.fetchTopTravel(travelUrl)
+//     if(this.props.allBooks.length){
+// //prevents a second fetch when going back and forth
+//     }
+//       else {
+//         const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
+//         this.props.fetchAllBooks(url)
+//       }
   }
 
 
@@ -30,6 +35,7 @@ class Main extends Component {
       <div className="">
         <div className="Main-header">
           <h1 className="Main-title">News Wire</h1>
+          <Nav/>
         </div>
         {
           (!this.props.isLoading) ? <BooksContainer books={this.props.allBooks}/> :
@@ -46,7 +52,8 @@ export const mapStateToProps = (store) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-fetchAllBooks: (url) => dispatch(fetchAllBooks(url))
+fetchAllBooks: (url) => dispatch(fetchAllBooks(url)),
+fetchTopTravel: (url) => dispatch(fetchTopTravel(url))
 })
 
 
