@@ -16,15 +16,17 @@ class Main extends Component {
 
   async componentDidMount() {
 
-    const travelUrl = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${API_KEY}`
-    this.props.fetchTopTravel(travelUrl)
-//     if(this.props.allBooks.length){
+    
+
+    // const travelUrl = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${API_KEY}`
+    // this.props.fetchTopTravel(travelUrl)
+    if(this.props.allBooks.length){
 // //prevents a second fetch when going back and forth
-//     }
-//       else {
-//         const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
-//         this.props.fetchAllBooks(url)
-//       }
+    }
+      else {
+        const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
+        this.props.fetchAllBooks(url)
+      }
   }
 
 

@@ -1,5 +1,5 @@
 import * as action from '../actions/index';
-import { hasErrored }
+
 
 export const fetchTopTravel = (url) => {
 
@@ -13,7 +13,7 @@ export const fetchTopTravel = (url) => {
       const data = await response.json()
       dispatch(action.getTopTravel(data))
     } catch(error) {
-      dispatch(hasErrored(error))
+      dispatch(action.hasErrored(error.message))
     }
   }
 }
