@@ -6,9 +6,9 @@ import BooksContainer from '../../Containers/BooksContainer/BooksContainer';
 import TravelContainer from '../../Containers/TravelContainer/TravelContainer';
 import Loading from '../../Components/Loading/Loading';
 import Nav from '../Nav/Nav';
-const API_KEY =`${process.env.REACT_APP_NEWYORKTIMES_API_KEY}`
-
-// import { cleanBooks } from '../../Utility/cleanBooks';
+import {NYT_KEY} from '../../Utility/Config/Key'
+const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
+// import { cleanResponse } from '../../Utility/cleanResponse';
 
 
 
@@ -22,10 +22,17 @@ class Main extends Component {
  ///tried includes but realize that after first condition is met the next if/else statement wont run
  selectedTopics.forEach(topic => {
    if(topic === 'books' && this.props.allBooks.length === 0){
-     const bookUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`
+     const bookUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${NYT_KEY}`
      this.props.fetchAllBooks(bookUrl)
-      } else if(topic === ''){
-
+      // } else if(topic === 'travel' && this.props.allTravel.length === 0){
+        // const travelUrl = `https://newsapi.org/v2/everything?q=travel&apiKey=${API_KEY}`
+        // this.props.fetchTopTravel(travelUrl)
+      // } else if(topic === 'topNews' && this.props.allTopNews.length === 0){
+        // const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&${API_KEY}`
+          //this.props.fetchTopNews(topNewsUrl)
+      // } else if(topic === 'sportsNews' && this.props.allSports.length === 0){
+        // const sportsUrl = `https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=${API_KEY}`
+        //this.props.fetchUSSports(sportsURL)
       }
      
      //     if(this.props.allBooks.length || this.props.allTravel.length){
@@ -33,7 +40,6 @@ class Main extends Component {
        //     }
        //     else {
          //       // const travelUrl = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${API_KEY}`
-         //       // this.props.fetchTopTravel(travelUrl)
          
          //       }
         })

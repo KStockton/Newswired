@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faFire, faFilm, faGlobeAfrica, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpen, faFire, faRunning, faGlobeAfrica, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setCategories } from '../../actions/index'
@@ -14,7 +14,7 @@ export class Options extends Component {
     // this.state = {
     //   topNews: false,
     //   books: false,
-    //   movieReview: false,
+    //   sportsNews: false,
     //   travel: false
     // }
   // }
@@ -30,7 +30,7 @@ export class Options extends Component {
   render() {
     let numOfCategories = Object.values(this.props.categories).filter(item=> item === true).length
 
-    const {topNews, books, movieReview, travel} = this.props.categories
+    const {topNews, books, sportsNews, travel} = this.props.categories
 
     return (
       <div>
@@ -60,13 +60,13 @@ export class Options extends Component {
             {books && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
           </div>
           <div className="Options-btn-wrapper">
-            <button className="Options-btn"  name="movieReview" onClick={this.selectTopic}>
-              <label htmlFor="movie-review">
-                <FontAwesomeIcon id="movie-review" className="Options-fontawesome" icon={faFilm}/>
-                  Movie Reviews
+            <button className="Options-btn"  name="sportsNews" onClick={this.selectTopic}>
+              <label htmlFor="sports-news">
+                <FontAwesomeIcon id="sports-news" className="Options-fontawesome" icon={faRunning}/>
+                  Sports 
               </label>
             </button>
-          {movieReview && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
+          {sportsNews && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
           </div>
           <div className="Options-btn-wrapper">
             <button className="Options-btn" name="travel" onClick={this.selectTopic}>

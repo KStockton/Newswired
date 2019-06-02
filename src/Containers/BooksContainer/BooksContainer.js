@@ -6,7 +6,7 @@ export default class BooksContainer extends Component {
 
   displayBooks = () => {
     return this.props.books.map(book => {
-      return (<Book {...book} key={shortid.generate()} id={shortid.generate()}/>
+      return (<Book {...book} key={shortid.generate()} />
     )
   })
   }

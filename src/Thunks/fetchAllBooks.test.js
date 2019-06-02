@@ -36,4 +36,18 @@ describe('fetchAllBooks', () => {
     await thunk(mockDispatch)
     expect(mockDispatch).toHaveBeenCalledWith(action.isLoading(false))
   })
+  it('should dispatch getAllBooks with and array of books', async () => {
+    const books = [{id: 3, title: 'Hard work pays off', author: 'Michael KS'}, {id: 1, title: 'Never Give Up', author: 'Michael KS'}]
+    
+    window.fetch = jest.fn().mockImplementation(() => 
+    Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve(
+        books
+      )
+    }))
+    const thunk = fetchAllBooks(mockUrl)
+    await thunk(mockDispatch)
+    expect(mockDispatch).toHaveBeenCalledWith(action.getAllBooks(books))
+  })
 })
