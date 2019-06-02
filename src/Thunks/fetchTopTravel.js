@@ -1,17 +1,20 @@
 import * as action from '../actions/index';
-
+import { hasErrored }
 
 export const fetchTopTravel = (url) => {
 
   return async (dispatch) => {
-    dispatch(action.isLoading(true))
-    const response = await fetch(url)
-    if(!response.ok) {
+    try {
+      dispatch(action.isLoading(true))
+      const response = await fetch(url)
+      if(!response.ok) {
       throw Error(response.sendText)
     }
-    const data = await response.json()
-    console.log(data.results)
-    dispatch(action.getTopTravel(data))
+      const data = await response.json()
+      dispatch(action.getTopTravel(data))
+    } catch(error) {
+      dispatch(hasErrored(error))
+    }
   }
 }
 

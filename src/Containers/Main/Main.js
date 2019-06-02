@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
+import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
 import BooksContainer from '../../Containers/BooksContainer/BooksContainer'
 import Loading from '../../Components/Loading/Loading';
 import Nav from '../Nav/Nav';
@@ -16,9 +17,6 @@ class Main extends Component {
   async componentDidMount() {
 
     const travelUrl = `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${API_KEY}`
-  //  let response = await fetch(Traveurls)
-    // console.log(await response.json())
-
     this.props.fetchTopTravel(travelUrl)
 //     if(this.props.allBooks.length){
 // //prevents a second fetch when going back and forth
