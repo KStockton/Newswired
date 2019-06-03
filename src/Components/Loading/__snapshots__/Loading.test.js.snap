@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should match the snapshot 1`] = `
+<section
+  className="Loading-wrapper"
+>
+  <img
+    alt="loading"
+    src="loading.svg"
+  />
+  <h4
+    className="Loading-text"
+  >
+    Loading...
+  </h4>
+</section>
+`;
