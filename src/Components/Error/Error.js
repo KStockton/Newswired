@@ -9,6 +9,6 @@ export const Error = () => {
       <img className="error" src={rott404} alt="Page Not Found"/>
     </section>
   )
-}
+};
 
 export default Error
