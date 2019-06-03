@@ -7,7 +7,7 @@ import TravelContainer from '../../Containers/TravelContainer/TravelContainer';
 import Loading from '../../Components/Loading/Loading';
 import Nav from '../Nav/Nav';
 
-const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
+// const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 // import { cleanResponse } from '../../Utility/cleanResponse';
 
 
@@ -24,12 +24,15 @@ class Main extends Component {
   //  if(topic === 'books' && this.props.allBooks.length === 0){
     //  const bookUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${NYT_KEY}`
     //  this.props.fetchAllBooks(bookUrl)
+
       // } else if(topic === 'travel' && this.props.allTravel.length === 0){
         // const travelUrl = `https://newsapi.org/v2/everything?q=travel&apiKey=${API_KEY}`
         // this.props.fetchTopTravel(travelUrl)
+
       // } else if(topic === 'topNews' && this.props.allTopNews.length === 0){
         // const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&${API_KEY}`
           //this.props.fetchTopNews(topNewsUrl)
+          
       // } else if(topic === 'sportsNews' && this.props.allSports.length === 0){
         // const sportsUrl = `https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=${API_KEY}`
         //this.props.fetchUSSports(sportsURL)

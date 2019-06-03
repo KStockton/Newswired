@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
+const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 
 
 class TravelContainer extends Component {
 
   async componentDidMount() {
-
+    if(this.props.allTravel === 0){
+      const travelUrl = `https://newsapi.org/v2/everything?q=travel&apiKey=${API_KEY}`
+        this.props.fetchTopTravel(travelUrl)
+    }
   }
 
 
 
 
   displayTravel =() => {
-   return this.props.travel.map(location => {
+   return this.props.allTravel.map(location => {
       const {id, title, author, abstract, image} = location
-      console.log(image)
+  
       return <article>
           <h6>{abstract}</h6>
           <img src={image} alt="travel" />
