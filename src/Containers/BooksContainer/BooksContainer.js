@@ -3,6 +3,7 @@ import Book from '../../Components/Book/Book';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
+import {NYT_KEY} from '../../Utility/Config/Key'
 const shortid = require('shortid');
  class BooksContainer extends Component {
   
@@ -42,7 +43,7 @@ export const mapStateToProps = (store) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchAllBooks: () => dispatch(fetchAllBooks(url))
+  fetchAllBooks: (url) => dispatch(fetchAllBooks(url))
 })
 
 

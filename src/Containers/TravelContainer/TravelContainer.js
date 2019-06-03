@@ -6,7 +6,7 @@ import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
 class TravelContainer extends Component {
 
   async componentDidMount() {
-    
+
   }
 
 
@@ -40,7 +40,7 @@ export const mapStateToProps = (store) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchTopTravel: (url) => dispatch(fetchTopTravel)
+  fetchTopTravel: (url) => dispatch(fetchTopTravel(url))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TravelContainer)
