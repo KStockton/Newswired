@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Begin should match the snapshot 1`] = `
+<div
+  className="begin-wrapper"
+>
+  <section>
+    <h1>
+      Welcome to News Wire
+    </h1>
+  </section>
+  <NavLink
+    to="/Options"
+  >
+    <button
+      className="begin-btn"
+    >
+      Get Started
+    </button>
+  </NavLink>
+</div>
+`;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Book = ({bookImage, rank, author, description, title, weeksOnList}) => {
   return (
@@ -11,5 +12,14 @@ const Book = ({bookImage, rank, author, description, title, weeksOnList}) => {
         <p className="book-description">{description}</p>
       </article>
   )
+}
+
+Book.propTypes = {
+  bookImage: PropTypes.string,
+  rank: PropTypes.number,
+  author: PropTypes.string,
+  description: PropTypes.string,
+  title: PropTypes.string,
+  weeksOnList: PropTypes.number
 }
 export default Book

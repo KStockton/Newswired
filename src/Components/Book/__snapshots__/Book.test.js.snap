@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Book should match the snapshot 1`] = `
+<article
+  className="book-tile"
+>
+  <img
+    alt="book"
+    className="book-img"
+  />
+  <p
+    className="author"
+  />
+  <p
+    className="book-rank"
+  >
+    Rank: 
+  </p>
+  <p
+    className="book-weeks"
+  >
+     weeks on list 
+  </p>
+  <p
+    className="book-title"
+  />
+  <p
+    className="book-description"
+  />
+</article>
+`;
+
+exports[`Book should match the snapshot when props are passed 1`] = `
+<article
+  className="book-tile"
+>
+  <img
+    alt="book"
+    className="book-img"
+    src="http://cool.com"
+  />
+  <p
+    className="author"
+  >
+    Michele Obama
+  </p>
+  <p
+    className="book-rank"
+  >
+    Rank: 
+    3
+  </p>
+  <p
+    className="book-weeks"
+  >
+    4
+     weeks on list 
+  </p>
+  <p
+    className="book-title"
+  >
+    Overcome
+  </p>
+  <p
+    className="book-description"
+  >
+    effor
+  </p>
+</article>
+`;

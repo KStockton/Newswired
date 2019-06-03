@@ -1,7 +1,7 @@
 let previousState = {
   topNews: false,
   books: false,
-  movieReview: false,
+  sportsNews: false,
   travel: false
 }
 

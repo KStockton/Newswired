@@ -6,7 +6,7 @@ export default class BooksContainer extends Component {
 
   displayBooks = () => {
     return this.props.books.map(book => {
-      return (<Book {...book} key={shortid.generate()} id={shortid.generate()}/>
+      return (<Book {...book} key={shortid.generate()} />
     )
   })
   }
@@ -16,6 +16,7 @@ export default class BooksContainer extends Component {
     
     return (
       <div className='book-wrapper'>
+        <h2>Top NewYork Times Books</h2>
         {displayBooks}
       </div>
     )

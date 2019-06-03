@@ -1,5 +1,8 @@
 @import '../../Sass/_variables';
 
+.Options-background {
+  background-image: $splash;
+}
 .Options-header {
   background-color: #ccd0d56b;
   margin: 0;
@@ -8,6 +11,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 72px;
+  border-bottom: 1px solid;
   
   .Options-title {
     margin: 0;
@@ -30,7 +35,6 @@
 }
 
 .Options-wrapper {
-  background-image: $splash;
   background-size: 100% 100%;
   width: 100vw;
   height: 87vh;
@@ -49,7 +53,8 @@
   z-index: auto;
   box-shadow: 3px 3px 2px #837a7a;
   height: 70px;
-  width: 276px;
+  width: 224px;
+  font-size: 0.8rem;
   display: flex;
   justify-content: space-evenly;
 }
@@ -87,7 +92,7 @@
 
 .Options-fontawesome {
   padding-right: 9px;
-  font-size: 30px;
+  font-size: 23px;
 }
 
 .Options-btn-wrapper {
@@ -101,4 +106,17 @@
   margin: 2rem;
   font-size: 1.5rem;
   color: green;
+}
+#next{
+  width: 100px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+}
+
+.Options-continue {
+  position: fixed;
+  top: 61%;
+  left: 47%;
+  margin: 0 auto;
 }

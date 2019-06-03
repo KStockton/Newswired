@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux'
 
 class Nav extends Component {
@@ -41,7 +41,7 @@ class Nav extends Component {
       <header className="Nav-header">
         {menu}
         <input type="checkbox" className="toggle" id="menu" value={this.state.checked} onClick={this.handleClick}/>
-          <label for="menu">
+          <label htmlFor="menu">
             <div className="bar top"></div>
             <div className="bar middle"></div>
             <div className="bar bottom"></div>
