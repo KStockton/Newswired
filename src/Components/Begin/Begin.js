@@ -5,12 +5,12 @@ const Begin = () => {
     
   return (
     <div className="begin-wrapper">
-      <div >
-      <h1>Welcome to News Wire</h1>  
-      </div>
-    <NavLink to="/Options">
-      <button className="begin-btn">Get Started</button>
-    </NavLink>
+      <section >
+        <h1>Welcome to News Wire</h1>  
+      </section>
+      <NavLink to="/Options">
+        <button className="begin-btn">Get Started</button>
+      </NavLink>
     </div>
   )
 }
