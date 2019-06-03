@@ -1,13 +1,16 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom'
 
-const Begin = (props) => {
-  
+const Begin = () => {
+    
   return (
     <div className="begin-wrapper">
       <div >
       <h1>Welcome to News Wire</h1>  
       </div>
-      <button className="begin-btn" onClick={props.pageSetup}>Get Started</button>
+    <NavLink to="/Options">
+      <button className="begin-btn">Get Started</button>
+    </NavLink>
     </div>
   )
 }
