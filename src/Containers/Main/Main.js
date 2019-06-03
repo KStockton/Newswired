@@ -17,10 +17,10 @@ class Main extends Component {
 
   async componentDidMount() {
 
-    const categories = Object.keys(this.props.categories)
- let selectedTopics = categories.filter(category => this.props.categories[category] === true)
+    // const categories = Object.keys(this.props.categories)
+//  let selectedTopics = categories.filter(category => this.props.categories[category] === true)
  ///tried includes but realize that after first condition is met the next if/else statement wont run
- selectedTopics.forEach(topic => {
+//  selectedTopics.forEach(topic => {
    if(topic === 'books' && this.props.allBooks.length === 0){
      const bookUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${NYT_KEY}`
      this.props.fetchAllBooks(bookUrl)
@@ -48,6 +48,7 @@ class Main extends Component {
 
 
   render() {
+   
 
     return (
       <div className="">
@@ -56,9 +57,30 @@ class Main extends Component {
           <Nav/>
         </div>
         {
-          (!this.props.isLoading) ? 
+          (!this.props.isLoading && this.props.categories.books) ? 
           // <TravelContainer travel={this.props.allTravel}/>
-          <BooksContainer books={this.props.allBooks}/>
+          <BooksContainer/>
+           :
+            <Loading/>
+        }
+        {
+          (!this.props.isLoading && this.props.categories.topNews) ? 
+          // <TravelContainer travel={this.props.allTravel}/>
+          <BooksContainer/>
+           :
+            <Loading/>
+        }
+        {
+          (!this.props.isLoading && this.props.categories.sportsNews) ? 
+          // <TravelContainer travel={this.props.allTravel}/>
+          <BooksContainer/>
+           :
+            <Loading/>
+        }
+        {
+          (!this.props.isLoading && this.props.categories.travel) ? 
+          // <TravelContainer travel={this.props.allTravel}/>
+          <BooksContainer/>
            :
             <Loading/>
         }
@@ -68,16 +90,14 @@ class Main extends Component {
 }
 
 export const mapStateToProps = (store) => ({
- allBooks: store.allBooks,
- allTravel: store.allTravel,
  isLoading: store.isLoading,
  categories: store.categories
 })
 
-export const mapDispatchToProps = (dispatch) => ({
-fetchAllBooks: (url) => dispatch(fetchAllBooks(url)),
-fetchTopTravel: (url) => dispatch(fetchTopTravel(url))
-})
+// export const mapDispatchToProps = (dispatch) => ({
+// fetchAllBooks: (url) => dispatch(fetchAllBooks(url)),
+// fetchTopTravel: (url) => dispatch(fetchTopTravel(url))
+// })
 
 
 
