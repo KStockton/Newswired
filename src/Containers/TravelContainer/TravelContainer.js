@@ -1,6 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
 
-export default class TravelContainer extends Component {
+
+class TravelContainer extends Component {
+
+  async componentDidMount() {
+
+  }
+
+
 
 
   displayTravel =() => {
@@ -24,3 +33,14 @@ export default class TravelContainer extends Component {
     )
   }
 }
+
+
+export const mapStateToProps = (store) => ({
+  allTravel: store.allTravel
+})
+
+export const mapDispatchToProps = (dispatch) => ({
+  fetchTopTravel: (url) => dispatch(fetchTopTravel(url))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(TravelContainer)
