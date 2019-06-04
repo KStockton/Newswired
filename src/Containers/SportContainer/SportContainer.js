@@ -1,52 +1,44 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
+import { fetchSportsNews } from '../../Thunks/fetchSportsNews';
 import Travel from '../../Components/Travel/Travel';
 const shortid = require('shortid')
 const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
-
-
-class TravelContainer extends Component {
+class SportsContainer extends Component {
 
    componentDidMount() {
-
-    if(this.props.allTravel.length == 0){
-      const travelUrl = `https://newsapi.org/v2/everything?q=travel-news&language=en&page=1&domains=vice.com&apiKey=${API_KEY}`
-      console.log('hi')
-       this.props.fetchTopTravel(travelUrl)
+    if(this.props.allSports.length == 0){
+      const sportNewsUrl = 
+      `https://newsapi.org/v2/everything?q=sports&language=en&from=2019-06-03&page=1&domains=espn.com&apiKey=${API_KEY}`;
+      this.props.fetchSportsNews(sportNewsUrl)
     }
   }
 
-
-
-
-  displayTravel =() => {
-   return this.props.allTravel.map(location => {
+  displaySportNews = () => {
+   return this.props.allSports.map(location => {
     return (<Travel {...location} key={shortid.generate()} id={shortid.generate()}/>)
    })
    }
   
   render() {
-    const displayTravel = this.displayTravel()
+    const displaySportNews = this.displaySportNews()
    
     return (
       <section>
-      <h2>Vice Travel News</h2>
-      <div className="TravelContainer-wrapper">
-        {displayTravel}
+      <h2>Sport News</h2>
+      <div className="SportNews-wrapper">
+        {displaySportNews}
       </div>
       </section>
     )
   }
 }
-
-
 export const mapStateToProps = (state) => ({
-  allTravel: state.allTravel
+  allSports: state.allSports
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchTopTravel: (url) => dispatch(fetchTopTravel(url))
+  fetchSportsNews: (url) => dispatch(fetchSportsNews(url))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(TravelContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(SportsContainer)

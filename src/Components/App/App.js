@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/Main" component={Main}/>
         {/*not sure if im rending a book component*/}  
         {/* <Route path="/main/books" component={Books}/> */}
-        <Route route="" component={Error}/>
+        <Route component={Error}/>
       </Switch>
       </div>
   );

@@ -8,9 +8,9 @@ import Error from '../../Components/Error/Error'
 const shortid = require('shortid');
 
  class BooksContainer extends Component {
+   
   
 async componentDidMount() {
-  console.log(this.props.allBooks.length)
   if(this.props.allBooks.length == 0){
     const bookUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?&api-key=${NYT_KEY}`
      this.props.fetchAllBooks(bookUrl)

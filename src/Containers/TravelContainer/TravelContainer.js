@@ -9,15 +9,21 @@ const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 class TravelContainer extends Component {
 
    componentDidMount() {
-
     if(this.props.allTravel.length == 0){
       const travelUrl = `https://newsapi.org/v2/everything?q=travel-news&language=en&page=1&domains=vice.com&apiKey=${API_KEY}`
-      console.log('hi')
        this.props.fetchTopTravel(travelUrl)
     }
   }
 
 
+
+
+
+      // const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&${API_KEY}`
+      // this.props.fetchTopNews(topNewsUrl)
+      
+
+    
 
 
   displayTravel =() => {
@@ -43,10 +49,11 @@ class TravelContainer extends Component {
 
 export const mapStateToProps = (state) => ({
   allTravel: state.allTravel
+
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchTopTravel: (url) => dispatch(fetchTopTravel(url))
+  fetchTopTravel: (url) => dispatch(fetchTopTravel(url)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TravelContainer)
