@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
-import Travel from '../../Components/Travel/Travel';
+import Card from '../../Components/Card/Card';
 const shortid = require('shortid')
 const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 
@@ -23,12 +23,9 @@ class TravelContainer extends Component {
       // this.props.fetchTopNews(topNewsUrl)
       
 
-    
-
-
   displayTravel =() => {
    return this.props.allTravel.map(location => {
-    return (<Travel {...location} key={shortid.generate()} id={shortid.generate()}/>)
+    return (<Card {...location} key={shortid.generate()} id={shortid.generate()}/>)
    })
    }
   
@@ -38,7 +35,7 @@ class TravelContainer extends Component {
     return (
       <section>
       <h2>Vice Travel News</h2>
-      <div className="TravelContainer-wrapper">
+      <div className="TravelContainer-wrapper Card-wrapper">
         {displayTravel}
       </div>
       </section>

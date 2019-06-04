@@ -6,14 +6,6 @@
   flex-direction: $fdirection;
 }
 
-// @mixin background($imagepath, $position:0 0, $repeat: no-repeat) {
-//   background-image: url($imgagepath);
-//   position: $position;
-//   repeat: $repeat; 
-// }
-
-$splash: url('../Assets/splashBG.png');
-
 @mixin tiles($textA, $fontS, $paddingSizeTop){
   text-align: $textA;
   font-size: $fontS;

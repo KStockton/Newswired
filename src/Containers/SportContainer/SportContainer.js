@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSportsNews } from '../../Thunks/fetchSportsNews';
-import Travel from '../../Components/Travel/Travel';
+import Card from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
 const shortid = require('shortid')
 const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
@@ -14,10 +14,11 @@ class SportsContainer extends Component {
       this.props.fetchSportsNews(sportNewsUrl)
     }
   }
+  
 
   displaySportNews = () => {
    return this.props.allSports.map(location => {
-    return (<Travel {...location} key={shortid.generate()} id={shortid.generate()}/>)
+    return (<Card {...location} key={shortid.generate()} id={shortid.generate()}/>)
    })
    }
   
@@ -27,7 +28,7 @@ class SportsContainer extends Component {
     return (
       <section>
       <h2>Sport News</h2>
-      <div className="SportNews-wrapper">
+      <div className="sports-wrapper Card-wrapper">
         {displaySportNews}
       </div>
       </section>

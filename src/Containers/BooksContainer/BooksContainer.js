@@ -7,13 +7,11 @@ import {NYT_KEY} from '../../Utility/Config/Key';
 import Error from '../../Components/Error/Error'
 const shortid = require('shortid');
 
- class BooksContainer extends Component {
+ export class BooksContainer extends Component {
    
   
 async componentDidMount() {
   if(this.props.allBooks.length == 0){
-    const bookUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?&api-key=${NYT_KEY}`
-     this.props.fetchAllBooks(bookUrl)
      const historyUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?&api-key=${NYT_KEY}`
      this.props.fetchAllBooks(historyUrl)
   }
@@ -46,7 +44,9 @@ async componentDidMount() {
 }
 
 BooksContainer.propTypes = {
-  allBooks: PropTypes.array
+  allBooks: PropTypes.array,
+  error: PropTypes.string,
+  fetchAllBooks: PropTypes.func
 }
 
 export const mapStateToProps = (state) => ({

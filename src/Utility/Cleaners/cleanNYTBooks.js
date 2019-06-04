@@ -7,7 +7,8 @@ export const cleanNYTBooks = (uncleanBooks) => {
          bookImage: book.book_image,
          description: book.description,
          title: book.title,
-         weeksOnList: book.weeks_on_list
+         weeksOnList: book.weeks_on_list,
+         isFavorited: false
        }
    })
    return cleanedBooks
