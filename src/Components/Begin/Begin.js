@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const Begin = () => {
     
@@ -8,9 +8,9 @@ const Begin = () => {
       <section >
         <h1>Welcome to News Wire</h1>  
       </section>
-      <NavLink to="/Options">
+      <Link to="/Options">
         <button className="begin-btn">Get Started</button>
-      </NavLink>
+      </Link>
     </div>
   )
 }

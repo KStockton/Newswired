@@ -7,16 +7,17 @@ import Error from  '../Error/Error';
 
 
 const App = () => { 
-    
+
     return (
       <div className="App">
       <Switch>
+        {/* {this.props.isLoadi} */}
         <Route exact path="/" component={Begin}/>
         <Route exact path="/Options" component={Options}/>
         <Route path="/Main" component={Main}/>
         {/*not sure if im rending a book component*/}  
         {/* <Route path="/main/books" component={Books}/> */}
-        <Route component={Error}/>
+        <Route route="" component={Error}/>
       </Switch>
       </div>
   );

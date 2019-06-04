@@ -7,7 +7,7 @@ describe('actions', () => {
 
     const expectedAction = {
       type: 'IS_LOADING',
-      bool
+      isLoading: bool
     }
     const result = action.isLoading(bool)
     expect(result).toEqual(expectedAction)

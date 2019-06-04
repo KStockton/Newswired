@@ -1,6 +1,6 @@
 export const isLoading = (bool) => ({
   type: 'IS_LOADING',
-  bool
+  isLoading: bool
 })
 
 export const getAllBooks = (books) => ({

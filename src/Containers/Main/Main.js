@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
 import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
 import BooksContainer from '../../Containers/BooksContainer/BooksContainer';
-import TravelContainer from '../../Containers/TravelContainer/TravelContainer';
+import TravelContainer from '../TravelContainer/TravelContainer';
 import Loading from '../../Components/Loading/Loading';
 import Nav from '../Nav/Nav';
 
@@ -32,7 +32,7 @@ class Main extends Component {
       // } else if(topic === 'topNews' && this.props.allTopNews.length === 0){
         // const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&${API_KEY}`
           //this.props.fetchTopNews(topNewsUrl)
-          
+
       // } else if(topic === 'sportsNews' && this.props.allSports.length === 0){
         // const sportsUrl = `https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=${API_KEY}`
         //this.props.fetchUSSports(sportsURL)
@@ -51,50 +51,24 @@ class Main extends Component {
 
 
   render() {
+    const {categories} = this.props
    
-
     return (
       <div className="">
         <div className="Main-header">
           <h1 className="Main-title">News Wire</h1>
           <Nav/>
         </div>
-        {
-          (!this.props.isLoading && this.props.categories.books) ? 
-          // <TravelContainer travel={this.props.allTravel}/>
-          <BooksContainer/>
-           :
-            <Loading/>
-        }
-        {/* {
-          (!this.props.isLoading && this.props.categories.topNews) ? 
-          // <TravelContainer travel={this.props.allTravel}/>
-          <BooksContainer/>
-           :
-            <Loading/>
-        }
-        {
-          (!this.props.isLoading && this.props.categories.sportsNews) ? 
-          // <TravelContainer travel={this.props.allTravel}/>
-          <BooksContainer/>
-           :
-            <Loading/>
-        }
-        {
-          (!this.props.isLoading && this.props.categories.travel) ? 
-          // <TravelContainer travel={this.props.allTravel}/>
-          <BooksContainer/>
-           :
-            <Loading/>
-        } */}
+        {categories.books && <BooksContainer/>}
+        {categories.travel && <TravelContainer/>}
       </div>
     )
   }
 }
 
-export const mapStateToProps = (store) => ({
- isLoading: store.isLoading,
- categories: store.categories
+export const mapStateToProps = (state) => ({
+ isLoading: state.isLoading,
+ categories: state.categories
 })
 
 // export const mapDispatchToProps = (dispatch) => ({

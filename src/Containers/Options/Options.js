@@ -70,7 +70,7 @@ export class Options extends Component {
         </div>
         <div className="Options-continue">
           {numOfCategories >= 3 && 
-            <NavLink to="/main" className="Options-btn" id="next"> 
+            <NavLink to="/Main" className="Options-btn" id="next"> 
               <FontAwesomeIcon id="latest-news" className="Options-fontawesome" icon={faArrowRight}/>
             </NavLink>}
         </div>
