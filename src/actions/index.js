@@ -22,3 +22,8 @@ export const hasErrored = (message) => ({
   type: 'HAS_ERROR',
   message
 })
+
+export const getSportsNews = (sports) => ({
+  type: 'ALL_SPORTS',
+  sports
+})

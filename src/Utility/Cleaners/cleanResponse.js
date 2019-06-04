@@ -10,7 +10,8 @@ export const cleanResponse = (uncleanResponse) => {
         bookImage: book.urlToImage,
         description: book.description,
         title: book.title,
-        content: book.content
+        content: book.content,
+        isfavorited: false
       }
   })
   return cleanedBooks
