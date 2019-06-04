@@ -43,5 +43,14 @@ describe('actions', () => {
     const result = action.hasErrored(mockMessage)
     expect(result).toEqual(expectedAction)
   })
-  
+  it('should return a sports array if the action.type is', () => {
+    const mockSports = [{author: 'ESPN',title: 'Warriors Win'}, {author: 'ABC', title: 'Toronto Wins'}]
+
+    const expectedAction = {
+      type: 'ALL_SPORTS',
+      sports: mockSports
+    }
+    const result = action.getSportsNews(mockSports)
+    expect(result).toEqual(expectedAction)
+  })
 });
