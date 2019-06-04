@@ -12,4 +12,24 @@
 //   repeat: $repeat; 
 // }
 
-$splash: url('../Assets/splashBG.png')
+$splash: url('../Assets/splashBG.png');
+
+@mixin tiles($textA, $fontS, $paddingSizeTop){
+  text-align: $textA;
+  font-size: $fontS;
+  $padding-top: $paddingSizeTop;
+}
+
+@mixin titles($fontS-Title,$lineH, $fontW, $textA, $paddingSizeTop){
+  font-size: $fontS-Title;
+  line-height: $lineH;
+  font-weight: $fontW;
+  text-align: $textA;
+  padding-top: $paddingSizeTop;
+}
+
+@mixin authors( $fontSAuthors, $textAuthor, $paddingSizeTop) {
+  font-size: $fontSAuthors;
+  text-align: $textAuthor;
+  padding-top: $paddingSizeTop;
+}

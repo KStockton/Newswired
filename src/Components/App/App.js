@@ -7,10 +7,11 @@ import Error from  '../Error/Error';
 
 
 const App = () => { 
-    
+
     return (
       <div className="App">
       <Switch>
+        {/* {this.props.isLoadi} */}
         <Route exact path="/" component={Begin}/>
         <Route exact path="/Options" component={Options}/>
         <Route path="/Main" component={Main}/>

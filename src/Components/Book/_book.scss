@@ -31,11 +31,8 @@
   border-radius: 1px;
 }
 .author {
-  color: #808080;
-  font-size: 12px;
-  text-align: left;
+  @include authors( 12px, left, 5px);
   font-family: 'Noto Sans', sans-serif;
-  padding-top: 5px;
   padding-bottom: 16px;
 }
 .book-weeks{
@@ -45,18 +42,26 @@
   text-transform: uppercase;
   padding: 7px 0px;
 }
-.book-title{
-  font-size: .9rem;
-  line-height: 1.1875rem;
-  font-weight: 700;
-  text-align: left;
+.book-title {
+  @include titles(.9rem, 1.1875rem, 700, left, 3px);
   font-family: 'Noto Sans', sans-serif;
-  padding-top: 3px;
 }
 
 .book-description {
+  @include tiles(left, 1rem, 6px );
   font-family: 'Old Standard TT', serif;
-  text-align: left;
-  font-size: 1rem;
-  padding-top: 6px;
+
+}
+.book-favorite{
+  position: relative;
+  top: 34px;
+  width: 25px;
+  left: 66px
+}
+
+.book-nofavorite{
+  position: relative;
+  top: 34px;
+  width: 25px;
+  left: 66px;
 }

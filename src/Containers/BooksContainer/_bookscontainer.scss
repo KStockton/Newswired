@@ -1,14 +1,14 @@
 
 .book-wrapper {
-width: 1000px;
-display: grid;
-grid-gap: 25px;
-grid-template-columns: repeat(15, 1fr);
-grid-auto-flow: row;
+display: flex;
 overflow: scroll;
 width: 100vw;
 }
 
+.error-text {
+  position:fixed;
+  top: 3%;
+}
 
 
 

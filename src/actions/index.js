@@ -1,6 +1,6 @@
 export const isLoading = (bool) => ({
   type: 'IS_LOADING',
-  bool
+  isLoading: bool
 })
 
 export const getAllBooks = (books) => ({
@@ -21,4 +21,9 @@ export const getTopTravel = (travel) => ({
 export const hasErrored = (message) => ({
   type: 'HAS_ERROR',
   message
+})
+
+export const getSportsNews = (sports) => ({
+  type: 'ALL_SPORTS',
+  sports
 })
