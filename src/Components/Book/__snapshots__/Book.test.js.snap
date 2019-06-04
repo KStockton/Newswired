@@ -5,6 +5,11 @@ exports[`Book should match the snapshot 1`] = `
   className="book-tile"
 >
   <img
+    alt="emoji favorite icon"
+    className="book-nofavorite"
+    src="nolove.svg"
+  />
+  <img
     alt="book"
     className="book-img"
   />
@@ -19,7 +24,7 @@ exports[`Book should match the snapshot 1`] = `
   <p
     className="book-weeks"
   >
-     weeks on list 
+     weeks on list
   </p>
   <p
     className="book-title"
@@ -34,6 +39,11 @@ exports[`Book should match the snapshot when props are passed 1`] = `
 <article
   className="book-tile"
 >
+  <img
+    alt="emoji favorite icon"
+    className="book-nofavorite"
+    src="nolove.svg"
+  />
   <img
     alt="book"
     className="book-img"
@@ -54,7 +64,7 @@ exports[`Book should match the snapshot when props are passed 1`] = `
     className="book-weeks"
   >
     4
-     weeks on list 
+     weeks on list
   </p>
   <p
     className="book-title"

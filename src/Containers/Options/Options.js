@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faFire, faRunning, faGlobeAfrica, faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setCategories } from '../../actions/index'
+import { setCategories } from '../../actions/index';
+import PropTypes from 'prop-types';
 
 
 // import PropTypes from 'prop-types'
@@ -87,6 +88,9 @@ export const mapDispatchToProps = (dispatch) => ({
  setCategories: (category) => dispatch(setCategories(category))
 })
 
-
+Options.propTypes = {
+  categories: PropTypes.object,
+  setCategories: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps) (Options)

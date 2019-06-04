@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSportsNews } from '../../Thunks/fetchSportsNews';
 import Travel from '../../Components/Travel/Travel';
+import PropTypes from 'prop-types';
 const shortid = require('shortid')
 const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 class SportsContainer extends Component {
@@ -40,5 +41,10 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   fetchSportsNews: (url) => dispatch(fetchSportsNews(url))
 })
+
+SportsContainer.propTypes = {
+  allSports: PropTypes.array,
+  fetchSportsNews: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(SportsContainer)
