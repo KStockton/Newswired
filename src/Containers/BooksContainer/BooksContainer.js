@@ -12,8 +12,6 @@ const shortid = require('shortid');
   
 async componentDidMount() {
   if(this.props.allBooks.length == 0){
-    const bookUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?&api-key=${NYT_KEY}`
-     this.props.fetchAllBooks(bookUrl)
      const historyUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?&api-key=${NYT_KEY}`
      this.props.fetchAllBooks(historyUrl)
   }

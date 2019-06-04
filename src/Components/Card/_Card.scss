@@ -1,4 +1,4 @@
-.TravelCard-tile {
+.CardCard-tile {
   border-radius: 8px;
   padding-top: 50px;
   padding-left: 25px;
@@ -6,23 +6,23 @@
   transition: .2s all;
 }
 
-.Travel-img {
+.Card-img {
   height: 209px;
   box-shadow: 2px 0px 0px 2px #a99a9a;
   border-radius: 1px;
   width: 252px;
 }
-.Travel-author {
+.Card-author {
   @include authors( 12px, left, 5px);
   font-family: 'Noto Sans', sans-serif;
   padding-bottom: 16px;
 }
 
-.Travel-title{
+.Card-title{
   @include titles(.9rem, 1.1875rem, 700, left, 3px)
 }
 
-.Travel-description{
+.Card-description{
   @include tiles(left, 1rem, 6px );
   font-family: 'Old Standard TT', serif;
 

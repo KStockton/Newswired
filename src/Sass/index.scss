@@ -10,7 +10,8 @@
 @import '../Components/Book/book';
 @import '../Containers/Nav/nav';
 @import '../Containers/TravelContainer/_travelContainer.scss';
-@import '../Components/Travel/Travel';
+@import '../Components/Card/Card';
+@import '../Containers/SportContainer/_sportsContainer.scss';
 
 * {
   margin: 0;
@@ -26,6 +27,7 @@ body {
   font-family: 'Noto Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
