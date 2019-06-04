@@ -58,7 +58,8 @@ export const mapStateToProps = (state) => ({
 })
 
 Main.propTypes = {
-  isLoading: PropTypes.bool
+  isLoading: PropTypes.bool,
+  categories: PropTypes.object
 }
 
 

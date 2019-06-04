@@ -1,16 +1,24 @@
 import React from 'react';
-import BookContainer from './BooksContainer';
-import { shallow, mount } from 'enzyme';
+import {BookContainer} from './BooksContainer';
+import { shallow  } from 'enzyme';
+import {mapStateToProps, mapDispatchToProps } from './BooksContainer';
+import { fetchAllBooks} from './../../Thunks/fetchAllBooks'
+jest.mock('../../Thunks/fetchAllBooks')
 //import mockstore to provide context
 
-describe('BookContainer', () => {
+describe.only('BookContainer', () => {
   let wrapper;
-  let mockBooks =[{title:'Golden'},{title:'Xavier'}]
+  let mockProps = {
+    allBooks: [{title:'Golden'},{title:'Xavier'}],
+    error: 'something went wrong'
+  }
   beforeEach(() => {
-    const context = [{ name: 'foo' }, {title: 'effort'}];
-    wrapper = mount(<BookContainer books={mockBooks}/>, {context})
+    wrapper = shallow(<BookContainer 
+      allBooks={mockProps.allBooks}
+      error={mockProps.error}
+      />)
   })
-  xit('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
 })
