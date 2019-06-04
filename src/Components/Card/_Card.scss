@@ -6,6 +6,19 @@
   transition: .2s all;
 }
 
+.Card-wrapper:hover .CardCard-tile{
+  opacity: .5;
+  transform: scale(.98);
+  box-shadow: none;
+}
+
+.Card-wrapper:hover .CardCard-tile:hover{
+  filter: blur (0px);
+  transform: scale(1.1);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0 px rgba(0,0,0,0.125);
+}
+
 .Card-img {
   height: 209px;
   box-shadow: 2px 0px 0px 2px #a99a9a;
@@ -27,3 +40,6 @@
   font-family: 'Old Standard TT', serif;
 
 }
+
+
+

@@ -35,7 +35,7 @@ class TravelContainer extends Component {
     return (
       <section>
       <h2>Vice Travel News</h2>
-      <div className="TravelContainer-wrapper">
+      <div className="TravelContainer-wrapper Card-wrapper">
         {displayTravel}
       </div>
       </section>

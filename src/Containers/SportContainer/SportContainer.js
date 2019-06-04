@@ -28,7 +28,7 @@ class SportsContainer extends Component {
     return (
       <section>
       <h2>Sport News</h2>
-      <div className="sports-wrapper">
+      <div className="sports-wrapper Card-wrapper">
         {displaySportNews}
       </div>
       </section>
