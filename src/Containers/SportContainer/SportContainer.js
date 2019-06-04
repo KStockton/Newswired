@@ -42,4 +42,9 @@ export const mapDispatchToProps = (dispatch) => ({
   fetchSportsNews: (url) => dispatch(fetchSportsNews(url))
 })
 
+SportsContainer.propTypes = {
+  allSports: PropTypes.array,
+  fetchSportsNews: PropTypes.func
+}
+
 export default connect(mapStateToProps, mapDispatchToProps)(SportsContainer)
