@@ -32,7 +32,8 @@
 }
 
 .Card-title{
-  @include titles(.9rem, 1.1875rem, 700, left, 3px)
+  @include titles(.9rem, 1.1875rem, 700, left, 3px);
+  padding-bottom: 18px;
 }
 
 .Card-description{
