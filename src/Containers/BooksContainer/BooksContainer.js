@@ -36,9 +36,9 @@ async componentDidMount() {
     return (
       <section>
         <h2>Top NewYork Times Books</h2>
-      <div className='book-wrapper'>
-        <p className="error">{this.props.error && errorMsg }</p>
+      <div className='BookContainer-wrapper'>
         {displayBooks}
+        <p className="error-text">{this.props.error && errorMsg }</p>
       </div>
       </section>
     )

@@ -1,16 +1,17 @@
 
-.book-wrapper {
-width: 1000px;
-display: grid;
-grid-gap: 5px 5px;
-grid-template-columns: repeat(29, 1fr);
+.BookContainer-wrapper {
+// width: 1000px;
+display: flex;
+// grid-gap: 5px 5px;
+// grid-template-columns: repeat(29, 1fr);
 // grid-auto-flow: row;
 overflow: scroll;
 width: 100vw;
 }
 
-.error {
-  position:fixed
+.error-text {
+  position:fixed;
+  top: 3%;
 }
 
 

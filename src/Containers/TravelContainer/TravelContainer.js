@@ -22,7 +22,7 @@ class TravelContainer extends Component {
 
   displayTravel =() => {
    return this.props.allTravel.map(location => {
-    return (<Travel {...location} key={shortid.generate()}/>)
+    return (<Travel {...location} key={shortid.generate()} id={shortid.generate()}/>)
    })
    }
   
@@ -32,7 +32,7 @@ class TravelContainer extends Component {
     return (
       <section>
       <h2>Vice Travel News</h2>
-      <div className="Travel-wrapper">
+      <div className="TravelContainer-wrapper">
         {displayTravel}
       </div>
       </section>

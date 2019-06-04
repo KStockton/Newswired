@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({bookImage, rank, author, description, title, weeksOnList}) => {
+const Book = ({bookImage, rank, author, id, description, title, weeksOnList}) => {
   return (
-    <article className="book-tile">
+    <article className="book-tile" id={id}>
         <img className="book-img" src={bookImage} alt="book"/>
         <p className="author">{author}</p>
         <p className="book-rank">Rank: {rank}</p>

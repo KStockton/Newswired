@@ -1,8 +1,6 @@
-.Travel-wrapper {
+.TravelContainer-wrapper {
   width: 1000px;
-  display: grid;
-  grid-gap: 5px 5px;
-  grid-template-columns: repeat(21, 1fr);
+  display: flex;
   overflow: scroll;
   width: 100vw;
   }
