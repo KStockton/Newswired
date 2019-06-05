@@ -1,24 +1,34 @@
 import React from 'react';
-import {BookContainer} from './BooksContainer';
+import {BookContainer, mapStateToProps, mapDispatchToProps} from './BooksContainer';
 import { shallow  } from 'enzyme';
-import {mapStateToProps, mapDispatchToProps } from './BooksContainer';
 import { fetchAllBooks} from './../../Thunks/fetchAllBooks'
 jest.mock('../../Thunks/fetchAllBooks')
-//import mockstore to provide context
 
-describe.only('BookContainer', () => {
+
+
+describe('BookContainer', () => {
   let wrapper;
-  let mockProps = {
-    allBooks: [{title:'Golden'},{title:'Xavier'}],
-    error: 'something went wrong'
-  }
+  let mockFetchFunction = jest.fn()
+  let mockBooks = { allBooks :[{title:'Golden'},{title:'Xavier'}]}
+  let mockError = 'something went wrong'
+
   beforeEach(() => {
+    
     wrapper = shallow(<BookContainer 
-      allBooks={mockProps.allBooks}
-      error={mockProps.error}
+      allBooks={mockBooks}
+      error={mockError}
+      fetchAllBooks={mockFetchFunction}
+
       />)
   })
-  it('should match the snapshot', () => {
+  xit('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
+});
+  describe('MSTP',() =>{
+    it('should map state from mockstate', () => {
+      const mockState ={ allBooks :[{title:'Golden'},{title:'Xavier'}], error: ''}
+      const result = mapStateToProps(mockState)
+      expect(result).toEqual(mockState)
+    }) 
 })

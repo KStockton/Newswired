@@ -2,11 +2,26 @@
 
 exports[`Error should match the snapshot 1`] = `
 <section>
-  <h3
-    className="Error-title"
-  >
-    404 Page Not Found
-  </h3>
+  <div>
+    <h3
+      className="Error-title"
+    >
+      "ruff" 
+      <span
+        aria-label="dog"
+        role="img"
+      >
+        🐶
+      </span>
+       404 Page Not Found
+    </h3>
+    <NavLink
+      className="error-back"
+      to="/"
+    >
+      Back
+    </NavLink>
+  </div>
   <img
     alt="Page Not Found"
     className="error"

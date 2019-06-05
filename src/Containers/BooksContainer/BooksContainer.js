@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Book from '../../Components/Book/Book';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
+import { fetchAllBooks } from './../../Thunks/fetchAllBooks';
 import {Link} from 'react-router-dom'
 import {NYT_KEY} from '../../Utility/Config/Key';
 const shortid = require('shortid');
@@ -12,16 +12,17 @@ const shortid = require('shortid');
   
 async componentDidMount() {
   if(this.props.allBooks.length === 0){
-     const historyUrl = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?&api-key=${NYT_KEY}`
-     this.props.fetchAllBooks(historyUrl)
+     const topBooks = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?&api-key=${NYT_KEY}`
+     this.props.fetchAllBooks(topBooks)
   }
 }
 
 
 
   displayBooks = () => {
-  if(this.props.allBooks.length > 0){
-    return this.props.allBooks.map(book => {
+    const {allBooks} =this.props
+  if(allBooks.length > 0){
+    return allBooks.map(book => {
       return (<Book {...book} key={shortid.generate() } />
       )
     })
@@ -29,6 +30,7 @@ async componentDidMount() {
   }
 
   render() {
+    console.log(this.props)
     const {error, allBooks}= this.props
     const errorMsg = 
                     <div>
@@ -40,8 +42,10 @@ async componentDidMount() {
       <section>
         <h2 className="book-title-header"> New York Times Best Sellers</h2>
       <div className='book-wrapper'>
+      <React.Fragment>
       {(error !== '' && allBooks.length === 0) && errorMsg}
         {displayBooks}
+      </React.Fragment>
       </div>
       </section>
     )
@@ -64,4 +68,7 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(BooksContainer)
+export default 
+connect(mapStateToProps, 
+  mapDispatchToProps)
+  (BooksContainer)

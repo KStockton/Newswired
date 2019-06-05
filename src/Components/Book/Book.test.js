@@ -1,9 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Book from './Book';
+import {Book} from './Book';
 
 describe('Book', () => {
   let wrapper;
+  let mockProp = jest.fn()
   beforeEach(() => {
     wrapper = shallow(<Book/>)
   })
@@ -11,12 +12,12 @@ describe('Book', () => {
     expect(wrapper).toMatchSnapshot()
   });
   it('should match the snapshot when props are passed', () => {
-    let mockbookImage = "http://cool.com"
-    let mockrank = 3
+    let mockbookImage = "http://win.com"
+    let mockrank = 1
     let mockauthor = "Michele Obama"
-    let mockdescription = 'effor'
+    let mockdescription = 'effort'
     let mocktitle = 'Overcome'
-    let mockweeksOnList = 4
+    let mockweeksOnList = 2
 
     const wrapper = shallow(<Book
       bookImage={mockbookImage}
@@ -25,8 +26,13 @@ describe('Book', () => {
       author={mockauthor}
       title={mocktitle}
       weeksOnList={mockweeksOnList}
+      toggleFavorite={mockProp}
     />)
     
     expect(wrapper).toMatchSnapshot()
   });
+  xit('should call togglefavorite when img is clicked', () => {
+    wrapper.find('#img-test').simulate('click')
+    expect(mockProp).toHaveBeenCalled()
+  })
 })

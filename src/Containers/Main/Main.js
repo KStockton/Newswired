@@ -7,7 +7,7 @@ import SportContainer from '../SportContainer/SportContainer';
 import TopNewsContainer from '../TopNewsContainer/TopNewsContainer';
 import PropTypes from 'prop-types'
 
-class Main extends Component {
+export class Main extends Component {
   
 
   render() {
@@ -28,7 +28,6 @@ class Main extends Component {
 }
 
 Main.propTypes = {
-  isLoading: PropTypes.bool,
   categories: PropTypes.object
 }
 export const mapStateToProps = (state) => ({

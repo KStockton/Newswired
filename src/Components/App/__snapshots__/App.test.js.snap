@@ -36,6 +36,10 @@ exports[`App should match the snapshot 1`] = `
       path="/Main"
     />
     <Route
+      path="/Card/:id"
+      render={[Function]}
+    />
+    <Route
       component={[Function]}
     />
   </Switch>

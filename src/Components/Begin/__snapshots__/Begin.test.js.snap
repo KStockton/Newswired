@@ -6,10 +6,20 @@ exports[`Begin should match the snapshot 1`] = `
 >
   <section>
     <h1>
-      Welcome to News Wire
+      <span
+        id="welcome"
+      >
+        Welcome
+      </span>
+      <span
+        id="news-wire"
+      >
+        to News Wire
+      </span>
     </h1>
   </section>
   <Link
+    className="start"
     to="/Options"
   >
     <button

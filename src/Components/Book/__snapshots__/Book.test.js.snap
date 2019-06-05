@@ -4,11 +4,18 @@ exports[`Book should match the snapshot 1`] = `
 <article
   className="book-tile"
 >
-  <img
-    alt="emoji favorite icon"
-    className="book-nofavorite"
-    src="nolove.svg"
-  />
+  <Link
+    to="/Card/undefined"
+  >
+    <img
+      alt="emoji favorite icon"
+      className="book-nofavorite"
+      id="img-test"
+      onClick={[Function]}
+      role="button"
+      src="nolove.svg"
+    />
+  </Link>
   <img
     alt="book"
     className="book-img"
@@ -39,15 +46,22 @@ exports[`Book should match the snapshot when props are passed 1`] = `
 <article
   className="book-tile"
 >
-  <img
-    alt="emoji favorite icon"
-    className="book-nofavorite"
-    src="nolove.svg"
-  />
+  <Link
+    to="/Card/undefined"
+  >
+    <img
+      alt="emoji favorite icon"
+      className="book-nofavorite"
+      id="img-test"
+      onClick={[Function]}
+      role="button"
+      src="nolove.svg"
+    />
+  </Link>
   <img
     alt="book"
     className="book-img"
-    src="http://cool.com"
+    src="http://win.com"
   />
   <p
     className="author"
@@ -58,12 +72,12 @@ exports[`Book should match the snapshot when props are passed 1`] = `
     className="book-rank"
   >
     Rank: 
-    3
+    1
   </p>
   <p
     className="book-weeks"
   >
-    4
+    2
      weeks on list
   </p>
   <p
@@ -74,7 +88,7 @@ exports[`Book should match the snapshot when props are passed 1`] = `
   <p
     className="book-description"
   >
-    effor
+    effort
   </p>
 </article>
 `;
