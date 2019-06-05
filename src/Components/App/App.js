@@ -4,6 +4,7 @@ import Begin from '../Begin/Begin';
 import Options from '../../Containers/Options/Options';
 import Main from '../../Containers/Main/Main';
 import Error from  '../Error/Error';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Item from './../Item/Item'
 
@@ -21,7 +22,6 @@ export const App = (props) => {
         <Route path='/card/:id' render={({ match }) => {
           const allCards = [...allBooks, ...allTravel, ...allTopNews, ...allSports]
           const item = allCards.find(item => (item.id === match.params.id))
-          console.log('item', allCards)     
           if(!item){
                   return <Route component={Error}/>
                 } else {
@@ -32,6 +32,13 @@ export const App = (props) => {
       </Switch>
       </div>
   );
+}
+
+App.propTypes = {
+  allSports: PropTypes.array,
+  allBooks: PropTypes.array,
+  allTravel: PropTypes.array,
+  allTopNews: PropTypes.array,
 }
 
 export const mapStateToProps = (state) => ({

@@ -17,9 +17,9 @@ exports[`Error should match the snapshot 1`] = `
     </h3>
     <NavLink
       className="error-back"
-      to="/"
+      to="/Options"
     >
-      Back
+      Home
     </NavLink>
   </div>
   <img

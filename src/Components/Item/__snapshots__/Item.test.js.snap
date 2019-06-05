@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item should match the snapshot 1`] = `
+<div>
+  <Link
+    className="Item-back"
+    to="/main"
+  >
+    Back
+  </Link>
+  <article
+    className="Item-wrapper"
+  >
+    <section
+      className="Item-content-wrapper"
+    >
+      <img
+        alt="book"
+        className="Item-img"
+      />
+      <p
+        className="Item-author"
+      />
+      <p
+        className="Item-rank"
+      >
+        Rank: 
+      </p>
+      <p
+        className="Item-weeks"
+      >
+         weeks on list
+      </p>
+      <p
+        className="Item-title"
+      />
+      <p
+        className="Item-description"
+      />
+      <p
+        className="Item-content"
+      />
+    </section>
+  </article>
+</div>
+`;
