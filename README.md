@@ -25,6 +25,7 @@ This project was built with the following
 - NPM & Webpack
 - React & JSX
 - Router
+- Redux
 - The fetch Api
 
 ### Tested With
