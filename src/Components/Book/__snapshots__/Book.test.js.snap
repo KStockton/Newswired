@@ -5,7 +5,7 @@ exports[`Book should match the snapshot 1`] = `
   className="book-tile"
 >
   <Link
-    to="/Card/undefined"
+    to="/card/undefined"
   >
     <img
       alt="emoji favorite icon"
@@ -15,11 +15,11 @@ exports[`Book should match the snapshot 1`] = `
       role="button"
       src="nolove.svg"
     />
+    <img
+      alt="book"
+      className="book-img"
+    />
   </Link>
-  <img
-    alt="book"
-    className="book-img"
-  />
   <p
     className="author"
   />
@@ -47,7 +47,7 @@ exports[`Book should match the snapshot when props are passed 1`] = `
   className="book-tile"
 >
   <Link
-    to="/Card/undefined"
+    to="/card/undefined"
   >
     <img
       alt="emoji favorite icon"
@@ -57,12 +57,12 @@ exports[`Book should match the snapshot when props are passed 1`] = `
       role="button"
       src="nolove.svg"
     />
+    <img
+      alt="book"
+      className="book-img"
+      src="http://win.com"
+    />
   </Link>
-  <img
-    alt="book"
-    className="book-img"
-    src="http://win.com"
-  />
   <p
     className="author"
   >

@@ -9,7 +9,7 @@ const shortid = require('shortid')
 const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`;
 
 
-export class sportContainer extends Component {
+export class SportContainer extends Component {
 
    componentDidMount() {
     
@@ -58,9 +58,9 @@ export const mapDispatchToProps = (dispatch) => ({
   fetchSportsNews: (url) => dispatch(fetchSportsNews(url))
 })
 
-sportContainer.propTypes = {
+SportContainer.propTypes = {
   allSports: PropTypes.array,
   fetchSportsNews: PropTypes.func
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(sportContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(SportContainer)

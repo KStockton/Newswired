@@ -4,10 +4,14 @@ exports[`Card should match the snapshot 1`] = `
 <section
   className="CardCard-tile"
 >
-  <img
-    alt="travel"
-    className="Card-img"
-  />
+  <Link
+    to="/card/undefined"
+  >
+    <img
+      alt="travel"
+      className="Card-img"
+    />
+  </Link>
   <p
     className="Card-author"
   />
@@ -24,10 +28,14 @@ exports[`Card should match the snapshot when props are passed 1`] = `
 <section
   className="CardCard-tile"
 >
-  <img
-    alt="travel"
-    className="Card-img"
-  />
+  <Link
+    to="/card/undefined"
+  >
+    <img
+      alt="travel"
+      className="Card-img"
+    />
+  </Link>
   <p
     className="Card-author"
   >

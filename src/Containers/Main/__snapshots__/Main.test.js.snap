@@ -7,16 +7,21 @@ exports[`Main should match the snapshot 1`] = `
   <div
     className="Main-header"
   >
-    <h1
-      className="Main-title"
+    <Link
+      className="news-title"
+      to="/Options"
     >
-      News Wire
-    </h1>
+      <h1
+        className="Main-title"
+      >
+        News Wire
+      </h1>
+    </Link>
     <Nav />
   </div>
   <Connect(BooksContainer) />
   <Connect(TravelContainer) />
-  <Connect(sportContainer) />
+  <Connect(SportContainer) />
   <Connect(TopNewsContainer) />
 </div>
 `;
