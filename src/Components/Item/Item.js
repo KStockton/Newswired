@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 
-const Item = ({bookImage, rank, author, id, description, title, weeksOnList}) => {
+const Item = ({bookImage, rank, author, id, description, title, weeksOnList, articleImage}) => {
 
   return (
     <div>
@@ -11,7 +11,7 @@ const Item = ({bookImage, rank, author, id, description, title, weeksOnList}) =>
       </Link>
       <article className="Item-wrapper" id={id}>
         <section className="Item-content-wrapper">
-          <img className="Item-img" src={bookImage} alt="book"/>
+          <img className="Item-img" src={bookImage|| articleImage} alt="book"/>
           <p className="Item-author">{author}</p>
           <p className="Item-rank">Rank: {rank}</p>
           <p className="Item-weeks">{weeksOnList} weeks on list</p>

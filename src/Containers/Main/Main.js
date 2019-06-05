@@ -5,7 +5,8 @@ import TravelContainer from '../TravelContainer/TravelContainer';
 import Nav from '../../Components/Nav/Nav';
 import SportContainer from '../SportContainer/SportContainer';
 import TopNewsContainer from '../TopNewsContainer/TopNewsContainer';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom'
 
 export class Main extends Component {
   
@@ -15,7 +16,9 @@ export class Main extends Component {
     return (
       <div className="">
         <div className="Main-header">
+          <Link to="/Options" className="news-title">
           <h1 className="Main-title">News Wire</h1>
+          </Link>
           <Nav/>
         </div>
         {categories.books && <BooksContainer />}

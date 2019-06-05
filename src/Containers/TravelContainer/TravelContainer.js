@@ -19,7 +19,7 @@ export class TravelContainer extends Component {
   displayTravel = () => {
   
    return this.props.allTravel.map(location => {
-    return (<Card {...location} key={shortid.generate()} id={shortid.generate()}/>)
+    return (<Card {...location} key={shortid.generate()}/>)
    })
   }
   

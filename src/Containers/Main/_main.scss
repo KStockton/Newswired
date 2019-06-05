@@ -16,3 +16,13 @@ justify-content: space-between;
     padding-left: 15px;
   }
 }
+
+.news-title{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  
+  &:hover {
+    color: white
+  }
+}

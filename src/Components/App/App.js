@@ -21,7 +21,8 @@ export const App = (props) => {
         <Route path='/card/:id' render={({ match }) => {
           const allCards = [...allBooks, ...allTravel, ...allTopNews, ...allSports]
           const item = allCards.find(item => (item.id === match.params.id))
-                if(!item){
+          console.log('item', allCards)     
+          if(!item){
                   return <Route component={Error}/>
                 } else {
                   return <Item match={match} {...item }/>

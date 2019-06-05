@@ -19,7 +19,7 @@ export class TopNewsContainer extends Component {
 
   displayTopNews =() => {
    return this.props.allTopNews.map(location => {
-    return (<Card {...location} key={shortid.generate()} id={shortid.generate()}/>)
+    return (<Card {...location} key={shortid.generate()}/>)
    })
    }
   

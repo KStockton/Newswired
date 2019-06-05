@@ -21,11 +21,7 @@ export class sportContainer extends Component {
 
   displaySportNews = () => {
    return this.props.allSports.map(location => {
-    return (
-    <Card {...location} 
-      key={shortid.generate()} 
-      id={shortid.generate()}/>
-      )
+    return (<Card {...location} key={shortid.generate()}/>)
    })
   }
   
