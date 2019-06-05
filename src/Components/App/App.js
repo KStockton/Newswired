@@ -4,11 +4,13 @@ import Begin from '../Begin/Begin';
 import Options from '../../Containers/Options/Options';
 import Main from '../../Containers/Main/Main';
 import Error from  '../Error/Error';
+import { connect } from 'react-redux';
+import Item from './../Item/Item'
 
 
-export const App = () => { 
+export const App = (props) => { 
   
-  const {all} =this.props
+  const {allBooks, allTravel, allTopNews, allSports} =props
 
     return (
       <div className="App">
@@ -19,7 +21,13 @@ export const App = () => {
         <Route path='/Card/:id' render={({ match }) => {
           
           const allCards = [...allBooks, ...allTravel, ...allTopNews, ...allSports]
-          const matchedCard = 
+          
+          const item = allCards.find(item => item.id === parseInt(match.params.id))
+                if(!item){
+                  return <Route component={Error}/>
+                } else {
+                  return <Item match={match} {...item }/>
+                }
         }}/>
         <Route component={Error}/>
       </Switch>
@@ -27,5 +35,12 @@ export const App = () => {
   );
 }
 
+export const mapStateToProps = (state) => ({
+  allBooks: state.allBooks,
+  allTravel: state.allTravel,
+  allSports: state.allSports,
+  allTopNews: state.allTopNews,
+})
 
-export default App;
+
+export default connect(mapStateToProps, null)(App);

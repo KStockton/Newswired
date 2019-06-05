@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BooksContainer from '../../Containers/BooksContainer/BooksContainer';
-import { TravelContainer }from '../TravelContainer/TravelContainer';
+import TravelContainer from '../TravelContainer/TravelContainer';
 import Nav from '../Nav/Nav';
 import SportContainer from '../SportContainer/SportContainer';
 import TopNewsContainer from '../TopNewsContainer/TopNewsContainer';
 import PropTypes from 'prop-types'
 
-export class Main extends Component {
+class Main extends Component {
   
 
   render() {

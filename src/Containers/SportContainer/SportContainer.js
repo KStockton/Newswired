@@ -29,6 +29,7 @@ class SportsContainer extends Component {
   }
   
   render() {
+    console.log('this.propssports', this.props)
     const {error, allSports}= this.props
     const errorMsg = 
                     <div>
