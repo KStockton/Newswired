@@ -7,6 +7,7 @@ const Item = ({bookImage, rank, author, id, description, title, weeksOnList}) =>
   return (
     <div>
       <Link to={`/card/${id}`} className="Item-back">
+        Back
       </Link>
       <article className="Item-wrapper" id={id}>
         <section className="Item-content-wrapper">
