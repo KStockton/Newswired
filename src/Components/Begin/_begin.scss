@@ -1,15 +1,27 @@
 @import '../../Sass/_variables';
 
 .begin-wrapper {
-  // background-image: $splash;
-  // background-color: grey;
   background-size: 100% 100%;
   width: 100vw;
   height: 100vh;
   z-index: -1;
   
 }
-
+#welcome{
+  font-size: 17rem;
+  font-family: 'Old Standard TT', serif;
+  margin: auto;
+  position: fixed;
+  right: 25%;
+  top: 25%;
+}
+#news-wire{
+  font-size: 3rem;
+  margin: auto;
+  position: fixed;
+  top: 57%;
+  right: 12%;
+}
 
 .begin-btn {
   padding: 10px;
