@@ -1,8 +1,13 @@
-
+.book-title-header{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.7rem;
+  padding: 36px 0px;
+  box-shadow: 2px 2px 2px #cab6b6;
+}
 .book-wrapper {
-display: flex;
-overflow: scroll;
-width: 100vw;
+  display: flex;
+  overflow: scroll;
+  width: 100vw;
 }
 
 .error-text {
