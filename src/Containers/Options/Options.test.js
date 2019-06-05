@@ -1,7 +1,7 @@
 import React from 'react'
 import { Options, mapStateToProps, mapDispatchToProps} from './Options'
 import { shallow } from 'enzyme'
-import { setCategories} from '../../actions/index'
+import { setCategories } from '../../actions/index'
 
 
 describe('Option', () => {
@@ -9,7 +9,9 @@ describe('Option', () => {
   let mockcategories = {categories:{books: true, travel: true, topNews: true, sportsNews: true}}
   let mockSetCategories = jest.fn()
   beforeEach(() => {
-    wrapper = shallow(<Options categories={mockcategories} setCategories={mockSetCategories}/>)
+    wrapper = shallow(<Options 
+      categories={mockcategories} 
+      setCategories={mockSetCategories}/>)
   })
 
   it('should match the snapshot', () => {

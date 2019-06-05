@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom'
 const shortid = require('shortid')
 const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
-class SportsContainer extends Component {
+
+export class sportContainer extends Component {
 
    componentDidMount() {
     
@@ -59,9 +60,9 @@ export const mapDispatchToProps = (dispatch) => ({
   fetchSportsNews: (url) => dispatch(fetchSportsNews(url))
 })
 
-SportsContainer.propTypes = {
+sportContainer.propTypes = {
   allSports: PropTypes.array,
   fetchSportsNews: PropTypes.func
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SportsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(sportContainer)
