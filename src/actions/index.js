@@ -32,3 +32,8 @@ export const getTopNews = (news) => ({
   type: 'ALL_TOP_NEWS',
   news
 })
+
+export const toggleFavorite = (id) => ({
+  type: 'TOGGLE_FAVORITE',
+  id
+})

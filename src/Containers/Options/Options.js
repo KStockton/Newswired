@@ -6,9 +6,6 @@ import { connect } from 'react-redux';
 import { setCategories } from '../../actions/index';
 import PropTypes from 'prop-types';
 
-
-// import PropTypes from 'prop-types'
-
 export class Options extends Component {
 
   
@@ -28,7 +25,6 @@ export class Options extends Component {
           <h1 className="Options-title">News Wire</h1>
         </div>
         <header className="Options-news">
-          {/* <p className="Options-select">Select Your News</p> */}
           <h4 className="Options-select-choice">Please Select 3 Categories</h4>
         </header>
         <div className="Options-wrapper">

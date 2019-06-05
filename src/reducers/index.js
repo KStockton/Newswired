@@ -6,6 +6,7 @@ import { hasErroredReducer } from './hasErroredReducer';
 import { allTopTravelReducer } from '../reducers/allTopTravelReducer';
 import { allSportNewsReducer } from "./allSportNewsReducer";
 import { allTopNewsReducer } from './allTopNewsReducer';
+import { favoriteReducer } from "./favoriteReducer";
 
 
 const rootReducer = combineReducers({
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   allSports: allSportNewsReducer,
   categories: categoryReducer,
   allTopNews: allTopNewsReducer,
+  favorites: favoriteReducer,
   error: hasErroredReducer
 });
 

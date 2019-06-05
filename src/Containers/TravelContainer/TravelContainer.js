@@ -9,20 +9,22 @@ const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 
 export class TravelContainer extends Component {
 
- async componentDidMount() {
-    if(this.props.allTravel.length == 0){
+ componentDidMount() {
+    if(this.props.allTravel.length === 0){
       const travelUrl = `https://newsapi.org/v2/everything?q=travel-news&language=en&page=1&domains=vice.com&apiKey=${API_KEY}`
       this.props.fetchTopTravel(travelUrl)
     }
   }
  
-  displayTravel =() => {
+  displayTravel = () => {
+  
    return this.props.allTravel.map(location => {
     return (<Card {...location} key={shortid.generate()} id={shortid.generate()}/>)
    })
   }
   
   render() {
+    console.log(this.props)
     const {error, allTravel}= this.props
     const errorMsg = 
                     <div>
@@ -34,11 +36,11 @@ export class TravelContainer extends Component {
    
     return (
       <section>
-      <h2 className="Travel-header">Vice Travel News</h2>
-      {(error !== '' && allTravel.length === 0) && errorMsg}
-      <div className="TravelContainer-wrapper Card-wrapper">
-        {displayTravel}
-      </div>
+        <h2 className="Travel-header">Vice Travel News</h2>
+        {(error !== '' && allTravel.length === 0) && errorMsg}
+        <div className="TravelContainer-wrapper Card-wrapper">
+          {displayTravel}
+        </div>
       </section>
     )
   }

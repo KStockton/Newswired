@@ -11,7 +11,7 @@ const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 export class TopNewsContainer extends Component {
 
    componentDidMount() {
-    if(this.props.allTopNews.length == 0){
+    if(this.props.allTopNews.length === 0){
        const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
        this.props.fetchTopNews(topNewsUrl)
     }

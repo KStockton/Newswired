@@ -9,7 +9,8 @@ const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 class SportsContainer extends Component {
 
    componentDidMount() {
-    if(this.props.allSports.length == 0){
+    
+    if(this.props.allSports.length === 0){
       const sportNewsUrl = 
       `https://newsapi.org/v2/everything?q=sports&language=en&from=2019-06-03&page=1&domains=espn.com&apiKey=${API_KEY}`;
       this.props.fetchSportsNews(sportNewsUrl)
@@ -19,11 +20,16 @@ class SportsContainer extends Component {
 
   displaySportNews = () => {
    return this.props.allSports.map(location => {
-    return (<Card {...location} key={shortid.generate()} id={shortid.generate()}/>)
+    return (
+    <Card {...location} 
+      key={shortid.generate()} 
+      id={shortid.generate()}/>
+      )
    })
-   }
+  }
   
   render() {
+    console.log('this.propssports', this.props)
     const {error, allSports}= this.props
     const errorMsg = 
                     <div>
@@ -32,13 +38,14 @@ class SportsContainer extends Component {
                     </div>
 
     const displaySportNews = this.displaySportNews()
+
     return (
       <section>
-      <h2 className="Sports-header">Sport News</h2>
-      <div className="sports-wrapper Card-wrapper">
-      {(error !== '' && allSports.length === 0) && errorMsg}
-        {displaySportNews}
-      </div>
+        <h2 className="Sports-header">Sport News</h2>
+          <div className="sports-wrapper Card-wrapper">
+            {(error !== '' && allSports.length === 0) && errorMsg}
+            {displaySportNews}
+          </div>
       </section>
     )
   }
