@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTopNews } from '../../Thunks/fetchTopNews';
 import PropTypes from 'prop-types';
+import Loading from '../../Components/Loading/Loading';
 import {Link} from 'react-router-dom'
 import Card from '../../Components/Card/Card';
 const shortid = require('shortid')
@@ -37,6 +38,7 @@ export class TopNewsContainer extends Component {
       <h2 className="TopNews-header">Top News</h2>
       <div className="TravelContainer-wrapper Card-wrapper">
       {(error !== '' && allTopNews.length === 0 ) && errorMsg}
+      {(allTopNews.length === 0 && !error !== '') && <Loading/>}
         {displayTopNews}
       </div>
       </section>

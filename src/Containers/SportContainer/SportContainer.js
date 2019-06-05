@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import { fetchSportsNews } from '../../Thunks/fetchSportsNews';
 import Card from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
+import Loading from '../../Components/Loading/Loading'
 import {Link} from 'react-router-dom'
 const shortid = require('shortid')
-const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
+const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`;
+
 
 export class sportContainer extends Component {
 
@@ -40,6 +42,7 @@ export class sportContainer extends Component {
         <h2 className="Sports-header">Sport News</h2>
           <div className="sports-wrapper Card-wrapper">
             {(error !== '' && allSports.length === 0) && errorMsg}
+            {(allSports.length === 0 && !error !== '') && <Loading/>}
             {displaySportNews}
           </div>
       </section>

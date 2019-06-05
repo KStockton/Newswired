@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
 import PropTypes from 'prop-types';
 import Card from '../../Components/Card/Card';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Loading from '../../Components/Loading/Loading';
 const shortid = require('shortid')
 const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 
@@ -37,6 +38,7 @@ export class TravelContainer extends Component {
       <section>
         <h2 className="Travel-header">Vice Travel News</h2>
         {(error !== '' && allTravel.length === 0) && errorMsg}
+        {(allTravel.length === 0 && !error !== '') && <Loading/>}
         <div className="TravelContainer-wrapper Card-wrapper">
           {displayTravel}
         </div>

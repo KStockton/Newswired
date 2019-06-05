@@ -3,7 +3,8 @@ import Book from '../../Components/Book/Book';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchAllBooks } from './../../Thunks/fetchAllBooks';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Loading from '../../Components/Loading/Loading';
 import {NYT_KEY} from '../../Utility/Config/Key';
 const shortid = require('shortid');
 
@@ -43,6 +44,7 @@ async componentDidMount() {
       <div className='book-wrapper'>
       <React.Fragment>
       {(error !== '' && allBooks.length === 0) && errorMsg}
+      {(allBooks.length === 0 && !error !== '') && <Loading/>}
         {displayBooks}
       </React.Fragment>
       </div>
