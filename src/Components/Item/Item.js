@@ -17,7 +17,7 @@ const Item = ({bookImage, rank, author, id, description, title, weeksOnList, art
           <p className="Item-weeks">{weeksOnList} weeks on list</p>
           <p className="Item-title">{title}</p>
           <p className="Item-description">{description}</p>
-          <p>{content || null}</p>
+          <p className="Item-content">{content || null}</p>
         </section>
       </article >
     </div>
