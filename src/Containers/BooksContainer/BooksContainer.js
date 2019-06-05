@@ -3,8 +3,8 @@ import Book from '../../Components/Book/Book';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchAllBooks } from '../../Thunks/fetchAllBooks';
+import {Link} from 'react-router-dom'
 import {NYT_KEY} from '../../Utility/Config/Key';
-import Error from '../../Components/Error/Error'
 const shortid = require('shortid');
 
  export class BooksContainer extends Component {
@@ -22,21 +22,26 @@ async componentDidMount() {
   displayBooks = () => {
   if(this.props.allBooks.length > 0){
     return this.props.allBooks.map(book => {
-      return (<Book {...book} key={shortid.generate()} />
+      return (<Book {...book} key={shortid.generate() } />
       )
     })
   }
   }
 
   render() {
-    const errorMsg = <h2>{this.props.error}</h2>
+    const {error, allBooks}= this.props
+    const errorMsg = 
+                    <div>
+                      <h2>{error}</h2>
+                      <Link to="/Options">Back</Link>
+                    </div>
     const displayBooks = this.displayBooks()    
     return (
       <section>
         <h2 className="book-title-header"> New York Times Best Sellers</h2>
       <div className='book-wrapper'>
+      {(error !== '' && allBooks.length === 0) && errorMsg}
         {displayBooks}
-        <p className="error-text">{this.props.error && errorMsg }</p>
       </div>
       </section>
     )

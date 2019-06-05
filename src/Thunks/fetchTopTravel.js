@@ -15,7 +15,7 @@ export const fetchTopTravel = (url) => {
       dispatch(action.getTopTravel(data))
       dispatch(action.isLoading(false))
     } catch(error) {
-      dispatch(action.hasErrored(error.message))
+      dispatch(action.hasErrored(error.message, 'travel'))
     }
   }
 }

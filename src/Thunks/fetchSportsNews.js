@@ -15,7 +15,7 @@ export const fetchSportsNews = (url) => {
       dispatch(action.getSportsNews(data))
       dispatch(action.isLoading(false))
     } catch(error) {
-      dispatch(action.hasErrored(error.message))
+      dispatch(action.hasErrored(error.message, 'sportsNews'))
     }
   }
 }

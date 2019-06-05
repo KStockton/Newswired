@@ -15,7 +15,7 @@ export const fetchTopNews = (url) => {
       dispatch(action.getTopNews(data))
       dispatch(action.isLoading(false))
     } catch(error) {
-      dispatch(action.hasErrored(error.message))
+      dispatch(action.hasErrored(error.message, 'topNews'))
     }
   }
 }
