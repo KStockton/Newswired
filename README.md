@@ -24,6 +24,7 @@ This project was built with the following
 - SCSS
 - NPM & Webpack
 - React & JSX
+- Router
 - The fetch Api
 
 ### Tested With
