@@ -9,9 +9,10 @@
 @import '../Containers/Main/main';
 @import '../Components/Book/book';
 @import '../Containers/Nav/nav';
-@import '../Containers/TravelContainer/_travelContainer.scss';
+@import '../Containers/TravelContainer/travelContainer';
 @import '../Components/Card/Card';
-@import '../Containers/SportContainer/_sportsContainer.scss';
+@import '../Containers/SportContainer/sportsContainer';
+@import '../Containers/TopNewsContainer/topNewsContainer';
 
 * {
   margin: 0;
@@ -27,10 +28,4 @@ body {
   font-family: 'Noto Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }

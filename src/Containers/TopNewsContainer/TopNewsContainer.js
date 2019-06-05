@@ -15,12 +15,6 @@ class TravelContainer extends Component {
     }
   }
 
-
-
-      // const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&${API_KEY}`
-      // this.props.fetchTopNews(topNewsUrl)
-      
-
   displayTopNews =() => {
    return this.props.allTopNews.map(location => {
     return (<Card {...location} key={shortid.generate()} id={shortid.generate()}/>)
@@ -32,7 +26,7 @@ class TravelContainer extends Component {
    
     return (
       <section>
-      <h2 className="Travel-header">Top News</h2>
+      <h2 className="TopNews-header">Top News</h2>
       <div className="TravelContainer-wrapper Card-wrapper">
         {displayTopNews}
       </div>
