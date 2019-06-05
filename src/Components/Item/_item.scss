@@ -77,8 +77,21 @@
 .Item-title{
   color:white;
   padding: 8px;
+  max-width: 544px;
 }
 .Item-description{
   color:white;
   padding: 8px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.Item-img {
+  max-height: 300px;
+  max-width: 500px;
+}
+.Item-content {
+  color: white;
+  max-width: 500px;
+  text-align: left
 }
