@@ -1,5 +1,9 @@
 @import '../../Sass/_variables';
 
+.Options-select-choice {
+  font-size: 1.7rem;
+  font-family: 'Old Standard TT', serif;
+}
 .Options-header {
   background-color: #ccd0d56b;
   margin: 0;
@@ -37,6 +41,9 @@
   height: 87vh;
   display: flex;
   justify-content: space-evenly;
+  position: fixed;
+  top: 41%;
+  margin: auto;
 }
 
 .Options-btn {
@@ -113,7 +120,7 @@
 
 .Options-continue {
   position: fixed;
-  top: 61%;
+  top: 77%;
   left: 47%;
   margin: 0 auto;
 }

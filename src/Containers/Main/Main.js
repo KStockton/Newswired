@@ -5,7 +5,9 @@ import TravelContainer from '../TravelContainer/TravelContainer';
 import Loading from '../../Components/Loading/Loading';
 import Nav from '../Nav/Nav';
 import SportContainer from '../SportContainer/SportContainer';
+import TopNewsContainer from '../TopNewsContainer/TopNewsContainer'
 import PropTypes from 'prop-types'
+
 
 // const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 // import { cleanResponse } from '../../Utility/cleanResponse';
@@ -15,16 +17,6 @@ import PropTypes from 'prop-types'
 class Main extends Component {
   
 
-  componentDidMount() {
-
-      // } else if(topic === 'topNews' && this.props.allTopNews.length === 0){
-        // const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&${API_KEY}`
-          //this.props.fetchTopNews(topNewsUrl)
-
-      // } else if(topic === 'sportsNews' && this.props.allSports.length === 0){
-        // const sportsUrl = `https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=${API_KEY}`
-        //this.props.fetchUSSports(sportsURL)
-      }
 
 
       toggleFavorite = (type, name) => {
@@ -46,14 +38,13 @@ class Main extends Component {
         {categories.books && <BooksContainer toggleFavorite={this.toggleFavorite} />}
         {categories.travel && <TravelContainer toggleFavorite={this.toggleFavorite} />}
         {categories.sportsNews && <SportContainer toggleFavorite={this.toggleFavorite} />}
-        {categories.topNews && <TravelContainer toggleFavorite={this.toggleFavorite} />}
+        {categories.topNews && <TopNewsContainer toggleFavorite={this.toggleFavorite} />}
       </div>
     )
   }
 }
 
 export const mapStateToProps = (state) => ({
- isLoading: state.isLoading,
  categories: state.categories
 })
 

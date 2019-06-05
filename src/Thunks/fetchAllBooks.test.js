@@ -8,7 +8,7 @@ describe('fetchAllBooks', () => {
   beforeEach(() => {
     mockUrl = "http://www.workhard.com"
     mockDispatch = jest.fn()
-    mockBook = [{title: 'Fire and Ice'}, {title: 'Shadow Avengenr'}]
+    mockBook = [{title: 'Fire and Ice'}, {title: 'Shadow Avengeners'}]
   })
   it('should dispatch isLoading(true)', async() => {
     const thunk = fetchAllBooks(mockUrl)

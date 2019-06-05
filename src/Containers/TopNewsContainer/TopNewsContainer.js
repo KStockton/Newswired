@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchTopTravel } from '../../Thunks/fetchTopTravel';
+import { fetchTopNews } from '../../Thunks/fetchTopNews';
 import Card from '../../Components/Card/Card';
 const shortid = require('shortid')
 const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
@@ -9,13 +9,11 @@ const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 class TravelContainer extends Component {
 
    componentDidMount() {
-    if(this.props.allTravel.length == 0){
-      const travelUrl = `https://newsapi.org/v2/everything?q=travel-news&language=en&page=1&domains=vice.com&apiKey=${API_KEY}`
-       this.props.fetchTopTravel(travelUrl)
+    if(this.props.allTopNews.length == 0){
+       const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
+       this.props.fetchTopNews(topNewsUrl)
     }
   }
-
-
 
 
 
@@ -23,20 +21,20 @@ class TravelContainer extends Component {
       // this.props.fetchTopNews(topNewsUrl)
       
 
-  displayTravel =() => {
-   return this.props.allTravel.map(location => {
+  displayTopNews =() => {
+   return this.props.allTopNews.map(location => {
     return (<Card {...location} key={shortid.generate()} id={shortid.generate()}/>)
    })
    }
   
   render() {
-    const displayTravel = this.displayTravel()
+    const displayTopNews = this.displayTopNews()
    
     return (
       <section>
-      <h2 className="Travel-header">Vice Travel News</h2>
+      <h2 className="Travel-header">Top News</h2>
       <div className="TravelContainer-wrapper Card-wrapper">
-        {displayTravel}
+        {displayTopNews}
       </div>
       </section>
     )
@@ -45,12 +43,11 @@ class TravelContainer extends Component {
 
 
 export const mapStateToProps = (state) => ({
-  allTravel: state.allTravel
-
+  allTopNews: state.allTopNews
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchTopTravel: (url) => dispatch(fetchTopTravel(url)),
+  fetchTopNews: (url) => dispatch(fetchTopNews(url)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TravelContainer)

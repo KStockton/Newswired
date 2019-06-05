@@ -33,7 +33,7 @@ async componentDidMount() {
     const displayBooks = this.displayBooks()    
     return (
       <section>
-        <h2>Top NewYork Times Books</h2>
+        <h2 className="book-title-header"> New York Times Best Sellers</h2>
       <div className='book-wrapper'>
         {displayBooks}
         <p className="error-text">{this.props.error && errorMsg }</p>

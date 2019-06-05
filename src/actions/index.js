@@ -27,3 +27,8 @@ export const getSportsNews = (sports) => ({
   type: 'ALL_SPORTS',
   sports
 })
+
+export const getTopNews = (news) => ({
+  type: 'ALL_TOP_NEWS',
+  news
+})
