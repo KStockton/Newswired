@@ -1,5 +1,16 @@
 @import '../../Sass/_variables';
 
+
+.Options-background {
+  background-image: url('../Assets/fetch.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  width: 100vw;
+  background-position-y: inherit;
+}
 .Options-select-choice {
   font-size: 1.7rem;
   font-family: 'Old Standard TT', serif;
@@ -116,6 +127,10 @@
   height: 49px;
   display: flex;
   align-items: center;
+  background-color: #f6f8fb;
+  position: fixed;
+  top: 75%;
+  right: 47%;
 }
 
 .Options-continue {
