@@ -1,12 +1,16 @@
 @import '../../Sass/_variables';
 
 .begin-wrapper {
-  background-size: 100% 100%;
-  width: 100vw;
+  background-image: url('../Assets/splash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-  z-index: -1;
-  
+  margin: 0;
+  position: fixed;
+  width: 100vw;
+  background-position-y: center;
 }
+
 #welcome{
   font-size: 17rem;
   font-family: 'Old Standard TT', serif;
@@ -14,6 +18,7 @@
   position: fixed;
   right: 25%;
   top: 25%;
+  color: white;
 }
 #news-wire{
   font-size: 3rem;
@@ -21,6 +26,15 @@
   position: fixed;
   top: 57%;
   right: 12%;
+  color: #837a7a;
+}
+
+.start{
+  position: fixed;
+  bottom: 22%;
+  right: 14%;
+  margin: auto;
+  z-index: 2;
 }
 
 .begin-btn {
@@ -32,7 +46,7 @@
   border-radius: 5px;
   text-transform: uppercase;
   z-index: auto;
-  box-shadow: 3px 3px 2px #837a7a;
+  box-shadow: 3px 3px 2px #52000000;
 }
 .begin-btn:hover{
     padding-left: 10px;
@@ -41,6 +55,7 @@
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2cffc9), color-stop(1, #ffffff));
     color: white;
     background: black;
+    box-shadow: inset -1px 0px 8px 2px white;
 }
 
 .begin-btn::before {
