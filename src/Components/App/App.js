@@ -18,11 +18,9 @@ export const App = (props) => {
         <Route exact path="/" component={Begin}/>
         <Route exact path="/Options" component={Options}/>
         <Route path="/Main" component={Main}/>
-        <Route path='/Card/:id' render={({ match }) => {
-          
+        <Route path='/card/:id' render={({ match }) => {
           const allCards = [...allBooks, ...allTravel, ...allTopNews, ...allSports]
-          
-          const item = allCards.find(item => item.id === parseInt(match.params.id))
+          const item = allCards.find(item => (item.id === match.params.id))
                 if(!item){
                   return <Route component={Error}/>
                 } else {

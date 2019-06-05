@@ -24,7 +24,6 @@ export class TravelContainer extends Component {
   }
   
   render() {
-    console.log(this.props)
     const {error, allTravel}= this.props
     const errorMsg = 
                     <div>

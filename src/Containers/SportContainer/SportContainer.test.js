@@ -1,6 +1,8 @@
 import React from 'react'
 import { SportContainer, mapStateToProps, mapDispatchToProps} from './SportContainer'
 import { shallow } from 'enzyme';
+import { fetchSportsNews } from '../../Thunks/fetchSportsNews'
+jest.mock('../../Thunks/fetchAllBooks')
 
 describe('SportsContainer',() => {
   let wrapper;
@@ -25,4 +27,14 @@ describe('MSTP',() =>{
     const result = mapStateToProps(mockState)
     expect(result).toEqual(mockState)
   }) 
-}) 
+});
+describe('MDTP',() =>{
+  const mockDispatch = jest.fn()
+  const mappedProps = mapDispatchToProps(mockDispatch)
+  xit('should dispatch action when correct params passed', () => {
+    const mockUrl = 'www.cool.com'
+    const actionToDispatch = fetchSportsNews(mockUrl)
+    mappedProps.fetchSportsNews(mockUrl)
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+  }) 
+});

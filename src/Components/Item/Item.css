@@ -1,0 +1,10 @@
+.Item-wrapper {
+  background-image: url('../../Assets/solo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  width: 100vw;
+  background-position-y: center;
+}

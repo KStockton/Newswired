@@ -8,11 +8,12 @@
 @import '../Components/Loading/loading.scss';
 @import '../Containers/Main/main';
 @import '../Components/Book/book';
-@import '../Containers/Nav/nav';
+@import '../Components/Nav/nav';
 @import '../Containers/TravelContainer/travelContainer';
 @import '../Components/Card/Card';
 @import '../Containers/SportContainer/sportContainer';
 @import '../Containers/TopNewsContainer/topNewsContainer';
+@import '../Components/Item/Item.css';
 
 * {
   margin: 0;

@@ -30,7 +30,6 @@ async componentDidMount() {
   }
 
   render() {
-    console.log(this.props)
     const {error, allBooks}= this.props
     const errorMsg = 
                     <div>
@@ -68,7 +67,4 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default 
-connect(mapStateToProps, 
-  mapDispatchToProps)
-  (BooksContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(BooksContainer)
