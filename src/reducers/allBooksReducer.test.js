@@ -26,5 +26,5 @@ describe('allBooksReducer', () => {
     const results = allBooksReducer(mockState, mockAction)
 
    expect(results).toEqual(mockAction)
-  })
-})
+  });
+});
