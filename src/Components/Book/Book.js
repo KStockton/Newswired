@@ -4,13 +4,14 @@ import love from '../../Assets/love.svg'
 import nolove from '../../Assets/nolove.svg'
 
 
-const Book = ({bookImage, rank, author, id, description, title, weeksOnList, isfavorited}) => {
+const Book = ({bookImage, rank, author, id, description, title, weeksOnList, isfavorited, toggleFavorite}) => {
 
   return (
     <article className="book-tile" id={id}>
         <img className={isfavorited ? 'book-favorite' : 'book-nofavorite'}
           src={isfavorited ? love : nolove} 
           alt="emoji favorite icon"
+          // onClick={this.props.toggleFavorite}
         />
         <img className="book-img" src={bookImage} alt="book"/>
         <p className="author">{author}</p>

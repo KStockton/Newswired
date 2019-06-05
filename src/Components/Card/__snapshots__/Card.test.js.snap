@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+<section
+  className="CardCard-tile"
+>
+  <img
+    alt="travel"
+    className="Card-img"
+  />
+  <p
+    className="Card-author"
+  />
+  <p
+    className="Card-title"
+  />
+  <p
+    className="Card-description"
+  />
+</section>
+`;
+
+exports[`Card should match the snapshot when props are passed 1`] = `
+<section
+  className="CardCard-tile"
+>
+  <img
+    alt="travel"
+    className="Card-img"
+  />
+  <p
+    className="Card-author"
+  >
+    Michele Obama
+  </p>
+  <p
+    className="Card-title"
+  >
+    Overcome
+  </p>
+  <p
+    className="Card-description"
+  >
+    effor
+  </p>
+</section>
+`;
