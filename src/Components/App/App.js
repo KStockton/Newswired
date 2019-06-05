@@ -7,6 +7,8 @@ import Error from  '../Error/Error';
 
 
 export const App = () => { 
+  
+  const {all} =this.props
 
     return (
       <div className="App">
@@ -14,6 +16,11 @@ export const App = () => {
         <Route exact path="/" component={Begin}/>
         <Route exact path="/Options" component={Options}/>
         <Route path="/Main" component={Main}/>
+        <Route path='/Card/:id' render={({ match }) => {
+          
+          const allCards = [...allBooks, ...allTravel, ...allTopNews, ...allSports]
+          const matchedCard = 
+        }}/>
         <Route component={Error}/>
       </Switch>
       </div>

@@ -10,7 +10,7 @@ const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 export class TravelContainer extends Component {
 
  async componentDidMount() {
-    if(this.props.allTravel.length == 0){
+    if(this.props.allTravel.length === 0){
       const travelUrl = `https://newsapi.org/v2/everything?q=travel-news&language=en&page=1&domains=vice.com&apiKey=${API_KEY}`
       this.props.fetchTopTravel(travelUrl)
     }
