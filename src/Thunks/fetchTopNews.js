@@ -11,7 +11,6 @@ export const fetchTopNews = (url) => {
       throw Error(response.sendText)
     }
       const data = await response.json()
-      console.log('data', data)
       dispatch(action.getTopNews(data))
       dispatch(action.isLoading(false))
     } catch(error) {

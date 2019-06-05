@@ -7,7 +7,7 @@ import {toggleFavorite} from '../../actions/index';
 import {Link} from 'react-router-dom'
 
 
-class Book extends Component{
+export class Book extends Component{
 
 
   render() {
@@ -16,14 +16,16 @@ class Book extends Component{
 
       return (
         <article className="book-tile" id={id}>
-          <Link to={`/Card/${id}`}>
+          <Link to={`/card/${id}`}>
             <img className={isfavorited ? 'book-favorite' : 'book-nofavorite'}
               src={isfavorited ? love : nolove} 
               alt="emoji favorite icon"
               onClick={() => this.props.toggleFavorite(id)}
+              role="button"
+              id="img-test"
               />
-              </Link>
             <img className="book-img" src={bookImage} alt="book"/>
+              </Link>
             <p className="author">{author}</p>
             <p className="book-rank">Rank: {rank}</p>
             <p className="book-weeks">{weeksOnList} weeks on list</p>

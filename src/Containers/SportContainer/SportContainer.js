@@ -3,10 +3,13 @@ import { connect } from 'react-redux';
 import { fetchSportsNews } from '../../Thunks/fetchSportsNews';
 import Card from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
+import Loading from '../../Components/Loading/Loading'
 import {Link} from 'react-router-dom'
 const shortid = require('shortid')
-const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
-class SportsContainer extends Component {
+const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`;
+
+
+export class sportContainer extends Component {
 
    componentDidMount() {
     
@@ -20,16 +23,11 @@ class SportsContainer extends Component {
 
   displaySportNews = () => {
    return this.props.allSports.map(location => {
-    return (
-    <Card {...location} 
-      key={shortid.generate()} 
-      id={shortid.generate()}/>
-      )
+    return (<Card {...location} key={shortid.generate()}/>)
    })
   }
   
   render() {
-    console.log('this.propssports', this.props)
     const {error, allSports}= this.props
     const errorMsg = 
                     <div>
@@ -44,6 +42,7 @@ class SportsContainer extends Component {
         <h2 className="Sports-header">Sport News</h2>
           <div className="sports-wrapper Card-wrapper">
             {(error !== '' && allSports.length === 0) && errorMsg}
+            {(allSports.length === 0 && !error !== '') && <Loading/>}
             {displaySportNews}
           </div>
       </section>
@@ -59,9 +58,9 @@ export const mapDispatchToProps = (dispatch) => ({
   fetchSportsNews: (url) => dispatch(fetchSportsNews(url))
 })
 
-SportsContainer.propTypes = {
+sportContainer.propTypes = {
   allSports: PropTypes.array,
   fetchSportsNews: PropTypes.func
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SportsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(sportContainer)

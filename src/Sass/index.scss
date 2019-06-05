@@ -3,16 +3,17 @@
 @import '../Components/App/App.scss';
 @import '../Components/Begin/_begin.scss';
 @import '../Containers/Options/_options.scss';
-@import '../Containers/BooksContainer/bookscontainer.scss';
+@import '../Containers/BooksContainer/booksContainer.scss';
 @import '../Components/Error/error.scss';
 @import '../Components/Loading/loading.scss';
 @import '../Containers/Main/main';
 @import '../Components/Book/book';
-@import '../Containers/Nav/nav';
+@import '../Components/Nav/nav';
 @import '../Containers/TravelContainer/travelContainer';
 @import '../Components/Card/Card';
-@import '../Containers/SportContainer/sportsContainer';
+@import '../Containers/SportContainer/sportContainer';
 @import '../Containers/TopNewsContainer/topNewsContainer';
+@import '../Components/Item/item';
 
 * {
   margin: 0;
