@@ -1,7 +1,7 @@
 import React from 'react';
-import {BookContainer, mapStateToProps, mapDispatchToProps} from './BooksContainer';
+import {BookContainer, mapStateToProps} from './BooksContainer';
 import { shallow  } from 'enzyme';
-import { fetchAllBooks} from './../../Thunks/fetchAllBooks'
+// import { fetchAllBooks} from './../../Thunks/fetchAllBooks'
 jest.mock('../../Thunks/fetchAllBooks')
 
 
