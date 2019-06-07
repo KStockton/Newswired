@@ -1,5 +1,6 @@
 import { allBooksReducer } from "./allBooksReducer";
 import {cleanNYTBooks} from './../Utility/Cleaners/cleanNYTBooks'
+import { isExpressionWrapper } from "@babel/types";
 
 
 
@@ -12,19 +13,11 @@ describe('allBooksReducer', () => {
     expect(results).toEqual(mockState)
   })
   it('should return spread allbook into state', () => {
-    let mockAction = [{
-    type: 'ALL_BOOKS', 
-    bookImage:'www.cool.com', 
-    rank: 4, 
-    author: 'whodey', 
-    id:'2jd;', 
-    description:'we note', 
-    title: 'cheers', 
-    weeksOnList: 100, 
-    isfavorited: false}]
     const mockState = []
+    const expected = [{name: 'pidgey2'}]
+    let mockAction = {type: 'ALL_BOOKS', books: expected}
     const results = allBooksReducer(mockState, mockAction)
 
-   expect(results).toEqual(mockAction)
+    expect(results).toEqual(expected)
   });
 });
