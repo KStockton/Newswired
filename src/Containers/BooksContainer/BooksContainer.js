@@ -66,7 +66,7 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   fetchAllBooks: (url) => dispatch(fetchAllBooks(url))
-})
+});
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksContainer)

@@ -1,4 +1,6 @@
-import * as action from '../actions/index'
+import * as action from '../actions/index';
+import { cleanNYTBooks } from '../Utility/Cleaners/cleanNYTBooks'
+
 
 
 
@@ -13,8 +15,9 @@ export const fetchAllBooks = (url) => {
         throw new Error(response.statusText)
       }
       const books = await response.json()
+      const cleanBooks = cleanNYTBooks(books)
       dispatch(action.isLoading(false));
-      dispatch(action.getAllBooks(books))
+      dispatch(action.getAllBooks(cleanBooks))
     } catch (error) {
       dispatch(action.hasErrored(error.message, 'books'))
     }

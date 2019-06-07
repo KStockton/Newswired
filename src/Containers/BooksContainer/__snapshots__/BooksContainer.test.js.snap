@@ -1,3 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BookContainer should match the snapshot 1`] = `undefined`;
+exports[`BookContainer should match the snapshot 1`] = `
+<section>
+  <h2
+    className="book-title-header"
+  >
+     New York Times Best Sellers
+  </h2>
+  <div
+    className="book-wrapper"
+  >
+    <Connect(Book)
+      key="yjdUfGhHF"
+      title="Golden"
+    />
+    <Connect(Book)
+      key="OBaviHQr-X"
+      title="Xavier"
+    />
+  </div>
+</section>
+`;
+
+exports[`BookContainer should match the snapshot the books are passed as props 1`] = `
+<section>
+  <h2
+    className="book-title-header"
+  >
+     New York Times Best Sellers
+  </h2>
+  <div
+    className="book-wrapper"
+  >
+    <Connect(Book)
+      key="JOLOjMTCbU"
+      title="Press, Press, Press, Press, Press"
+    />
+  </div>
+</section>
+`;
+
+exports[`BookContainer should match the snapshot when there is an error message 1`] = `
+<section>
+  <h2
+    className="book-title-header"
+  >
+     New York Times Best Sellers
+  </h2>
+  <div
+    className="book-wrapper"
+  >
+    <Loading />
+  </div>
+</section>
+`;
