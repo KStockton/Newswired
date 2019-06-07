@@ -1,7 +1,7 @@
 import React from 'react';
 import {BooksContainer, mapStateToProps} from './BooksContainer';
 import { shallow  } from 'enzyme';
-// import { fetchAllBooks} from './../../Thunks/fetchAllBooks'
+import { fetchAllBooks} from './../../Thunks/fetchAllBooks'
 jest.mock('../../Thunks/fetchAllBooks')
 
 
@@ -43,10 +43,25 @@ describe('BookContainer', () => {
    let books = wrapper.instance().displayBooks().length 
     expect(books).toBe(2)
   });
-  it('should call fetchAllBooks when componentDidMount is called',() => {
-    wrapper.update()
-    expect(mockFetchFunction).toHaveBeenCalled()
+  it('should not call fetchAllBooks when the allBooks length is greater than 0', () => {  
+    let mockBooks = [{title:'Golden'},{title:'Xavier'}]
+    wrapper = shallow(<BooksContainer
+      allBooks={mockBooks}
+      error={mockError}
+      />)
+    wrapper.instance().componentDidMount()
+    expect(fetchAllBooks).not.toHaveBeenCalled()
   })
+  it('should call fetchAllBooks when the allBooks length is 0', () => {  
+    let mockBooks = []
+    wrapper = shallow(<BooksContainer
+      allBooks={mockBooks}
+      error={mockError}
+      fetchAllBooks={mockFetchFunction}
+      />)
+    wrapper.instance().componentDidMount()
+    expect(mockFetchFunction).toHaveBeenCalled()
+  });
 
 });
   describe('MSTP',() =>{

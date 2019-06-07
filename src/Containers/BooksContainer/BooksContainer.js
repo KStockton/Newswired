@@ -11,7 +11,7 @@ const shortid = require('shortid');
  export class BooksContainer extends Component {
    
   
-async componentDidMount() {
+componentDidMount() {
   if(this.props.allBooks.length === 0){
      const topBooks = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?&api-key=${NYT_KEY}`
      this.props.fetchAllBooks(topBooks)
