@@ -38,6 +38,14 @@ describe('BookContainer', () => {
     wrapper.update()
     wrapper.instance().render()
     expect(wrapper.instance().displayBooks).toHaveBeenCalled()
+  });
+  it('should render books when all books props are passed',() => {
+   let books = wrapper.instance().displayBooks().length 
+    expect(books).toBe(2)
+  });
+  it('should call fetchAllBooks when componentDidMount is called',() => {
+    wrapper.update()
+    expect(mockFetchFunction).toHaveBeenCalled()
   })
 
 });
