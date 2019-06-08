@@ -46,6 +46,14 @@ describe('BookContainer', () => {
     expect(wrapper.instance().displayBooks).toHaveBeenCalled()
   });
 
+  it('should render loading when allsports.length === 0, error message != empty string ', () => {
+    const allBooks = []
+    const error = ''
+    wrapper.setProps({allBooks})
+    wrapper.setProps({error})
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('should render books when all books props are passed',() => {
    let books = wrapper.instance().displayBooks().length 
     expect(books).toBe(2)

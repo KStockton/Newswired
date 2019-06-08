@@ -42,7 +42,7 @@ export class SportContainer extends Component {
         <h2 className="Sports-header">Sport News</h2>
           <div className="sports-wrapper Card-wrapper">
             {(error !== '' && allSports.length === 0) && errorMsg}
-            {(allSports.length === 0 && !error !== '') && <Loading/>}
+            {(!error !== '' && allSports.length === 0) && <Loading/>}
             {displaySportNews}
           </div>
       </section>

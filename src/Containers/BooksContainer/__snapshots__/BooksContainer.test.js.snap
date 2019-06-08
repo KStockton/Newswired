@@ -11,11 +11,11 @@ exports[`BookContainer should match the snapshot 1`] = `
     className="book-wrapper"
   >
     <Connect(Book)
-      key="W9E-4elcS"
+      key="i-S1nff7w"
       title="Golden"
     />
     <Connect(Book)
-      key="KpMznBGRWy"
+      key="K16Er2IzIH"
       title="Xavier"
     />
   </div>
@@ -33,7 +33,7 @@ exports[`BookContainer should match the snapshot the books are passed as props 1
     className="book-wrapper"
   >
     <Connect(Book)
-      key="E9wiONP0vg"
+      key="WUYJYeyvpF"
       title="Press, Press, Press, Press, Press"
     />
   </div>
@@ -60,6 +60,21 @@ exports[`BookContainer should match the snapshot when there is an error message 
         Back
       </Link>
     </div>
+    <Loading />
+  </div>
+</section>
+`;
+
+exports[`BookContainer should render loading when allsports.length === 0, error message != empty string  1`] = `
+<section>
+  <h2
+    className="book-title-header"
+  >
+     New York Times Best Sellers
+  </h2>
+  <div
+    className="book-wrapper"
+  >
     <Loading />
   </div>
 </section>
