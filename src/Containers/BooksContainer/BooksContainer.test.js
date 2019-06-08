@@ -21,28 +21,36 @@ describe('BookContainer', () => {
 
       />)
   })
-  xit('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
-  })
-  xit('should match the snapshot the books are passed as props', () => {
+  });
+
+  it('should match the snapshot the books are passed as props', () => {
     wrapper.setProps({allBooks:  [{title: 'Press, Press, Press, Press, Press'}]})
+    wrapper.update()
     expect(wrapper).toMatchSnapshot()
   });
-  xit('should match the snapshot when there is an error message',() => {
-    wrapper.setProps({ allBooks: []}) 
-    wrapper.setProps({ error: ''})
+
+  it('should match the snapshot when there is an error message',() => {
+    const allBooks = []
+    wrapper.setProps({allBooks}) 
+    wrapper.setProps({ error: 'something went wrong'})
+    wrapper.update()
     expect(wrapper).toMatchSnapshot()
   });
+
   it('should call display books when rendered', () => {
     wrapper.instance().displayBooks = jest.fn()
     wrapper.update()
     wrapper.instance().render()
     expect(wrapper.instance().displayBooks).toHaveBeenCalled()
   });
+
   it('should render books when all books props are passed',() => {
    let books = wrapper.instance().displayBooks().length 
     expect(books).toBe(2)
   });
+
   it('should not call fetchAllBooks when the allBooks length is greater than 0', () => {  
     let mockBooks = [{title:'Golden'},{title:'Xavier'}]
     wrapper = shallow(<BooksContainer

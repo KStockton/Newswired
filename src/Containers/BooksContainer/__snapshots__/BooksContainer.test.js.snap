@@ -11,11 +11,11 @@ exports[`BookContainer should match the snapshot 1`] = `
     className="book-wrapper"
   >
     <Connect(Book)
-      key="Ga3O1Z3rr"
+      key="W9E-4elcS"
       title="Golden"
     />
     <Connect(Book)
-      key="-nEz7ZrzGH"
+      key="KpMznBGRWy"
       title="Xavier"
     />
   </div>
@@ -33,7 +33,7 @@ exports[`BookContainer should match the snapshot the books are passed as props 1
     className="book-wrapper"
   >
     <Connect(Book)
-      key="iw61HL5Z_z"
+      key="E9wiONP0vg"
       title="Press, Press, Press, Press, Press"
     />
   </div>
@@ -50,6 +50,16 @@ exports[`BookContainer should match the snapshot when there is an error message 
   <div
     className="book-wrapper"
   >
+    <div>
+      <h2>
+        something went wrong
+      </h2>
+      <Link
+        to="/Options"
+      >
+        Back
+      </Link>
+    </div>
     <Loading />
   </div>
 </section>

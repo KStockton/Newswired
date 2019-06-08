@@ -6,7 +6,7 @@ jest.mock('../../Thunks/fetchAllBooks')
 
 describe('SportsContainer',() => {
   let wrapper;
-  let mockSports = { allSports :[{title:'Golden'},{title:'Xavier Basketball'}]}
+  let mockSports = [{title:'Golden'},{title:'Xavier Basketball'}]
   let mockError = 'something went wrong';
   let mockfetchSportNews = jest.fn()
   beforeEach(() => {
@@ -16,10 +16,16 @@ describe('SportsContainer',() => {
       fetchSportsNews={mockfetchSportNews}
       />)
   })
-  xit('should match the snapshot', () => {
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
+  });
+  it('should render error message if the error is not an empty string and allsports.length === 0', () => {
+   const allSports = []
+    wrapper.setProps({error: 'something went wrong'})
+    wrapper.setProps({allSports})
+    wrapper.update()
     expect(wrapper).toMatchSnapshot()
   })
-
 })
 describe('MSTP',() =>{
   it('should map state from mockstate', () => {
