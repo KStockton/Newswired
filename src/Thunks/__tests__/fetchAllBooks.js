@@ -39,6 +39,7 @@ describe('fetchAllBooks', () => {
     await thunk(mockDispatch) 
     expect(cleanNYTBooks).toHaveBeenCalled()
   });
+
   it('should cleanNYTBooks to have been called with mockBooks', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
@@ -48,6 +49,7 @@ describe('fetchAllBooks', () => {
     await thunk(mockDispatch) 
     expect(cleanNYTBooks).toHaveBeenCalledWith(mockBooks)
   });
+
   it('should pass the correct params when fetch is called', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
@@ -57,6 +59,7 @@ describe('fetchAllBooks', () => {
     await thunk(mockDispatch) 
     expect(window.fetch).toHaveBeenCalledWith(mockUrl)
   });
+
   it('should dispatch isLoading(false) if the response is OK', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
@@ -68,20 +71,15 @@ describe('fetchAllBooks', () => {
     await thunk(mockDispatch)
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
   });
+
   it('should dispatch getAllBooks if the response is ok', async () => {
-    let books = cleanBooks
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
-      json: () => Promise.resolve({
-          books
-      })
+      json: () => Promise.resolve(mockBooks)
     }))
-
     const thunk = fetchAllBooks(mockUrl) 
     await thunk(mockDispatch)
-    // console.log(thunk)
-    // const mockCleanBooks = jest.fn().mockImplementation(() => cleanBooks)
-    // console.log(mockCleanBooks)
-    expect(mockDispatch).toHaveBeenCalledWith(getAllBooks(books))
-  })
-})
+    const result = cleanNYTBooks(mockBooks)
+    expect(mockDispatch).toHaveBeenCalledWith(getAllBooks(result))
+  });
+});
