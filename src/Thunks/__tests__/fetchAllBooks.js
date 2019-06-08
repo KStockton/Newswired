@@ -1,5 +1,6 @@
 import { fetchAllBooks } from '../fetchAllBooks';
 import { isLoading, getAllBooks, hasErrored } from '../../actions';
+import { cleanBooks, uncleanBooks } from '../../Utility/MockData';
 import { cleanNYTBooks } from '../../Utility/Cleaners/cleanNYTBooks'
 jest.mock('../../Utility/Cleaners/cleanNYTBooks')
 
@@ -7,9 +8,7 @@ describe('fetchAllBooks', () => {
   let mockUrl;
   let mockDispatch;
   let mockBooks;
-  let mockCleanNYTBooks
   beforeEach(() => {
-    mockCleanNYTBooks = [{id: 1234}]
     mockUrl = "www.cool.com"
     mockDispatch = jest.fn()
     mockBooks = [{title: 'work'}]
@@ -31,17 +30,6 @@ describe('fetchAllBooks', () => {
     await thunk(mockDispatch)
     expect(mockDispatch).toHaveBeenCalledWith(hasErrored('ooops'))
   });
-  xit('should dispatch isLoading(false) if the response is OK', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve({
-            books: mockBooks
-        })
-    }))
-    const thunk = fetchAllBooks(mockUrl)
-    await thunk(mockDispatch)
-    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
-  });
   it('should cleanNYTBooks to have been called when response is ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
@@ -51,4 +39,49 @@ describe('fetchAllBooks', () => {
     await thunk(mockDispatch) 
     expect(cleanNYTBooks).toHaveBeenCalled()
   });
+  it('should cleanNYTBooks to have been called with mockBooks', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockBooks)
+    }))
+    const thunk = fetchAllBooks(mockUrl)
+    await thunk(mockDispatch) 
+    expect(cleanNYTBooks).toHaveBeenCalledWith(mockBooks)
+  });
+  it('should pass the correct params when fetch is called', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockBooks)
+    }))
+    const thunk = fetchAllBooks(mockUrl)
+    await thunk(mockDispatch) 
+    expect(window.fetch).toHaveBeenCalledWith(mockUrl)
+  });
+  it('should dispatch isLoading(false) if the response is OK', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve({
+            books: mockBooks
+        })
+    }))
+    const thunk = fetchAllBooks(mockUrl) 
+    await thunk(mockDispatch)
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
+  });
+  it('should dispatch getAllBooks if the response is ok', async () => {
+    let books = cleanBooks
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({
+          books
+      })
+    }))
+
+    const thunk = fetchAllBooks(mockUrl) 
+    await thunk(mockDispatch)
+    // console.log(thunk)
+    // const mockCleanBooks = jest.fn().mockImplementation(() => cleanBooks)
+    // console.log(mockCleanBooks)
+    expect(mockDispatch).toHaveBeenCalledWith(getAllBooks(books))
+  })
 })
