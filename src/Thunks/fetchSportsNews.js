@@ -11,7 +11,6 @@ export const fetchSportsNews = (url) => {
       throw Error(response.sendText)
     }
       const data = await response.json()
-    
       dispatch(action.getSportsNews(data))
       dispatch(action.isLoading(false))
     } catch(error) {
