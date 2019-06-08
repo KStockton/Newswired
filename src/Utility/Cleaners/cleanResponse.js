@@ -2,8 +2,9 @@ const shortid = require('shortid');
 
 
 export const cleanResponse = (uncleanResponse) => {
- const cleanedBooks = uncleanResponse.articles.map(article => {
-    return {
+return uncleanResponse.articles.map(article => {
+
+  return {
         id: shortid.generate(),
         source: article.source.name,
         author: article.author,
@@ -14,5 +15,4 @@ export const cleanResponse = (uncleanResponse) => {
         isfavorited: false
       }
   })
-  return cleanedBooks
 }
