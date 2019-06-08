@@ -38,7 +38,7 @@ export class TravelContainer extends Component {
       <section>
         <h2 className="Travel-header">Vice Travel News</h2>
         {(error !== '' && allTravel.length === 0) && errorMsg}
-        {(allTravel.length === 0 && !error !== '') && <Loading/>}
+        {(error === '' && allTravel.length === 0 ) && <Loading/>}
         <div className="TravelContainer-wrapper Card-wrapper">
           {displayTravel}
         </div>

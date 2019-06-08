@@ -11,30 +11,12 @@ exports[`BookContainer should match the snapshot 1`] = `
     className="book-wrapper"
   >
     <Connect(Book)
-      key="i-S1nff7w"
+      key="y2PJ9r7TC"
       title="Golden"
     />
     <Connect(Book)
-      key="K16Er2IzIH"
+      key="-drg6sAOZO"
       title="Xavier"
-    />
-  </div>
-</section>
-`;
-
-exports[`BookContainer should match the snapshot the books are passed as props 1`] = `
-<section>
-  <h2
-    className="book-title-header"
-  >
-     New York Times Best Sellers
-  </h2>
-  <div
-    className="book-wrapper"
-  >
-    <Connect(Book)
-      key="WUYJYeyvpF"
-      title="Press, Press, Press, Press, Press"
     />
   </div>
 </section>

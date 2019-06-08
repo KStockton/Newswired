@@ -25,12 +25,6 @@ describe('BookContainer', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  it('should match the snapshot the books are passed as props', () => {
-    wrapper.setProps({allBooks:  [{title: 'Press, Press, Press, Press, Press'}]})
-    wrapper.update()
-    expect(wrapper).toMatchSnapshot()
-  });
-
   it('should match the snapshot when there is an error message',() => {
     const allBooks = []
     wrapper.setProps({allBooks}) 
@@ -60,16 +54,11 @@ describe('BookContainer', () => {
   });
 
   it('should not call fetchAllBooks when the allBooks length is greater than 0', () => {  
-    let mockBooks = [{title:'Golden'},{title:'Xavier'}]
-    wrapper = shallow(<BooksContainer
-      allBooks={mockBooks}
-      error={mockError}
-      />)
     wrapper.instance().componentDidMount()
     expect(fetchAllBooks).not.toHaveBeenCalled()
   })
   it('should call fetchAllBooks when the allBooks length is 0', () => {  
-    let mockBooks = []
+    const mockBooks = []
     wrapper = shallow(<BooksContainer
       allBooks={mockBooks}
       error={mockError}

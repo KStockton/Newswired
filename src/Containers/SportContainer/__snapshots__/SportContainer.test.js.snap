@@ -11,11 +11,11 @@ exports[`SportsContainer should match the snapshot 1`] = `
     className="sports-wrapper Card-wrapper"
   >
     <Card
-      key="8E0VTTqpa"
+      key="O1GsbUSvW"
       title="Golden"
     />
     <Card
-      key="J0BPyzRcRm"
+      key="p-FYtZNsjO"
       title="Xavier Basketball"
     />
   </div>
@@ -42,6 +42,20 @@ exports[`SportsContainer should render error message if the error is not an empt
         Back
       </Link>
     </div>
+  </div>
+</section>
+`;
+
+exports[`SportsContainer should render loading if the component is loading 1`] = `
+<section>
+  <h2
+    className="Sports-header"
+  >
+    Sport News
+  </h2>
+  <div
+    className="sports-wrapper Card-wrapper"
+  >
     <Loading />
   </div>
 </section>
