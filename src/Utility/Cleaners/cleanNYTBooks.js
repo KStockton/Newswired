@@ -1,5 +1,4 @@
 export const cleanNYTBooks = (uncleanBooks) => {
-  console.log('uncleanBooks', uncleanBooks)
   const cleanedBooks = uncleanBooks.results.books.map(book => {
      return {
          id: book.primary_isbn10,
