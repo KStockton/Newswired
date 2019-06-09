@@ -52,12 +52,14 @@ describe('BookContainer', () => {
    let books = wrapper.instance().displayBooks().length 
     expect(books).toBe(2)
   });
+  
+describe('ComponentDidMount', () => {
 
   it('should not call fetchAllBooks when the allBooks length is greater than 0', () => {  
     wrapper.instance().componentDidMount()
     expect(mockFetchFunction).not.toHaveBeenCalled()
   });
-
+  
   it('should call fetchAllBooks when the allBooks length is 0', () => {  
     const mockBooks = []
     wrapper = shallow(<BooksContainer
@@ -65,11 +67,12 @@ describe('BookContainer', () => {
       error={mockError}
       fetchAllBooks={mockFetchFunction}
       />)
-    wrapper.instance().componentDidMount()
-    expect(mockFetchFunction).toHaveBeenCalled()
+      wrapper.instance().componentDidMount()
+      expect(mockFetchFunction).toHaveBeenCalled()
+    });
+    
   });
-
-});
+})
   describe('MSTP',() =>{
     it('should map state from mockstate', () => {
       const mockState ={ allBooks :[{title:'Golden'},{title:'Xavier'}], error: ''}

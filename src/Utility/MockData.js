@@ -36,3 +36,7 @@ export const mockTopNews = [
   export const mockNewsError = ''
 
   export const mockRealNewsError = 'something went wrong'
+
+  export const mockTravel = [{title:'New York'},{title:'Boston'}]
+
+  export const mockRealTravelError = 'No Travel Here'

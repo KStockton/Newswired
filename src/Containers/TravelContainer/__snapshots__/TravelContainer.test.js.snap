@@ -1,3 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SportsContainer should match the snapshot 1`] = `undefined`;
+exports[`TravelContainer should have an error if error !== empty string  1`] = `
+<section>
+  <h2
+    className="Travel-header"
+  >
+    Vice Travel News
+  </h2>
+  <div>
+    <h2>
+      No Travel Here
+    </h2>
+    <Link
+      to="/Options"
+    >
+      Back
+    </Link>
+  </div>
+  <div
+    className="TravelContainer-wrapper Card-wrapper"
+  />
+</section>
+`;
+
+exports[`TravelContainer should match the snapshot 1`] = `
+<section>
+  <h2
+    className="Travel-header"
+  >
+    Vice Travel News
+  </h2>
+  <div
+    className="TravelContainer-wrapper Card-wrapper"
+  >
+    <Card
+      key="QMnsXcGiT"
+      title="New York"
+    />
+    <Card
+      key="bJ2N8tcvEx"
+      title="Boston"
+    />
+  </div>
+</section>
+`;

@@ -1,26 +1,43 @@
 import React from 'react'
 import { TravelContainer, mapStateToProps, mapDispatchToProps} from './TravelContainer'
 import { shallow } from 'enzyme';
+import * as mockData from '../../Utility/MockData'
 import { fetchTopTravel } from '../../Thunks/fetchTopTravel'
-jest.mock('../../Thunks/fetchAllBooks')
+jest.mock('../../Thunks/fetchTopTravel')
 
-describe('SportsContainer',() => {
+describe('TravelContainer',() => {
   let wrapper;
-  let mockTravel = { allTravel :[{title:'New York'},{title:'Boston'}]}
-  let mockError = 'something went wrong';
-  let mockfetchTravel = jest.fn()
+  let mockTravel  
+  let mockError 
+  let mockfetchTravel 
   beforeEach(() => {
+    mockTravel = mockData.mockTravel
+    mockfetchTravel = jest.fn()
+    mockError = 'something went wrong'
     wrapper = shallow(<TravelContainer 
       allTravel={mockTravel}
       error={mockError}
       fetchTopTravel={mockfetchTravel}
       />)
   })
-  xit('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
-  })
+  });
 
-})
+  it('should have an error if error !== empty string ', () => {
+    const error = mockData.mockRealTravelError
+    const allTravel = []
+    wrapper.setProps({error})
+    wrapper.setProps({allTravel})
+    wrapper.update()
+    expect(wrapper).toMatchSnapshot()
+  });
+
+  it('should load if ')
+
+});
+
+
 describe('MSTP',() =>{
   it('should map state from mockstate', () => {
     const mockState = { allTravel :[{title:'Golden'},{title:'Xavier Basketball'}], error: 'oops'}

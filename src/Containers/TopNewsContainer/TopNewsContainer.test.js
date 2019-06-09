@@ -47,6 +47,11 @@ describe('TopNewsContainer', () => {
   it('should render 2 topNews articles when 2 books are passed', () => {
    let result = wrapper.instance().displayTopNews().length
     expect(result).toBe(2)
+  });
+
+  describe('ComponentDidMount', () => {
+
+  
   })
 
 });
