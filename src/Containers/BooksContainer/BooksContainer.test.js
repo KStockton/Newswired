@@ -55,7 +55,7 @@ describe('BookContainer', () => {
 
   it('should not call fetchAllBooks when the allBooks length is greater than 0', () => {  
     wrapper.instance().componentDidMount()
-    expect(fetchAllBooks).not.toHaveBeenCalled()
+    expect(mockFetchFunction).not.toHaveBeenCalled()
   })
   it('should call fetchAllBooks when the allBooks length is 0', () => {  
     const mockBooks = []

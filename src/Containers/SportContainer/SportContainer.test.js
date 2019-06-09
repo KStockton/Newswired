@@ -48,12 +48,24 @@ describe('SportsContainer',() => {
     let sportCards = wrapper.instance().displaySportNews().length
     expect(sportCards).toBe(2)
   });
+ describe('componentDidMount', () => {
 
-  it('should not call fetchSportsNews if allSports already has been fetched', () => {
+  it('should not call fetchSportsNews if allSports already has been fetched',  () => {
     wrapper.instance().componentDidMount()
-    expect(fetchSportsNews).not.toHaveBeenCalled()
-  })
+    expect(mockfetchSportNews).not.toHaveBeenCalled()
+  });
 
+  it('should call fetchSportNews with  if allSport.length === 0',  () => {
+    const mockNoSports = []
+    const mockError = ''
+    wrapper = shallow(<SportContainer
+      allSports={mockNoSports}
+      error={mockError}
+      fetchSportsNews={mockfetchSportNews}/>)
+      wrapper.instance().componentDidMount()
+      expect(mockfetchSportNews).toHaveBeenCalled()
+    }) 
+  })
 });
 describe('MSTP',() =>{
   it('should map state from mockstate', () => {
