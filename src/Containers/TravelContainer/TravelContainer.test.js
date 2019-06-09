@@ -33,7 +33,14 @@ describe('TravelContainer',() => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  it('should load if ')
+  it('should render loading if allTravel.length is 0 and there is no error', () => {
+    const error = ''
+    const allTravel = []
+    wrapper.setProps({error})
+    wrapper.setProps({allTravel})
+    wrapper.update()
+    expect(wrapper).toMatchSnapshot()
+  })
 
 });
 
