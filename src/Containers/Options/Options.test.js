@@ -16,6 +16,34 @@ describe('Option', () => {
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
+  });
+
+  it('should only render topSports icon its true', () => {
+    const categories = {categories:{books: false, travel: false, topNews: false, sportsNews: true}}
+    wrapper.setProps({categories})
+    wrapper.update()
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render topNews if its true', () => {
+    const categories = {categories:{books: false, travel: false, topNews: true, sportsNews: false}}
+    wrapper.setProps({categories})
+    wrapper.update()
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should render books if its true', () => {
+    const categories = {categories:{books: true, travel: false, topNews: false, sportsNews: false}}
+    wrapper.setProps({categories})
+    wrapper.update()
+    expect(wrapper).toMatchSnapshot()
+  });
+
+  it('should render travel if its true', () => {
+    const categories = {categories:{books: false, travel: true, topNews: false, sportsNews: false}}
+    wrapper.setProps({categories})
+    wrapper.update()
+    expect(wrapper).toMatchSnapshot()
   })
 })
 describe('MSTP',() =>{
