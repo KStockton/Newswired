@@ -11,11 +11,10 @@ const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`;
 
 export class SportContainer extends Component {
 
-   componentDidMount() {
+ componentDidMount = ()=>{
     
     if(this.props.allSports.length === 0){
-      const sportNewsUrl = 
-      `https://newsapi.org/v2/everything?q=sports&language=en&from=2019-06-03&page=1&domains=espn.com&apiKey=${API_KEY}`;
+      const sportNewsUrl = `https://newsapi.org/v2/everything?q=sports&language=en&from=2019-06-03&page=1&domains=espn.com&apiKey=${API_KEY}`;
       this.props.fetchSportsNews(sportNewsUrl)
     }
   }
@@ -42,7 +41,7 @@ export class SportContainer extends Component {
         <h2 className="Sports-header">Sport News</h2>
           <div className="sports-wrapper Card-wrapper">
             {(error !== '' && allSports.length === 0) && errorMsg}
-            {(allSports.length === 0 && !error !== '') && <Loading/>}
+            {(error === '' && allSports.length === 0) && <Loading/>}
             {displaySportNews}
           </div>
       </section>

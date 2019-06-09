@@ -1,4 +1,5 @@
 import * as action from '../actions/index';
+import { cleanResponse } from './../Utility/Cleaners/cleanResponse'
 
 
 export const fetchSportsNews = (url) => {
@@ -11,7 +12,8 @@ export const fetchSportsNews = (url) => {
       throw Error(response.sendText)
     }
       const data = await response.json()
-      dispatch(action.getSportsNews(data))
+      const cleanData = cleanResponse(data)
+      dispatch(action.getSportsNews(cleanData))
       dispatch(action.isLoading(false))
     } catch(error) {
       dispatch(action.hasErrored(error.message, 'sportsNews'))

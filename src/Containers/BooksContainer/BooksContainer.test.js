@@ -21,49 +21,58 @@ describe('BookContainer', () => {
 
       />)
   })
-  xit('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
-  xit('should match the snapshot the books are passed as props', () => {
-    wrapper.setProps({allBooks:  [{title: 'Press, Press, Press, Press, Press'}]})
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   });
-  xit('should match the snapshot when there is an error message',() => {
-    wrapper.setProps({ allBooks: []}) 
-    wrapper.setProps({ error: ''})
+
+  it('should match the snapshot when there is an error message',() => {
+    const allBooks = []
+    wrapper.setProps({allBooks}) 
+    wrapper.setProps({ error: 'something went wrong'})
+    wrapper.update()
     expect(wrapper).toMatchSnapshot()
   });
+
   it('should call display books when rendered', () => {
     wrapper.instance().displayBooks = jest.fn()
     wrapper.update()
     wrapper.instance().render()
     expect(wrapper.instance().displayBooks).toHaveBeenCalled()
   });
+
+  it('should render loading when allsports.length === 0, error message != empty string ', () => {
+    const allBooks = []
+    const error = ''
+    wrapper.setProps({allBooks})
+    wrapper.setProps({error})
+    expect(wrapper).toMatchSnapshot()
+  });
+
   it('should render books when all books props are passed',() => {
    let books = wrapper.instance().displayBooks().length 
     expect(books).toBe(2)
   });
+  
+describe('ComponentDidMount', () => {
+
   it('should not call fetchAllBooks when the allBooks length is greater than 0', () => {  
-    let mockBooks = [{title:'Golden'},{title:'Xavier'}]
-    wrapper = shallow(<BooksContainer
-      allBooks={mockBooks}
-      error={mockError}
-      />)
     wrapper.instance().componentDidMount()
-    expect(fetchAllBooks).not.toHaveBeenCalled()
-  })
+    expect(mockFetchFunction).not.toHaveBeenCalled()
+  });
+  
   it('should call fetchAllBooks when the allBooks length is 0', () => {  
-    let mockBooks = []
+    const mockBooks = []
     wrapper = shallow(<BooksContainer
       allBooks={mockBooks}
       error={mockError}
       fetchAllBooks={mockFetchFunction}
       />)
-    wrapper.instance().componentDidMount()
-    expect(mockFetchFunction).toHaveBeenCalled()
+      wrapper.instance().componentDidMount()
+      expect(mockFetchFunction).toHaveBeenCalled()
+    });
+    
   });
-
-});
+})
   describe('MSTP',() =>{
     it('should map state from mockstate', () => {
       const mockState ={ allBooks :[{title:'Golden'},{title:'Xavier'}], error: ''}
@@ -71,6 +80,7 @@ describe('BookContainer', () => {
       expect(result).toEqual(mockState)
     });
   });
+
   describe('MDTP', () => {
     let mockDispatch
     let mappedProps
@@ -85,6 +95,6 @@ describe('BookContainer', () => {
       const actionToDispatch = fetchAllBooks(mockbookUrl)
       mappedProps.fetchAllBooks(mockbookUrl)
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
-    })
-  })
+    });
+  });
 

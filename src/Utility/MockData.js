@@ -23,3 +23,20 @@ export const cleanBooks = [{
   weeksOnList: 20,
   isFavorited: false,
 }]
+
+export const mockTopNews = [
+  {
+    title: 'Syria',
+    id: 232
+  }, {
+    titel: 'Trump loses hair',
+    id: 45
+  }]
+
+  export const mockNewsError = ''
+
+  export const mockRealNewsError = 'something went wrong'
+
+  export const mockTravel = [{title:'New York'},{title:'Boston'}]
+
+  export const mockRealTravelError = 'No Travel Here'
