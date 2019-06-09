@@ -12,19 +12,19 @@ exports[`TopNewsContainer should match the snapshot 1`] = `
   >
     <Card
       id={232}
-      key="9RX228sPY"
+      key="CNEzyg8d-"
       title="Syria"
     />
     <Card
       id={45}
-      key="NQkD9a9fXb"
+      key="06WEzRhGIS"
       titel="Trump loses hair"
     />
   </div>
 </section>
 `;
 
-exports[`TopNewsContainer should render loading if data is fetched 1`] = `
+exports[`TopNewsContainer should render an error if an error message is passed 1`] = `
 <section>
   <h2
     className="TopNews-header"
@@ -44,6 +44,21 @@ exports[`TopNewsContainer should render loading if data is fetched 1`] = `
         Back
       </Link>
     </div>
+  </div>
+</section>
+`;
+
+exports[`TopNewsContainer should render loading if data is in the process of fetching 1`] = `
+<section>
+  <h2
+    className="TopNews-header"
+  >
+    Top News
+  </h2>
+  <div
+    className="TravelContainer-wrapper Card-wrapper"
+  >
+    <Loading />
   </div>
 </section>
 `;

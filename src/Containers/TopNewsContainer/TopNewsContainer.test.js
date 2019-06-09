@@ -20,12 +20,21 @@ describe('TopNewsContainer', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  it('should render loading if data is fetched', () => {
+  it('should render loading if data is in the process of fetching', () => {
+    const allTopNews = []
+    const error = mockData.mockNewsError
+    wrapper.setProps({allTopNews})
+    wrapper.setProps({error})
+    wrapper.update()
+    expect(wrapper).toMatchSnapshot()
+  });
+
+  it('should render an error if an error message is passed', () => {
     const allTopNews = []
     const error = mockData.mockRealNewsError
     wrapper.setProps({allTopNews})
     wrapper.setProps({error})
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
-  });
+  })
 })
