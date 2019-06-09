@@ -40,7 +40,33 @@ describe('TravelContainer',() => {
     wrapper.setProps({allTravel})
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
-  })
+  });
+
+  it('should render allTravel when the allTravel.length > 0 is passed', () => {
+    let travel = wrapper.instance().displayTravel().length
+    expect(travel).toBe(2)
+  });
+
+  describe('ComponentDidMount', () => {
+    it('should not call fetchTopTravel', () => {
+
+      wrapper.instance().componentDidMount()
+      expect(fetchTopTravel).not.toHaveBeenCalled()
+    })
+  });
+
+    it('should call fetchTopTravel when the componentMounts and allTravel === 0', () => {
+      const mockTravel = []
+      const mockError = ''
+
+      wrapper = shallow(<TravelContainer
+        allTravel={mockTravel}
+        error={mockError}
+        fetchTopTravel={mockfetchTravel}
+        />)
+      wrapper.instance().componentDidMount()
+      expect(mockfetchTravel).toHaveBeenCalled()
+    })
 
 });
 
