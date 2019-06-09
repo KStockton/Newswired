@@ -36,5 +36,17 @@ describe('TopNewsContainer', () => {
     wrapper.setProps({error})
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
+  });
+
+  it('should call displayTopNews when rendered', () => {
+    wrapper.instance().displayTopNews = jest.fn()
+    wrapper.instance().render()
+    expect(wrapper.instance().displayTopNews).toHaveBeenCalled()
+  });
+
+  it('should render 2 topNews articles when 2 books are passed', () => {
+   let result = wrapper.instance().displayTopNews().length
+    expect(result).toBe(2)
   })
-})
+
+});
