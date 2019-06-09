@@ -17,11 +17,11 @@ describe('SportsContainer',() => {
       />)
   });
 
-  xit('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  xit('should render error message if the error is not an empty string and allsports.length === 0', () => {
+  it('should render error message if the error is not an empty string and allsports.length === 0', () => {
    const allSports = []
     wrapper.setProps({error: 'something went wrong'})
     wrapper.setProps({allSports})
@@ -29,7 +29,7 @@ describe('SportsContainer',() => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  xit('should render loading if the component is loading', () => {
+  it('should render loading if the component is loading', () => {
     const allSports = []
     const error = ''
     wrapper.setProps({allSports})
@@ -37,6 +37,7 @@ describe('SportsContainer',() => {
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
   });
+
   it('should call displaySportsNews when rendered',() => {
     wrapper.instance().displaySportNews = jest.fn()
     wrapper.update()
@@ -48,6 +49,7 @@ describe('SportsContainer',() => {
     let sportCards = wrapper.instance().displaySportNews().length
     expect(sportCards).toBe(2)
   });
+
  describe('componentDidMount', () => {
 
   it('should not call fetchSportsNews if allSports already has been fetched',  () => {
@@ -67,17 +69,21 @@ describe('SportsContainer',() => {
     }) 
   })
 });
+
 describe('MSTP',() =>{
+
   it('should map state from mockstate', () => {
     const mockState = { allSports :[{title:'Golden'},{title:'Xavier Basketball'}], error: 'oops'}
     const result = mapStateToProps(mockState)
     expect(result).toEqual(mockState)
   }) 
 });
+
 describe('MDTP',() =>{
   const mockDispatch = jest.fn()
   const mappedProps = mapDispatchToProps(mockDispatch)
-  xit('should dispatch action when correct params passed', () => {
+
+  it('should dispatch action when correct params passed', () => {
     const mockUrl = 'www.cool.com'
     const actionToDispatch = fetchSportsNews(mockUrl)
     mappedProps.fetchSportsNews(mockUrl)

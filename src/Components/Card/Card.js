@@ -16,7 +16,7 @@ const Card = ({id, author, source, articleImage, description, title}) =>{
 }
 
 Card.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   author: PropTypes.string,
   source: PropTypes.string,
   description: PropTypes.string,

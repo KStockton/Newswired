@@ -46,7 +46,7 @@ describe('BookContainer', () => {
     wrapper.setProps({allBooks})
     wrapper.setProps({error})
     expect(wrapper).toMatchSnapshot()
-  })
+  });
 
   it('should render books when all books props are passed',() => {
    let books = wrapper.instance().displayBooks().length 
@@ -56,7 +56,8 @@ describe('BookContainer', () => {
   it('should not call fetchAllBooks when the allBooks length is greater than 0', () => {  
     wrapper.instance().componentDidMount()
     expect(mockFetchFunction).not.toHaveBeenCalled()
-  })
+  });
+
   it('should call fetchAllBooks when the allBooks length is 0', () => {  
     const mockBooks = []
     wrapper = shallow(<BooksContainer
@@ -76,6 +77,7 @@ describe('BookContainer', () => {
       expect(result).toEqual(mockState)
     });
   });
+
   describe('MDTP', () => {
     let mockDispatch
     let mappedProps
@@ -90,6 +92,6 @@ describe('BookContainer', () => {
       const actionToDispatch = fetchAllBooks(mockbookUrl)
       mappedProps.fetchAllBooks(mockbookUrl)
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
-    })
-  })
+    });
+  });
 

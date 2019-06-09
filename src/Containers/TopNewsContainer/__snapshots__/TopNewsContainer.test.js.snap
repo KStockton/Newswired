@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopNewsContainer should match the snapshot 1`] = `
+<section>
+  <h2
+    className="TopNews-header"
+  >
+    Top News
+  </h2>
+  <div
+    className="TravelContainer-wrapper Card-wrapper"
+  >
+    <Card
+      id={232}
+      key="9RX228sPY"
+      title="Syria"
+    />
+    <Card
+      id={45}
+      key="NQkD9a9fXb"
+      titel="Trump loses hair"
+    />
+  </div>
+</section>
+`;
+
+exports[`TopNewsContainer should render loading if data is fetched 1`] = `
+<section>
+  <h2
+    className="TopNews-header"
+  >
+    Top News
+  </h2>
+  <div
+    className="TravelContainer-wrapper Card-wrapper"
+  >
+    <div>
+      <h2>
+        something went wrong
+      </h2>
+      <Link
+        to="/Options"
+      >
+        Back
+      </Link>
+    </div>
+  </div>
+</section>
+`;
