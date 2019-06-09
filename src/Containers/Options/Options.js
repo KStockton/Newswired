@@ -48,6 +48,7 @@ export class Options extends Component {
             </button>
             {books && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
           </div>
+
           <div className="Options-btn-wrapper">
             <button className="Options-btn"  name="sportsNews" onClick={this.selectTopic}>
               <label htmlFor="sports-news">
@@ -57,6 +58,7 @@ export class Options extends Component {
             </button>
           {sportsNews && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
           </div>
+
           <div className="Options-btn-wrapper">
             <button className="Options-btn" name="travel" onClick={this.selectTopic}>
               <label htmlFor="latest-news">
@@ -66,6 +68,7 @@ export class Options extends Component {
             </button>
             {travel && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
           </div>
+          
         </div>
         <div className="Options-continue">
           {numOfCategories >= 3 && 

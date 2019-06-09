@@ -51,10 +51,25 @@ describe('Option', () => {
   });
 
   it('should call selectTopic when button is clicked', () => {
-    wrapper.find('button').at(1).simulate('click', { target : { name : 'topNews'}})
+    wrapper.find('button').at(0).simulate('click', { target : { name : 'topNews'}})
     expect(mockSetCategories).toHaveBeenCalledWith('topNews') 
   });
-})
+
+  it('should call selectTopic when button is clicked', () => {
+    wrapper.find('button').at(1).simulate('click', { target : { name : 'books'}})
+    expect(mockSetCategories).toHaveBeenCalledWith('books') 
+  });
+
+  it('should call selectTopic when button is clicked', () => {
+    wrapper.find('button').at(2).simulate('click', { target : { name : 'sportsNews'}})
+    expect(mockSetCategories).toHaveBeenCalledWith('sportsNews') 
+  });
+
+  it('should call selectTopic when button is clicked', () => {
+    wrapper.find('button').at(3).simulate('click', { target : { name : 'travel'}})
+    expect(mockSetCategories).toHaveBeenCalledWith('travel') 
+  });
+});
 describe('MSTP',() =>{
 
   it('should map state from mockstate', () => {
