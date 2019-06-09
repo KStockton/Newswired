@@ -8,7 +8,7 @@ jest.mock('../../Thunks/fetchAllBooks')
 
 describe('BookContainer', () => {
   let wrapper;
-  let mockFetchFunction = jest.fn()
+  let mockfetchAllBooks = jest.fn()
   let mockBooks = [{title:'Golden'},{title:'Xavier'}]
   let mockError = 'something went wrong'
 
@@ -17,7 +17,7 @@ describe('BookContainer', () => {
     wrapper = shallow(<BooksContainer 
       allBooks={mockBooks}
       error={mockError}
-      fetchAllBooks={mockFetchFunction}
+      fetchAllBooks={mockfetchAllBooks}
 
       />)
   })
@@ -57,18 +57,19 @@ describe('ComponentDidMount', () => {
 
   it('should not call fetchAllBooks when the allBooks length is greater than 0', () => {  
     wrapper.instance().componentDidMount()
-    expect(mockFetchFunction).not.toHaveBeenCalled()
+    expect(fetchAllBooks).not.toHaveBeenCalled()
   });
   
   it('should call fetchAllBooks when the allBooks length is 0', () => {  
     const mockBooks = []
+    const mockError = ''
     wrapper = shallow(<BooksContainer
       allBooks={mockBooks}
       error={mockError}
-      fetchAllBooks={mockFetchFunction}
+      fetchAllBooks={mockfetchAllBooks}
       />)
       wrapper.instance().componentDidMount()
-      expect(mockFetchFunction).toHaveBeenCalled()
+      expect(mockfetchAllBooks).toHaveBeenCalled()
     });
     
   });
