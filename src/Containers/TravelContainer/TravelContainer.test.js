@@ -40,6 +40,11 @@ describe('TravelContainer',() => {
     wrapper.setProps({allTravel})
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
+  });
+
+  it('should render allTravel when the allTravel.length > 0 is passed', () => {
+    let travel = wrapper.instance().displayTravel().length
+    expect(travel).toBe(2)
   })
 
 });
