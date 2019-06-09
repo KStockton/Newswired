@@ -28,8 +28,9 @@ export class Options extends Component {
       <h4 className="Options-select-choice">Please Select 3 Categories</h4>
         </header>
         <div className="Options-wrapper">
+
         <div className="Options-btn-wrapper">
-          <button className="Options-btn" name="topNews" onClick={this.selectTopic}>
+          <button className="Options-btn" name="topNews" onClick={(event) => this.selectTopic(event)}>
             <label htmlFor="top-news">
               <FontAwesomeIcon id="top-news" className="Options-fontawesome" icon={faFire}/>
                 Top News
@@ -37,6 +38,7 @@ export class Options extends Component {
           </button>
           {topNews && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
           </div>
+
           <div className="Options-btn-wrapper">
             <button className="Options-btn" name="books" onClick={this.selectTopic}>
               <label htmlFor="new-york-times-books">
