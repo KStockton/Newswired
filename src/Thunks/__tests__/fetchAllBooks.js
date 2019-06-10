@@ -7,6 +7,7 @@ describe('fetchAllBooks', () => {
   let mockUrl;
   let mockDispatch;
   let mockBooks;
+  
   beforeEach(() => {
     mockUrl = "www.cool.com"
     mockDispatch = jest.fn()
@@ -19,7 +20,7 @@ describe('fetchAllBooks', () => {
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
   });
 
-  it('should dispatch hasError with a message if the response.status is not 200', async () => {
+  it('should dispatch hasError with a message if the response.statusText is not 200', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: false,
       statusText:  'ooops'
@@ -45,6 +46,7 @@ describe('fetchAllBooks', () => {
         ok: true,
         json: () => Promise.resolve(mockBooks)
     }))
+
     const thunk = fetchAllBooks(mockUrl)
     await thunk(mockDispatch) 
     expect(cleanNYTBooks).toHaveBeenCalledWith(mockBooks)
