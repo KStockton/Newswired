@@ -1,7 +1,8 @@
 import React from 'react';
 import {BooksContainer, mapStateToProps, mapDispatchToProps} from './BooksContainer';
 import { shallow  } from 'enzyme';
-import { fetchAllBooks } from './../../Thunks/fetchAllBooks'
+import { Link } from 'react-router-dom';
+import { fetchAllBooks } from './../../Thunks/fetchAllBooks';
 jest.mock('../../Thunks/fetchAllBooks')
 
 
@@ -18,7 +19,6 @@ describe('BookContainer', () => {
       allBooks={mockBooks}
       error={mockError}
       fetchAllBooks={mockfetchAllBooks}
-
       />)
   })
   it('should match the snapshot', () => {
@@ -27,7 +27,7 @@ describe('BookContainer', () => {
 
   it('should match the snapshot when there is an error message',() => {
     const allBooks = []
-    wrapper.setProps({allBooks}) 
+    wrapper.setProps({ allBooks }) 
     wrapper.setProps({ error: 'something went wrong'})
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
@@ -47,6 +47,14 @@ describe('BookContainer', () => {
     wrapper.setProps({error})
     expect(wrapper).toMatchSnapshot()
   });
+
+  it('Link should have a prop of /Options with a link if something goes wrong', () => {
+    const allBooks = []
+     wrapper.setProps({error: 'something went wrong'})
+     wrapper.setProps({allBooks})
+     wrapper.update()
+     expect(wrapper.find(Link).props().to).toBe('/Options');
+   });
 
   it('should render books when all books props are passed',() => {
    let books = wrapper.instance().displayBooks().length 

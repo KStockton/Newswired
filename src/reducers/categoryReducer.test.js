@@ -12,6 +12,7 @@ describe('categoryReducer', () =>{
     const mockState = {topNews: false, books: false, sportsNews: false, travel: false}
     const expected = {topNews: true, books: false, sportsNews: false, travel: false}
     const mockaction = {type: "SET_NEWS_CATEGORY", category: "topNews"}
+    
     const results = categoryReducer(mockState, mockaction)
     expect(results).toEqual(expected)
   })

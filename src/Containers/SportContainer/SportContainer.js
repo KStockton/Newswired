@@ -4,7 +4,7 @@ import { fetchSportsNews } from '../../Thunks/fetchSportsNews';
 import Card from '../../Components/Card/Card';
 import PropTypes from 'prop-types';
 import Loading from '../../Components/Loading/Loading'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 const shortid = require('shortid')
 const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`;
 

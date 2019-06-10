@@ -15,14 +15,14 @@ export class TopNewsContainer extends Component {
     if(this.props.allTopNews.length === 0){
        const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
        this.props.fetchTopNews(topNewsUrl)
-    }
-  }
+    };
+  };
 
   displayTopNews =() => {
-   return this.props.allTopNews.map(location => {
-    return (<Card {...location} key={shortid.generate()}/>)
-   })
-   }
+    return this.props.allTopNews.map(location => {
+      return (<Card {...location} key={shortid.generate()}/>)
+    });
+   };
   
   render() {
     const {error, allTopNews}= this.props

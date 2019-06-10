@@ -4,7 +4,7 @@ import love from '../../Assets/love.svg'
 import nolove from '../../Assets/nolove.svg'
 import { connect } from 'react-redux';
 import {toggleFavorite} from '../../actions/index';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 export class Book extends Component{

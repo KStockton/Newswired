@@ -1,4 +1,5 @@
 import * as action from '../actions/index';
+import { cleanResponse } from '../Utility/Cleaners/cleanResponse';
 
 
 export const fetchTopTravel = (url) => {
@@ -11,8 +12,8 @@ export const fetchTopTravel = (url) => {
       throw Error(response.sendText)
     }
       const data = await response.json()
-    
-      dispatch(action.getTopTravel(data))
+      const cleanData = cleanResponse(data)
+      dispatch(action.getTopTravel(cleanData))
       dispatch(action.isLoading(false))
     } catch(error) {
       dispatch(action.hasErrored(error.message, 'travel'))
