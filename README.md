@@ -27,6 +27,7 @@ This project was built with the following
 - Router
 - Redux
 - The fetch Api
+- Jest/Enzyme 
 
 ### Tested With
 - Jest
