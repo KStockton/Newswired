@@ -2,7 +2,7 @@
 
 
 .Options-background {
-  background-image: url('../Assets/fetch.jpg');
+  background-image: url('../Assets/blurcolor.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -14,11 +14,12 @@
 
 .Options-select-choice {
   font-size: 1.7rem;
-  font-family: 'Old Standard TT', serif;
+  // font-family: 'Old Standard TT', serif;
+  color:white;
 }
 
 .Options-header {
-  background-color: #c3c3c3;
+  background-color: #0077B9;
   margin: 0;
   width: 100vw;
   height: 123px;
@@ -27,6 +28,7 @@
   justify-content: center;
   height: 72px;
   border-bottom: 1px solid;
+  color: #fff;
   
   .Options-title {
     margin: 0;
