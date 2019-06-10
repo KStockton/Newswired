@@ -2,24 +2,22 @@
 
 
 .Options-background {
-  background-image: url('../Assets/blurcolor.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   height: 100vh;
-  margin: 0;
-  position: fixed;
   width: 100vw;
+  background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) ),url('../Assets/camera.jpg'); 
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
 }
 
 .Options-select-choice {
   font-size: 1.7rem;
-  // font-family: 'Old Standard TT', serif;
   color:white;
 }
 
 .Options-header {
-  background-color: #0077B9;
+  background-color: #000000bd;
   margin: 0;
   width: 100vw;
   height: 123px;
@@ -84,6 +82,7 @@
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2cffc9), color-stop(1, #ffffff));
     color: white;
     background: black;
+    cursor:pointer;
 }
 
 .Options-btn::before {
@@ -135,6 +134,9 @@
   position: fixed;
   top: 75%;
   right: 47%;
+  &:hover {
+    color: green;
+  }
 }
 
 .Options-continue {

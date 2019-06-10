@@ -2,7 +2,6 @@ const shortid = require('shortid');
 
 
 export const cleanResponse = (uncleanResponse) => {
-  
   const cleanResponse = uncleanResponse.articles.map(article => {
     return {
           id: shortid.generate(),

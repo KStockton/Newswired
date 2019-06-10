@@ -71,7 +71,7 @@ export class Options extends Component {
           
         </div>
         <div className="Options-continue" role="button">
-          {numOfCategories >= 3 && 
+          {numOfCategories >= 1 && 
             <NavLink to="/Main" className="Options-btn" id="next"> 
               <FontAwesomeIcon id="latest-news" className="Options-fontawesome" icon={faArrowRight}/>
             </NavLink>}

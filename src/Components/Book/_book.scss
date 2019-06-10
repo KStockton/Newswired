@@ -24,6 +24,7 @@
   font-family: 'Old Standard TT', serif;
   font-size: 0.9rem;
   padding: 5px 0px;
+  color:white;
 }
 
 .book-img {
@@ -36,6 +37,7 @@
   @include authors( 12px, left, 5px);
   font-family: 'Noto Sans', sans-serif;
   padding-bottom: 16px;
+  color:white;
 }
 .book-weeks{
   font-size: 0.8rem;
@@ -43,15 +45,18 @@
   font-family: 'Noto Sans', sans-serif;
   text-transform: uppercase;
   padding: 7px 0px;
+  color:white;
 }
 .book-title {
   @include titles(.9rem, 1.1875rem, 700, left, 3px);
   font-family: 'Noto Sans', sans-serif;
+  color:white;
 }
 
 .book-description {
   @include tiles(left, 1rem, 6px );
   font-family: 'Old Standard TT', serif;
+  color:white;
 
 }
 .book-favorite{
