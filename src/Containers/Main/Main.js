@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BooksContainer from '../../Containers/BooksContainer/BooksContainer';
 import TravelContainer from '../TravelContainer/TravelContainer';
-import Nav from '../../Components/Nav/Nav';
+// import Nav from '../../Components/Nav/Nav';
+import Time from '../../Components/Time/Time'
 import SportContainer from '../SportContainer/SportContainer';
 import TopNewsContainer from '../TopNewsContainer/TopNewsContainer';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,7 +27,8 @@ export class Main extends Component {
             News Wire
             </h1>
           </Link>
-          <Nav/>
+          {/* <Nav/> */}
+          <Time/>
         </div>
         {categories.books && <BooksContainer />}
         {categories.sportsNews && <SportContainer />}

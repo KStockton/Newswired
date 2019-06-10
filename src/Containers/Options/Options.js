@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setCategories } from '../../actions/index';
 import PropTypes from 'prop-types';
+import Footer from '../../Components/Footer/Footer';
 
 export class Options extends Component {
 
@@ -20,6 +21,7 @@ export class Options extends Component {
     const {topNews, books, sportsNews, travel} = this.props.categories
 
     return (
+        <section>
       <div className="Options-background">
         <div className="Options-header">
           <h1 className="Options-title">News Wire  </h1>
@@ -77,6 +79,10 @@ export class Options extends Component {
             </NavLink>}
         </div>
       </div>
+      <footer>
+          <Footer/>
+      </footer>
+      </section>
     )
   }
 }
