@@ -16,10 +16,6 @@ const Card = ({id, author, source, articleImage, description, title}) =>{
 }
 
 Card.propTypes = {
-  id: PropTypes.oneOneType([
-    PropTypes.string,
-    PropTypes.number
-  ]),
   author: PropTypes.string,
   source: PropTypes.string,
   title: PropTypes.string,

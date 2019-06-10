@@ -19,7 +19,7 @@ describe('fetchAllBooks', () => {
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
   });
 
-  it('should dispatch hasError with a message if the response.status is not 200', async () => {
+  it('should dispatch hasError with a message if the response.statusText is not 200', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: false,
       statusText:  'ooops'

@@ -34,11 +34,11 @@ exports[`TravelContainer should match the snapshot 1`] = `
     className="TravelContainer-wrapper Card-wrapper"
   >
     <Card
-      key="iMd9T0tH-"
+      key="fvrqW8TGC"
       title="New York"
     />
     <Card
-      key="1CpIyo6OoQ"
+      key="rjbZP_jgjg"
       title="Boston"
     />
   </div>
