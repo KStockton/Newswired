@@ -11,11 +11,11 @@ exports[`SportsContainer should match the snapshot 1`] = `
     className="sports-wrapper Card-wrapper"
   >
     <Card
-      key="5f5ZJjSqu"
+      key="qxz_K4_Hb"
       title="Golden"
     />
     <Card
-      key="TxfYOU708_"
+      key="uWeu8Urvzb"
       title="Xavier Basketball"
     />
   </div>

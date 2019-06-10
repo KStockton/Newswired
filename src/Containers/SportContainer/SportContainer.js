@@ -11,7 +11,7 @@ const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`;
 
 export class SportContainer extends Component {
 
- componentDidMount = ()=>{
+ componentDidMount = () => {
     
     if(this.props.allSports.length === 0){
       const sportNewsUrl = `https://newsapi.org/v2/everything?q=sports&language=en&from=2019-06-03&page=1&domains=espn.com&apiKey=${API_KEY}`;

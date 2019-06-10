@@ -12,12 +12,12 @@ exports[`TopNewsContainer should match the snapshot 1`] = `
   >
     <Card
       id={232}
-      key="JaX1uDku7"
+      key="yoYXvwbP9"
       title="Syria"
     />
     <Card
       id={45}
-      key="2OVPFflKsp"
+      key="kf1ZefxwkG"
       titel="Trump loses hair"
     />
   </div>

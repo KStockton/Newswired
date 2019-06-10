@@ -1,7 +1,8 @@
-import React from 'react'
-import { Options, mapStateToProps, mapDispatchToProps} from './Options'
-import { shallow } from 'enzyme'
-import { setCategories } from '../../actions/index'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Options, mapStateToProps, mapDispatchToProps} from './Options';
+import { shallow } from 'enzyme';
+import { setCategories } from '../../actions/index';
 
 
 const mockSelectTopic = jest.fn()
@@ -27,14 +28,15 @@ describe('Option', () => {
     wrapper.setProps({categories})
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
-  })
+  });
 
   it('should render topNews if its true', () => {
     const categories = {categories:{books: false, travel: false, topNews: true, sportsNews: false}}
     wrapper.setProps({categories})
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
-  })
+  });
+
 
   it('should render books if its true', () => {
     const categories = {categories:{books: true, travel: false, topNews: false, sportsNews: false}}
@@ -49,6 +51,17 @@ describe('Option', () => {
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
   });
+
+  xit('should render next arrow when three categories are selected', () => {
+    const categories = {categories:{books: true, travel: true, topNews: true, sportsNews: false}}
+    const numOfCategories = 3
+      
+      wrapper.setProps({categories})
+      wrapper.setProps({numOfCategories})
+      wrapper.setProps({ NavLink })
+    wrapper.update() 
+    expect(wrapper).toMatchSnapshot()
+  }); 
 
   it('should call selectTopic when button is clicked', () => {
     wrapper.find('button').at(0).simulate('click', { target : { name : 'topNews'}})
@@ -69,7 +82,9 @@ describe('Option', () => {
     wrapper.find('button').at(3).simulate('click', { target : { name : 'travel'}})
     expect(mockSetCategories).toHaveBeenCalledWith('travel') 
   });
+
 });
+ 
 describe('MSTP',() =>{
 
   it('should map state from mockstate', () => {
@@ -88,5 +103,5 @@ describe('MDTP',() =>{
     const actionToDispatch = setCategories(mockCategory)
     mappedProps.setCategories(mockCategory)
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch) 
-  }) 
-})  
+  }); 
+});   
