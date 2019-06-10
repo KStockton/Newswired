@@ -42,4 +42,4 @@ This project was built with the following
 
 ![Screen Shot 2019-06-10 at 2 55 33 PM](https://user-images.githubusercontent.com/34406483/59230053-7757a300-8b99-11e9-9f3f-85fe708eca99.png)
 
-<img width="840" alt="Screen Shot 2019-06-05 at 11 02 09 AM" src="https://user-images.githubusercontent.com/34406483/58975786-07a17c80-8783-11e9-9030-53996414c5b8.png">
+<img width="1679" alt="Screen Shot 2019-06-10 at 5 40 47 PM" src="https://user-images.githubusercontent.com/34406483/59233743-eedfff00-8ba6-11e9-9a7c-02a971db00e9.png">
