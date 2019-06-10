@@ -1,7 +1,7 @@
 import React from 'react'
 import { SportContainer, mapStateToProps, mapDispatchToProps} from './SportContainer'
 import { shallow } from 'enzyme';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { fetchSportsNews } from '../../Thunks/fetchSportsNews'
 jest.mock('../../Thunks/fetchSportsNews')
 

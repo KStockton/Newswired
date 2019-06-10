@@ -10,6 +10,7 @@ describe('TravelContainer',() => {
   let mockTravel  
   let mockError 
   let mockfetchTravel 
+  
   beforeEach(() => {
     mockTravel = mockData.mockTravel
     mockfetchTravel = jest.fn()
