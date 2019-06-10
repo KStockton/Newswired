@@ -30,6 +30,7 @@
   height: 267px;
   box-shadow: 3px 3px 8px 3px #a99a9a;
   border-radius: 1px;
+  min-width: 172px;
 }
 .author {
   @include authors( 12px, left, 5px);

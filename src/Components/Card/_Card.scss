@@ -23,7 +23,7 @@
   height: 230px;
   box-shadow: 2px 4px 6px 2px #a99a9a;
   border-radius: 2px;
-  width: 304px;
+  min-width: 304px;
 }
 .Card-author {
   @include authors( 12px, left, 5px);

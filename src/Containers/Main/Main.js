@@ -7,7 +7,9 @@ import SportContainer from '../SportContainer/SportContainer';
 import TopNewsContainer from '../TopNewsContainer/TopNewsContainer';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import Footer from '../../Components/Footer/Footer'
 import PropTypes from 'prop-types';
+
 import {Link} from 'react-router-dom'
 
 export class Main extends Component {
@@ -30,6 +32,7 @@ export class Main extends Component {
         {categories.travel && <TravelContainer  />}
         {categories.sportsNews && <SportContainer />}
         {categories.topNews && <TopNewsContainer />}
+        <Footer/>
       </div>
     )
   }
