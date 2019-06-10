@@ -1,7 +1,6 @@
 import { fetchAllBooks } from '../fetchAllBooks';
 import { isLoading, getAllBooks, hasErrored } from '../../actions';
-import { cleanBooks, uncleanBooks } from '../../Utility/MockData';
-import { cleanNYTBooks } from '../../Utility/Cleaners/cleanNYTBooks'
+import { cleanNYTBooks } from '../../Utility/Cleaners/cleanNYTBooks';
 jest.mock('../../Utility/Cleaners/cleanNYTBooks')
 
 describe('fetchAllBooks', () => {
@@ -30,6 +29,7 @@ describe('fetchAllBooks', () => {
     await thunk(mockDispatch)
     expect(mockDispatch).toHaveBeenCalledWith(hasErrored('ooops'))
   });
+  
   it('should cleanNYTBooks to have been called when response is ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,

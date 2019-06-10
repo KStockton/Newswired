@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Card = ({id, author, source, articleImage, description, title}) =>{
@@ -16,9 +16,14 @@ const Card = ({id, author, source, articleImage, description, title}) =>{
 }
 
 Card.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.oneOneType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
   author: PropTypes.string,
   source: PropTypes.string,
+  title: PropTypes.string,
+  articleImage: PropTypes.string,
   description: PropTypes.string,
   content: PropTypes.string
 }

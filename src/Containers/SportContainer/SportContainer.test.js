@@ -12,6 +12,7 @@ describe('SportsContainer',() => {
   let mockfetchSportNews = jest.fn()
   
   beforeEach(() => {
+  
     wrapper = shallow(<SportContainer 
       allSports={mockSports}
       error={mockError}
@@ -25,26 +26,32 @@ describe('SportsContainer',() => {
 
   it('should render error message if the error is not an empty string and allsports.length === 0', () => {
    const allSports = []
+
     wrapper.setProps({error: 'something went wrong'})
     wrapper.setProps({allSports})
     wrapper.update()
+
     expect(wrapper).toMatchSnapshot()
   });
 
   it('should render loading if the component is loading', () => {
     const allSports = []
     const error = ''
+
     wrapper.setProps({allSports})
     wrapper.setProps({error})
     wrapper.update()
+
     expect(wrapper).toMatchSnapshot()
   });
 
   it('Link should have a prop of /Options with a link if something goes wrong', () => {
     const allSports = []
+
      wrapper.setProps({error: 'something went wrong'})
      wrapper.setProps({allSports})
      wrapper.update()
+
      expect(wrapper.find(Link).props().to).toBe('/Options');
    });
 
@@ -52,6 +59,7 @@ describe('SportsContainer',() => {
     wrapper.instance().displaySportNews = jest.fn()
     wrapper.update()
     wrapper.instance().render()
+   
     expect(wrapper.instance().displaySportNews).toHaveBeenCalled()
   });
 
@@ -70,14 +78,16 @@ describe('SportsContainer',() => {
   it('should call fetchSportNews with  if allSport.length === 0',  () => {
     const mockNoSports = []
     const mockError = ''
+    
     wrapper = shallow(<SportContainer
       allSports={mockNoSports}
       error={mockError}
       fetchSportsNews={mockfetchSportNews}/>)
+      
       wrapper.instance().componentDidMount()
       expect(mockfetchSportNews).toHaveBeenCalled()
-    }) 
-  })
+    }); 
+  });
 });
 
 describe('MSTP',() =>{
@@ -85,18 +95,21 @@ describe('MSTP',() =>{
   it('should map state from mockstate', () => {
     const mockState = { allSports :[{title:'Golden'},{title:'Xavier Basketball'}], error: 'oops'}
     const result = mapStateToProps(mockState)
+   
     expect(result).toEqual(mockState)
-  }) 
+  });
 });
 
 describe('MDTP',() =>{
+  
   const mockDispatch = jest.fn()
   const mappedProps = mapDispatchToProps(mockDispatch)
 
   it('should dispatch action when correct params passed', () => {
     const mockUrl = 'www.cool.com'
     const actionToDispatch = fetchSportsNews(mockUrl)
+    
     mappedProps.fetchSportsNews(mockUrl)
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
-  }) 
+  });
 });

@@ -1,10 +1,7 @@
-import {cleanResponse} from '../Utility/Cleaners/cleanResponse'
-
 export const allTopTravelReducer = (state = [], action) => {
   switch(action.type) {
     case 'ALL_TRAVEL':
-     const allCleanedTravel = cleanResponse(action.travel)  
-      return [...state, ...allCleanedTravel]
+      return action.travel
     default:
       return state
   } 

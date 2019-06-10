@@ -6,5 +6,14 @@ describe('allTopNewsReducer', () =>{
     const mockAction = []
     const results = allTopNewsReducer(mockState,mockAction)
     expect(results).toEqual(mockState)
-  })
+  });
+
+  it('should return action.news into state', () => {
+    const mockState = []
+    let expected = [{name: 'Michael'},{name: 'Jackson'}]
+    const mockAction = {type: 'ALL_TOP_NEWS', news: expected}
+    const result = allTopNewsReducer(mockState, mockAction)
+
+    expect(result).toEqual(expected)
+  });
 });
