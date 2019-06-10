@@ -36,7 +36,7 @@ This project was built with the following
 ## Screenshot
 <img width="840" alt="Screen Shot 2019-06-05 at 11 00 22 AM" src="https://user-images.githubusercontent.com/34406483/58975768-fd7f7e00-8782-11e9-9675-894965e4f018.png">
 
-<img width="840" alt="Screen Shot 2019-06-05 at 11 00 46 AM" src="https://user-images.githubusercontent.com/34406483/58975712-e04aaf80-8782-11e9-8571-32923be67635.png">
+![Screen Shot 2019-06-10 at 12 59 54 AM](https://user-images.githubusercontent.com/34406483/59178051-18534900-8b1b-11e9-970b-62d116fdbca1.png)
 
 <img width="840" alt="Screen Shot 2019-06-05 at 11 00 56 AM" src="https://user-images.githubusercontent.com/34406483/58975753-f5274300-8782-11e9-84a5-97da18384e80.png">
 
