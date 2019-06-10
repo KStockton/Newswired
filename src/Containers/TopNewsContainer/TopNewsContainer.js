@@ -36,7 +36,7 @@ export class TopNewsContainer extends Component {
     return (
       <section>
       <h2 className="TopNews-header">Top News</h2>
-      <div className="TravelContainer-wrapper Card-wrapper">
+      <div className="TopNews-wrapper Card-wrapper">
       {(error !== '' && allTopNews.length === 0 ) && errorMsg}
       {(error === '' && allTopNews.length === 0 ) && <Loading/>}
         {displayTopNews}

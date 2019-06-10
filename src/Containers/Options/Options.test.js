@@ -52,13 +52,13 @@ describe('Option', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  xit('should render next arrow when three categories are selected', () => {
-    const categories = {categories:{books: true, travel: true, topNews: true, sportsNews: false}}
+  xit('should render next arrow when one category is selected', () => {
+    const categories = {categories:{books: true, travel: false, topNews: false, sportsNews: false}}
     const numOfCategories = 3
       
-      wrapper.setProps({categories})
-      wrapper.setProps({numOfCategories})
-      wrapper.setProps({ NavLink })
+    wrapper.setProps({categories})
+    wrapper.setProps({numOfCategories})
+    wrapper.setProps({ NavLink })
     wrapper.update() 
     expect(wrapper).toMatchSnapshot()
   }); 

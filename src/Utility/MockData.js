@@ -40,3 +40,34 @@ export const mockTopNews = [
   export const mockTravel = [{title:'New York'},{title:'Boston'}]
 
   export const mockRealTravelError = 'No Travel Here'
+
+  
+  export const uncleanResponse = 
+      {
+      articles: [
+        {
+          source: { name: 'ESPN'},
+          urlToImage: "espn.com",
+          content: "Warriors lose again!",
+          title: 'KD Leaves',
+          author: 'ESPN',
+          description: 'KD fueds with team',
+          test: 'hmm!'
+        }
+
+      ]
+    }
+  
+  export const cleanResponse = 
+    [{
+      id: 1,
+      source: 'ESPN',
+      author: 'ESPN',
+      articleImage:  "espn.com",
+      description: 'KD fueds with team',
+      title: 'KD Leaves',
+      content: "Warriors lose again!",
+      isfavorited: false
+    }]
+  
+   
