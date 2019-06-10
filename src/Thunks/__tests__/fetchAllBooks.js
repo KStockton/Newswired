@@ -7,6 +7,7 @@ describe('fetchAllBooks', () => {
   let mockUrl;
   let mockDispatch;
   let mockBooks;
+  
   beforeEach(() => {
     mockUrl = "www.cool.com"
     mockDispatch = jest.fn()
@@ -45,6 +46,7 @@ describe('fetchAllBooks', () => {
         ok: true,
         json: () => Promise.resolve(mockBooks)
     }))
+
     const thunk = fetchAllBooks(mockUrl)
     await thunk(mockDispatch) 
     expect(cleanNYTBooks).toHaveBeenCalledWith(mockBooks)
