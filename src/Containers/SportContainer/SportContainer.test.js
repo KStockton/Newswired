@@ -1,6 +1,7 @@
 import React from 'react'
 import { SportContainer, mapStateToProps, mapDispatchToProps} from './SportContainer'
 import { shallow } from 'enzyme';
+import { Link } from 'react-router-dom'
 import { fetchSportsNews } from '../../Thunks/fetchSportsNews'
 jest.mock('../../Thunks/fetchSportsNews')
 
@@ -9,6 +10,7 @@ describe('SportsContainer',() => {
   let mockSports = [{title:'Golden'},{title:'Xavier Basketball'}]
   let mockError = 'something went wrong';
   let mockfetchSportNews = jest.fn()
+  
   beforeEach(() => {
     wrapper = shallow(<SportContainer 
       allSports={mockSports}
@@ -37,6 +39,14 @@ describe('SportsContainer',() => {
     wrapper.update()
     expect(wrapper).toMatchSnapshot()
   });
+
+  it('Link should have a prop of Options', () => {
+    const allSports = []
+     wrapper.setProps({error: 'something went wrong'})
+     wrapper.setProps({allSports})
+     wrapper.update()
+     expect(wrapper.find(Link).props().to).toBe('/Options');
+   });
 
   it('should call displaySportsNews when rendered',() => {
     wrapper.instance().displaySportNews = jest.fn()
