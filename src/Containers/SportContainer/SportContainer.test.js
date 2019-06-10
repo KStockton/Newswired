@@ -40,7 +40,7 @@ describe('SportsContainer',() => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  it('Link should have a prop of Options', () => {
+  it('Link should have a prop of /Options with a link if something goes wrong', () => {
     const allSports = []
      wrapper.setProps({error: 'something went wrong'})
      wrapper.setProps({allSports})
