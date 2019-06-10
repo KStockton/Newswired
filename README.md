@@ -36,10 +36,10 @@ This project was built with the following
 ## Screenshot
 <img width="840" alt="Screen Shot 2019-06-05 at 11 00 22 AM" src="https://user-images.githubusercontent.com/34406483/58975768-fd7f7e00-8782-11e9-9675-894965e4f018.png">
 
-![Screen Shot 2019-06-10 at 12 59 54 AM](https://user-images.githubusercontent.com/34406483/59178051-18534900-8b1b-11e9-970b-62d116fdbca1.png)
+<img width="1679" alt="Screen Shot 2019-06-10 at 3 18 14 PM" src="https://user-images.githubusercontent.com/34406483/59230071-8a6a7300-8b99-11e9-817a-89e3a3844fd9.png">
 
-<img width="840" alt="Screen Shot 2019-06-05 at 11 00 56 AM" src="https://user-images.githubusercontent.com/34406483/58975753-f5274300-8782-11e9-84a5-97da18384e80.png">
+<img width="1679" alt="Screen Shot 2019-06-10 at 3 09 13 PM" src="https://user-images.githubusercontent.com/34406483/59230043-71fa5880-8b99-11e9-8321-c0f4f2b09e86.png">
 
-<img width="840" alt="Screen Shot 2019-06-05 at 11 02 42 AM" src="https://user-images.githubusercontent.com/34406483/58975723-e6d92700-8782-11e9-9a8f-cd893657156f.png">
+![Screen Shot 2019-06-10 at 2 55 33 PM](https://user-images.githubusercontent.com/34406483/59230053-7757a300-8b99-11e9-9f3f-85fe708eca99.png)
 
 <img width="840" alt="Screen Shot 2019-06-05 at 11 02 09 AM" src="https://user-images.githubusercontent.com/34406483/58975786-07a17c80-8783-11e9-9030-53996414c5b8.png">
