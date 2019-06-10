@@ -25,7 +25,7 @@ export class Options extends Component {
           <h1 className="Options-title">News Wire  </h1>
         </div>
         <header className="Options-news">
-      <h4 className="Options-select-choice">Select 3 or more</h4>
+      <h4 className="Options-select-choice">Select News</h4>
         </header>
         <div className="Options-wrapper">
 

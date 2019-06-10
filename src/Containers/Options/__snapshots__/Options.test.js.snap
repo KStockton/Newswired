@@ -19,7 +19,7 @@ exports[`Option should match the snapshot 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Select 3 or more
+      Select News
     </h4>
   </header>
   <div
@@ -236,7 +236,7 @@ exports[`Option should only render topSports icon its true 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Select 3 or more
+      Select News
     </h4>
   </header>
   <div
@@ -453,7 +453,7 @@ exports[`Option should render books if its true 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Select 3 or more
+      Select News
     </h4>
   </header>
   <div
@@ -670,7 +670,7 @@ exports[`Option should render topNews if its true 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Select 3 or more
+      Select News
     </h4>
   </header>
   <div
@@ -887,7 +887,7 @@ exports[`Option should render travel if its true 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Select 3 or more
+      Select News
     </h4>
   </header>
   <div

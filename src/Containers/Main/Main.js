@@ -29,8 +29,8 @@ export class Main extends Component {
           <Nav/>
         </div>
         {categories.books && <BooksContainer />}
-        {categories.travel && <TravelContainer  />}
         {categories.sportsNews && <SportContainer />}
+        {categories.travel && <TravelContainer  />}
         {categories.topNews && <TopNewsContainer />}
         <Footer/>
       </div>
