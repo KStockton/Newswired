@@ -14,7 +14,7 @@ export class Main extends Component {
   render() {
     const {categories} = this.props
     return (
-      <div className="">
+      <div className="Main-background">
         <div className="Main-header">
           <Link to="/Options" className="news-title">
           <h1 className="Main-title">News Wire</h1>

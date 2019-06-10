@@ -37,6 +37,10 @@
   box-shadow: inset 0px 1px 1px #000000, 0px 1px 0px #ff9494;
 }
 
+.Item-fontawesome {
+  font-size: 18px;
+}
+
 .Item-wrapper {
   background-image: url('../Assets/solo.jpg');
   background-repeat: no-repeat;
@@ -52,19 +56,21 @@
 
 
 .Item-content-wrapper {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 617px;
+  background-color: #171616a1;
+  margin: 8rem 21rem;
 }
 
 .Item-author{
-  color:white;
+  color: white;
   padding: 8px;
+  font-size: 13px;
+  font-style: italic;
+  text-align: left;
 }
 .Item-rank{
   color: white;
@@ -78,20 +84,28 @@
   color:white;
   padding: 8px;
   max-width: 544px;
+  font-weight: 200;
+  font-size: 21px;
+  font-family: 'Old Standard TT', serif;
 }
 .Item-description{
-  color:white;
+  color: white;
   padding: 8px;
   max-width: 500px;
   text-align: left;
+  padding-top: 20px;
+  // padding-left: 50px;
+  font-family: 'Old Standard TT', serif;
 }
 
 .Item-img {
   max-height: 300px;
   max-width: 500px;
+  padding: 12px 0px;
 }
 .Item-content {
   color: white;
   max-width: 500px;
-  text-align: left
+  text-align: left;
+  font-family: 'Old Standard TT', serif;
 }
