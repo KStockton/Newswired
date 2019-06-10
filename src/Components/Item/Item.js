@@ -5,7 +5,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 
-const Item = ({bookImage, rank, author, id, description, title, weeksOnList, articleImage, content}) => {
+const Item = ({bookImage, author, id, description, title, articleImage, content}) => {
 
   return (
     <section>
@@ -28,9 +28,7 @@ const Item = ({bookImage, rank, author, id, description, title, weeksOnList, art
 Item.propTypes = {
   id: PropTypes.string,
   bookImage: PropTypes.string,
-  rank: PropTypes.number,
   title: PropTypes.string,
-  weeksOnList: PropTypes.number,
   articleImage: PropTypes.string,
   author: PropTypes.string,
   source: PropTypes.string,

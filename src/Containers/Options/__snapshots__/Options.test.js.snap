@@ -10,7 +10,7 @@ exports[`Option should match the snapshot 1`] = `
     <h1
       className="Options-title"
     >
-      News Wire
+      News Wire  
     </h1>
   </div>
   <header
@@ -19,7 +19,7 @@ exports[`Option should match the snapshot 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Please Select 3 Categories
+      Select 3 or more
     </h4>
   </header>
   <div
@@ -227,7 +227,7 @@ exports[`Option should only render topSports icon its true 1`] = `
     <h1
       className="Options-title"
     >
-      News Wire
+      News Wire  
     </h1>
   </div>
   <header
@@ -236,7 +236,7 @@ exports[`Option should only render topSports icon its true 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Please Select 3 Categories
+      Select 3 or more
     </h4>
   </header>
   <div
@@ -444,7 +444,7 @@ exports[`Option should render books if its true 1`] = `
     <h1
       className="Options-title"
     >
-      News Wire
+      News Wire  
     </h1>
   </div>
   <header
@@ -453,7 +453,7 @@ exports[`Option should render books if its true 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Please Select 3 Categories
+      Select 3 or more
     </h4>
   </header>
   <div
@@ -878,7 +878,7 @@ exports[`Option should render topNews if its true 1`] = `
     <h1
       className="Options-title"
     >
-      News Wire
+      News Wire  
     </h1>
   </div>
   <header
@@ -887,7 +887,7 @@ exports[`Option should render topNews if its true 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Please Select 3 Categories
+      Select 3 or more
     </h4>
   </header>
   <div
@@ -1095,7 +1095,7 @@ exports[`Option should render travel if its true 1`] = `
     <h1
       className="Options-title"
     >
-      News Wire
+      News Wire  
     </h1>
   </div>
   <header
@@ -1104,7 +1104,7 @@ exports[`Option should render travel if its true 1`] = `
     <h4
       className="Options-select-choice"
     >
-      Please Select 3 Categories
+      Select 3 or more
     </h4>
   </header>
   <div
