@@ -11,11 +11,11 @@ exports[`BookContainer should match the snapshot 1`] = `
     className="book-wrapper"
   >
     <Connect(Book)
-      key="MXc8bRhV9"
+      key="0ltCdKRJ1"
       title="Golden"
     />
     <Connect(Book)
-      key="46VZwCE7mk"
+      key="3bB5t8mxkZ"
       title="Xavier"
     />
   </div>

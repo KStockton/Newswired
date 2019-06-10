@@ -22,12 +22,12 @@ componentDidMount() {
 
   displayBooks = () => {
     const {allBooks} =this.props
-  if(allBooks.length > 0){
-    return allBooks.map(book => {
-      return (<Book {...book} key={shortid.generate() } />
-      )
-    })
-  }
+    
+    if(allBooks.length > 0) {
+      return allBooks.map(book => {
+        return (<Book {...book} key={shortid.generate() } />)
+      }) 
+    }
   }
 
   render() {
