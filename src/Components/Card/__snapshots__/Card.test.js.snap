@@ -27,9 +27,10 @@ exports[`Card should match the snapshot 1`] = `
 exports[`Card should match the snapshot when props are passed 1`] = `
 <section
   className="CardCard-tile"
+  id={3}
 >
   <Link
-    to="/card/undefined"
+    to="/card/3"
   >
     <img
       alt="travel"

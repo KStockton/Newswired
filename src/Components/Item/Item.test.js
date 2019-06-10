@@ -14,7 +14,6 @@ describe('Item', () => {
   });
 
   it('Link should have a prop of /Options with a link if something goes wrong', () => {
-     wrapper.update()
      expect(wrapper.find(Link).props().to).toBe('/main');
    });
 })
