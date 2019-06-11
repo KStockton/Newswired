@@ -31,6 +31,7 @@ componentDidMount() {
   }
 
   render() {
+    
     const {error, allBooks}= this.props
     const errorMsg = 
                     <div>
@@ -38,6 +39,7 @@ componentDidMount() {
                       <Link to="/Options">Back</Link>
                     </div>
     const displayBooks = this.displayBooks()    
+
     return (
       <section>
         <h2 className="book-title-header"> New York Times Best Sellers</h2>
