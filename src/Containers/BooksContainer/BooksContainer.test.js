@@ -20,7 +20,8 @@ describe('BookContainer', () => {
       error={mockError}
       fetchAllBooks={mockfetchAllBooks}
       />)
-  })
+  });
+  
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   });

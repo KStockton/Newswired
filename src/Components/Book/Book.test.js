@@ -8,12 +8,15 @@ describe('Book', () => {
   let wrapper;
   let mockProp = jest.fn()
   let mockId = 3
+  
   beforeEach(() => {
     wrapper = shallow(<Book toggleFavorite={mockProp} id={mockId}/>)
   })
+
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   });
+
   it('should match the snapshot when props are passed', () => {
     let mockbookImage = "http://win.com"
     let mockrank = 1
