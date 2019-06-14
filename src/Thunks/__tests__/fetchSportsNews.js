@@ -50,6 +50,35 @@ describe('fetchSportsNews', () => {
     expect(cleanResponse).toHaveBeenCalledWith(mockSports)
   });
 
-  
-});
+  it('should dispatch isLoading(false) if the status is ok', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve ({
+      ok: true,
+      json: () => Promise.resolve(mockSports)
+    }))
+    const thunk = fetchSportsNews(mockUrl)
+    await thunk(mockDispatch)
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
+  });
+
+  it('should pass the correct params when fetch is called', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockSports)
+    }))
+    const thunk = fetchSportsNews(mockUrl)
+    await thunk(mockDispatch) 
+    expect(window.fetch).toHaveBeenCalledWith(mockUrl)
+  });
+
+  it('should dispatch getSportsNews if the status is ok', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({sports: mockSports})
+    }))
+    const thunk = fetchSportsNews(mockUrl)
+    await thunk(mockDispatch)
+    const result = cleanResponse(mockSports)
+    expect(mockDispatch).toHaveBeenCalledWith(getSportsNews(result))
+  })
+}); 
 
