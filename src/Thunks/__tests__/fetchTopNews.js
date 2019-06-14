@@ -58,4 +58,15 @@ describe('fetchTopNews', () => {
     await thunk(mockDispatch)
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
   });
+
+  it('should dispatch getTopNews if the response is ok', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve(mockNews)
+    }))
+    const thunk = fetchTopNews(mockUrl)
+    await thunk(mockDispatch)
+    const result = cleanResponse(mockNews)
+    expect(mockDispatch).toHaveBeenCalledWith(getTopNews(result))
+  });
 });
