@@ -1,7 +1,7 @@
 import { fetchSportsNews } from '../fetchSportsNews';
 import { isLoading, getSportsNews, hasErrored } from '../../actions';
 import { cleanResponse } from '../../Utility/Cleaners/cleanResponse';
-jest.mock('../../Utility/Cleaners/cleanNYTBooks');
+jest.mock('../../Utility/Cleaners/cleanResponse');
 
 describe('fetchSportsNews', () => {
   let mockUrl, mockDispatch, mockSports
@@ -49,5 +49,7 @@ describe('fetchSportsNews', () => {
     await thunk(mockDispatch) 
     expect(cleanResponse).toHaveBeenCalledWith(mockSports)
   });
+
+  
 });
 
