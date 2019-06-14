@@ -1,0 +1,33 @@
+import { fetchTopNews } from '../fetchTopNews';
+import { isLoading, getTopNews, hasErrored } from '../../actions/index'
+import { cleanResponse } from '../../Utility/Cleaners/cleanResponse';
+import * as mockData from '../../Utility/MockData';
+jest.mock('../../Utility/Cleaners/cleanResponse');
+
+describe('fetchTopNews', () => {
+  let mockUrl, mockDispatch, mockNews
+
+  beforeEach(() => {
+    mockUrl = 'www.topnews.com'
+    mockDispatch = jest.fn()
+    mockNews = mockData.mockTopNews
+  });
+
+  it('should disptach isLoading(true)', async () => {
+    const thunk = fetchTopNews(mockUrl)
+    await thunk(mockDispatch)
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
+  });
+
+  it('should dispatch hasErrorred if ok is false', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: false,
+      statusText: 'ooops'
+    }))
+    const thunk = fetchTopNews(mockUrl)
+    await thunk(mockDispatch)
+    expect(mockDispatch).toHaveBeenCalledWith(hasErrored('ooops'))
+  });
+
+  it('should ')
+});

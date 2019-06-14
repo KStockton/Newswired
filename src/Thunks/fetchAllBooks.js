@@ -16,8 +16,7 @@ export const fetchAllBooks = (url) => {
      
       dispatch(action.getAllBooks(cleanBooks))
       dispatch(action.isLoading(false));
-
-    } catch (error) {
+    } catch(error) {
       dispatch(action.hasErrored(error.message, 'books'))
     }
   }

@@ -8,8 +8,9 @@ export const fetchSportsNews = (url) => {
     try {
       dispatch(action.isLoading(true))
       const response = await fetch(url)
+
       if(!response.ok) {
-      throw Error(response.sendText)
+      throw Error(response.statusText)
     }
       const data = await response.json()
       const cleanData = cleanResponse(data)
