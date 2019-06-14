@@ -8,7 +8,6 @@ export const fetchSportsNews = (url) => {
     try {
       dispatch(action.isLoading(true))
       const response = await fetch(url)
-
       if(!response.ok) {
       throw Error(response.statusText)
     }
