@@ -69,5 +69,6 @@ export const mockTopNews = [
       content: "Warriors lose again!",
       isfavorited: false
     }]
-  
+
+    
    

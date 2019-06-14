@@ -20,7 +20,7 @@ describe('fetchAllBooks', () => {
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
   });
 
-  it('should dispatch hasError with a message if the response.statusText is not 200', async () => {
+  it('should dispatch hasErrored with a message if the response.statusText is not 200', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: false,
       statusText:  'ooops'
@@ -31,7 +31,7 @@ describe('fetchAllBooks', () => {
     expect(mockDispatch).toHaveBeenCalledWith(hasErrored('ooops'))
   });
   
-  it('should cleanNYTBooks to have been called when response is ok', async () => {
+  it('cleanNYTBooks should be called when response is ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(mockBooks)
@@ -41,7 +41,7 @@ describe('fetchAllBooks', () => {
     expect(cleanNYTBooks).toHaveBeenCalled()
   });
 
-  it('should cleanNYTBooks to have been called with mockBooks', async () => {
+  it('cleanNYTBooks to have been called with mockBooks', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(mockBooks)
