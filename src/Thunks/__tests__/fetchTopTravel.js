@@ -32,14 +32,14 @@ describe('fetchTopTravel', () => {
     expect(mockDispatch).toHaveBeenCalledWith(hasErrored('ooops'))
   });
 
-  xit('should cleanResponse to have been called when response is ok', async () => {
+  it('should cleanResponse to have been called when response is ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
       json: () => Promise.resolve(mockTravel)
     }))
 
     const thunk = fetchTopTravel(mockUrl)
-    await thunk(mockTravel)
+    await thunk(mockDispatch)
     expect(cleanResponse).toHaveBeenCalled()
   });
 
@@ -64,8 +64,8 @@ describe('fetchTopTravel', () => {
     expect(window.fetch).toHaveBeenCalledWith(mockUrl)
   });
 
-  xit('should dispatch isLoading(false) if the response is OK', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resovle({
+  it('should dispatch isLoading(false) if the response is OK', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
       json: () => Promise.resolve({
         travel: mockTravel
@@ -74,7 +74,7 @@ describe('fetchTopTravel', () => {
     const thunk = fetchTopTravel(mockUrl)
     await thunk(mockDispatch)
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
-  });
+  }); 
 
   it('should dispatch getAllBooks if the response is ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
