@@ -8,7 +8,8 @@ describe('Item', () => {
 
   beforeEach(() => {
     wrapper = shallow(<Item/>) 
-  })
+  });
+  
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   });

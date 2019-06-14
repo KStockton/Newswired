@@ -6,18 +6,19 @@ import { setCategories } from '../../actions/index';
 
 
 const mockSelectTopic = jest.fn()
+
 describe('Option', () => {
   let wrapper;
   let mockcategories = {categories:{books: true, travel: true, topNews: true, sportsNews: true}}
   let mockSetCategories
+
   beforeEach(() => { 
-   
     mockSetCategories =jest.fn()
     wrapper = shallow(<Options 
       selectTopic ={mockSelectTopic}
       categories={mockcategories} 
       setCategories={mockSetCategories}/>)
-  })
+  });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
@@ -52,7 +53,7 @@ describe('Option', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-  xit('should render next arrow when one category is selected', () => {
+  it('should render next arrow when one category is selected', () => {
     const categories = {categories:{books: true, travel: false, topNews: false, sportsNews: false}}
     const numOfCategories = 3
       
