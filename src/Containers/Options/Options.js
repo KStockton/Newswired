@@ -45,7 +45,7 @@ export class Options extends Component {
             <button className="Options-btn" name="books" onClick={this.selectTopic}>
               <label htmlFor="new-york-times-books">
                 <FontAwesomeIcon id="new-york-times-books" className="Options-fontawesome" icon={faBookOpen}/>
-                  Top NY Times Books
+                  NY Times Books
               </label>
             </button>
             {books && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
