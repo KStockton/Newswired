@@ -10,7 +10,7 @@ const Item = ({bookImage, author, id, description, title, articleImage, content}
   return (
     <section>
       <Link to={`/main`} className="Item-back">
-      `<FontAwesomeIcon id="latest-news" className="Item-fontawesome" icon={faArrowLeft}/>
+        <FontAwesomeIcon id="latest-news" className="Item-fontawesome" icon={faArrowLeft}/>
       </Link>
       <article className="Item-wrapper" id={id}>
         <section className="Item-content-wrapper">

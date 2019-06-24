@@ -49,14 +49,9 @@
 }
 
 .Options-wrapper {
-  background-size: 100% 100%;
-  width: 100vw;
-  height: 87vh;
   display: flex;
   justify-content: space-evenly;
-  position: fixed;
-  top: 41%;
-  margin: auto;
+  margin: auto 0;
 }
 
 .Options-btn {
@@ -132,9 +127,6 @@
   display: flex;
   align-items: center;
   background-color: #f6f8fb;
-  // position: fixed;
-  // top: 75%;
-  // right: 47%;
   &:hover {
     color: green;
   }
@@ -142,9 +134,7 @@
 
 .Options-continue {
   display: flex;
-  align-content: flex-end;
-  margin-left: 35.5em;
-  margin-top: 27rem;
+  justify-content: center;
 }
 
 @media screen and(max-width: 1100px) {
@@ -171,9 +161,6 @@
     display: flex;
     flex-direction: row;
     align-content: center;
-    position: fixed;
-    top: 84%;
-    left: 15%;
     margin: 0 auto;
   }
 

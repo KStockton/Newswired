@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setCategories } from '../../actions/index';
 import PropTypes from 'prop-types';
-import Footer from '../../Components/Footer/Footer';
 
 export class Options extends Component {
 
@@ -79,9 +78,6 @@ export class Options extends Component {
             </NavLink>}
         </div>
       </div>
-      <footer>
-          <Footer/>
-      </footer>
       </section>
     )
   }
