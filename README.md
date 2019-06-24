@@ -4,7 +4,7 @@
 
 Fetch News Data for a user and allow them to favorite the latest news articles. 
 
-View the website here  https://kstockton.github.io/
+View the website here  https://kstockton.github.io/Newswired
 ## Installing / Lets Get Started
 ```bash
 git clone [https://github.com/KStockton/Newswired] [what you want to name the repo]
