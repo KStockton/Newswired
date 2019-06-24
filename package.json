@@ -22,12 +22,14 @@
     "shortid": "^2.2.14",
     "styled-components": "^4.2.1"
   },
+  "homepage":"http://KStockton.github.io/Newswired",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
