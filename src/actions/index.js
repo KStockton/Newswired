@@ -8,7 +8,7 @@ export const getAllBooks = (books) => ({
   books
 })
 
-export const setCategories = (category) => ({
+export const set = (category) => ({
   type: 'SET_NEWS_CATEGORY',
   category
 })

@@ -114,7 +114,7 @@ exports[`Option should match the snapshot 1`] = `
               title=""
               transform={null}
             />
-            Top NY Times Books
+            NY Times Books
           </label>
         </button>
       </div>
@@ -216,9 +216,6 @@ exports[`Option should match the snapshot 1`] = `
       role="button"
     />
   </div>
-  <footer>
-    <Footer />
-  </footer>
 </section>
 `;
 
@@ -336,7 +333,7 @@ exports[`Option should only render topSports icon its true 1`] = `
               title=""
               transform={null}
             />
-            Top NY Times Books
+            NY Times Books
           </label>
         </button>
       </div>
@@ -438,9 +435,6 @@ exports[`Option should only render topSports icon its true 1`] = `
       role="button"
     />
   </div>
-  <footer>
-    <Footer />
-  </footer>
 </section>
 `;
 
@@ -558,7 +552,7 @@ exports[`Option should render books if its true 1`] = `
               title=""
               transform={null}
             />
-            Top NY Times Books
+            NY Times Books
           </label>
         </button>
       </div>
@@ -660,9 +654,6 @@ exports[`Option should render books if its true 1`] = `
       role="button"
     />
   </div>
-  <footer>
-    <Footer />
-  </footer>
 </section>
 `;
 
@@ -780,7 +771,7 @@ exports[`Option should render next arrow when one category is selected 1`] = `
               title=""
               transform={null}
             />
-            Top NY Times Books
+            NY Times Books
           </label>
         </button>
       </div>
@@ -882,9 +873,6 @@ exports[`Option should render next arrow when one category is selected 1`] = `
       role="button"
     />
   </div>
-  <footer>
-    <Footer />
-  </footer>
 </section>
 `;
 
@@ -1002,7 +990,7 @@ exports[`Option should render topNews if its true 1`] = `
               title=""
               transform={null}
             />
-            Top NY Times Books
+            NY Times Books
           </label>
         </button>
       </div>
@@ -1104,9 +1092,6 @@ exports[`Option should render topNews if its true 1`] = `
       role="button"
     />
   </div>
-  <footer>
-    <Footer />
-  </footer>
 </section>
 `;
 
@@ -1224,7 +1209,7 @@ exports[`Option should render travel if its true 1`] = `
               title=""
               transform={null}
             />
-            Top NY Times Books
+            NY Times Books
           </label>
         </button>
       </div>
@@ -1326,8 +1311,5 @@ exports[`Option should render travel if its true 1`] = `
       role="button"
     />
   </div>
-  <footer>
-    <Footer />
-  </footer>
 </section>
 `;
