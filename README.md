@@ -2,7 +2,7 @@
 
 ## The Goals and Objectives of this project is as below:
 
-Fetch News Data for a user and allow them to favorite the latest news articles. 
+A user can retrieve Fetch News for upto for categories and click on a story for more information.  
 
 View the website here  https://kstockton.github.io/Newswired
 ## Installing / Lets Get Started
