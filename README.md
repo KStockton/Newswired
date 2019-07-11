@@ -2,7 +2,7 @@
 
 ## The Goals and Objectives of this project is as below:
 
-A user can retrieve Fetch News for upto for categories and click on a story for more information.  
+A user can retrieve news or the New York Times latest books. Also a user can click on a article to view more information.  
 
 View the website here  https://kstockton.github.io/Newswired
 ## Installing / Lets Get Started
