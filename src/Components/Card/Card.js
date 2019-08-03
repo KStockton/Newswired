@@ -8,12 +8,12 @@ const Card = ({id, author, source, articleImage, description, title}) =>{
       <Link to={`/card/${id}`}>
         <img className="Card-img" src={articleImage} alt="travel"/>
       </Link>
-        <p className="Card-author">{author}</p>
-        <p className="Card-title">{title}</p>
-        <p className="Card-description">{description}</p>
+      <p className="Card-author">{author}</p>
+      <p className="Card-title">{title}</p>
+      <p className="Card-description">{description}</p>
     </section>
-  )
-}
+  );
+};
 
 Card.propTypes = {
   author: PropTypes.string,
@@ -22,6 +22,6 @@ Card.propTypes = {
   articleImage: PropTypes.string,
   description: PropTypes.string,
   content: PropTypes.string
-}
+};
 
-export default Card
+export default Card;

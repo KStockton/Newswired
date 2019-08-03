@@ -7,13 +7,13 @@ describe('Error', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Error/>) 
-  })
+    wrapper = shallow(<Error/>); 
+  });
   it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('Navlink should have a prop of /Options with a link if something goes wrong', () => {
-     expect(wrapper.find(NavLink).props().to).toBe('/Options');
-   });
+    expect(wrapper.find(NavLink).props().to).toBe('/Options');
+  });
 });

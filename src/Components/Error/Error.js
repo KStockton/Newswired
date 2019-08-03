@@ -12,13 +12,13 @@ export const Error = () => {
       <div className="error-wrapper">
         <h5 className="Error-title">404 Page Not Found</h5>
         <NavLink className="error-back"to="/Options">
-        <FontAwesomeIcon className="Error-fontawesome" icon={faHome}/>
+          <FontAwesomeIcon className="Error-fontawesome" icon={faHome}/>
           Home
         </NavLink>
       </div>
     </section>
-  )
+  );
 };
 
 
-export default Error
+export default Error;

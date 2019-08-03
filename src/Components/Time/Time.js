@@ -3,11 +3,11 @@ import React, { Component }  from 'react';
  
 export default class Time extends Component {
   
-    render() {
-      return (
-        <time>
-           {/* <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} /> */}
-        </time>
-      )
-   }
+  render() {
+    return (
+      <time>
+        {/* <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} /> */}
+      </time>
+    );
+  }
 }

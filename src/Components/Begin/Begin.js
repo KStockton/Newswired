@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 const Begin = () => {
     
@@ -15,10 +15,10 @@ const Begin = () => {
         <button className="begin-btn">Get Started</button>
       </Link>
     </div>
-  )
-}
+  );
+};
 
 
 
 
-export default Begin
+export default Begin;

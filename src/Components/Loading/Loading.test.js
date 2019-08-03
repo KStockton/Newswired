@@ -6,10 +6,10 @@ describe('Loading', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Loading/>)
+    wrapper = shallow(<Loading/>);
   });
 
   it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot();
   });
 });

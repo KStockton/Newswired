@@ -4,81 +4,81 @@ import { cleanResponse } from '../../Utility/Cleaners/cleanResponse';
 jest.mock('../../Utility/Cleaners/cleanResponse');
 
 describe('fetchSportsNews', () => {
-  let mockUrl, mockDispatch, mockSports
+  let mockUrl, mockDispatch, mockSports;
 
-  beforeEach (() => {
-     mockUrl = 'www.sports.com'
-     mockDispatch = jest.fn()
-     mockSports = [{title: 'nuggets'}]
+  beforeEach(() => {
+    mockUrl = 'www.sports.com';
+    mockDispatch = jest.fn();
+    mockSports = [{title: 'nuggets'}];
   });
 
   it('should dispatch isLoading(true) ', () => {
-    const thunk = fetchSportsNews(mockUrl)
-    thunk(mockDispatch)
-    expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
+    const thunk = fetchSportsNews(mockUrl);
+    thunk(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(true));
   });
 
   it('should dispatch hadErrored with a message if the response is not ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: false,
       statusText: 'sorry no sports'
-    }))
+    }));
 
-    const thunk = fetchSportsNews(mockUrl)
-    await thunk(mockDispatch)
-    expect(mockDispatch).toHaveBeenCalledWith(hasErrored('sorry no sports'))
+    const thunk = fetchSportsNews(mockUrl);
+    await thunk(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(hasErrored('sorry no sports'));
   });
 
   it('should cleanResponse to have been called with response is ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
       json: () => Promise.resolve(mockSports)
-    }))
-    const thunk = fetchSportsNews(mockUrl)
-    await thunk(mockDispatch)
-    expect(cleanResponse).toHaveBeenCalled()
+    }));
+    const thunk = fetchSportsNews(mockUrl);
+    await thunk(mockDispatch);
+    expect(cleanResponse).toHaveBeenCalled();
   });
 
   it('cleanResponse to have been called with mockSports', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve(mockSports)
-    }))
+      ok: true,
+      json: () => Promise.resolve(mockSports)
+    }));
 
-    const thunk = fetchSportsNews(mockUrl)
-    await thunk(mockDispatch) 
-    expect(cleanResponse).toHaveBeenCalledWith(mockSports)
+    const thunk = fetchSportsNews(mockUrl);
+    await thunk(mockDispatch); 
+    expect(cleanResponse).toHaveBeenCalledWith(mockSports);
   });
 
   it('should dispatch isLoading(false) if the status is ok', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve ({
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
       json: () => Promise.resolve(mockSports)
-    }))
-    const thunk = fetchSportsNews(mockUrl)
-    await thunk(mockDispatch)
-    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
+    }));
+    const thunk = fetchSportsNews(mockUrl);
+    await thunk(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false));
   });
 
   it('should pass the correct params when fetch is called', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve(mockSports)
-    }))
-    const thunk = fetchSportsNews(mockUrl)
-    await thunk(mockDispatch) 
-    expect(window.fetch).toHaveBeenCalledWith(mockUrl)
+      ok: true,
+      json: () => Promise.resolve(mockSports)
+    }));
+    const thunk = fetchSportsNews(mockUrl);
+    await thunk(mockDispatch); 
+    expect(window.fetch).toHaveBeenCalledWith(mockUrl);
   });
 
   it('should dispatch getSportsNews if the status is ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
       json: () => Promise.resolve({sports: mockSports})
-    }))
-    const thunk = fetchSportsNews(mockUrl)
-    await thunk(mockDispatch)
-    const result = cleanResponse(mockSports)
-    expect(mockDispatch).toHaveBeenCalledWith(getSportsNews(result))
-  })
+    }));
+    const thunk = fetchSportsNews(mockUrl);
+    await thunk(mockDispatch);
+    const result = cleanResponse(mockSports);
+    expect(mockDispatch).toHaveBeenCalledWith(getSportsNews(result));
+  });
 }); 
 

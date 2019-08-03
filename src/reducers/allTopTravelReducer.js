@@ -1,8 +1,8 @@
 export const allTopTravelReducer = (state = [], action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'ALL_TRAVEL':
-      return action.travel
+      return action.travel;
     default:
-      return state
+      return state;
   } 
-}
+};

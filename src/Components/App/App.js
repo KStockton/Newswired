@@ -6,47 +6,47 @@ import Main from '../../Containers/Main/Main';
 import Error from  '../Error/Error';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Item from './../Item/Item'
+import Item from './../Item/Item';
 
 
 export const App = (props) => { 
   
-  const {allBooks, allTravel, allTopNews, allSports} =props
+  const {allBooks, allTravel, allTopNews, allSports} =props;
 
-    return (
-      <div className="App">
+  return (
+    <div className="App">
       <Switch>
         <Route exact path="/" component={Begin}/>
         <Route exact path="/Options" component={Options}/>
         <Route path="/Main" component={Main}/>
         <Route path='/card/:id' render={({ match }) => {
-          const allCards = [...allBooks, ...allTravel, ...allTopNews, ...allSports]
-          const item = allCards.find(item => (item.id === match.params.id))
-          if(!item){
-                  return <Route component={Error}/>
-                } else {
-                  return <Item match={match} {...item }/>
-                }
+          const allCards = [...allBooks, ...allTravel, ...allTopNews, ...allSports];
+          const item = allCards.find(item => (item.id === match.params.id));
+          if (!item){
+            return <Route component={Error}/>;
+          } else {
+            return <Item match={match} {...item }/>;
+          }
         }}/>
         <Route component={Error}/>
       </Switch>
-      </div>
+    </div>
   );
-}
+};
 
 App.propTypes = {
   allSports: PropTypes.array,
   allBooks: PropTypes.array,
   allTravel: PropTypes.array,
-  allTopNews: PropTypes.array,
-}
+  allTopNews: PropTypes.array
+};
 
 export const mapStateToProps = (state) => ({
   allBooks: state.allBooks,
   allTravel: state.allTravel,
   allSports: state.allSports,
-  allTopNews: state.allTopNews,
-})
+  allTopNews: state.allTopNews
+});
 
 
 export default connect(mapStateToProps, null)(App);

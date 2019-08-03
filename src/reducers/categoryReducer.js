@@ -3,14 +3,14 @@ let previousState = {
   books: false,
   sportsNews: false,
   travel: false
-}
+};
 
 
 export const categoryReducer = (state = previousState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'SET_NEWS_CATEGORY':
-      return Object.assign( {}, state, { [`${action.category}`]: !state[action.category]})
-   default:
+      return Object.assign( {}, state, { [`${action.category}`]: !state[action.category]});
+    default:
       return state;
   } 
-}
+};

@@ -7,14 +7,14 @@ describe('Item', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Item/>) 
+    wrapper = shallow(<Item/>); 
   });
   
   it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('Link should have a prop of /Options with a link if something goes wrong', () => {
-     expect(wrapper.find(Link).props().to).toBe('/main');
-   });
-})
+    expect(wrapper.find(Link).props().to).toBe('/main');
+  });
+});

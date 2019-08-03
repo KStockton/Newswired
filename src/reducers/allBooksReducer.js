@@ -1,9 +1,9 @@
 export const allBooksReducer = (state = [], action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'ALL_BOOKS':
-      return action.books
+      return action.books;
     default:
-        return state
-    }
-}
+      return state;
+  }
+};
 

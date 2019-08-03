@@ -1,17 +1,17 @@
 export const uncleanBooks = {
   results: {
     books: [{
-              title: 'Becoming', 
-              description: 'The former first lady describes how she balanced work',
-              primary_isbn10: 1234,
-              weeks_on_list: 20,
-              book_image: 'cool.com',
-              rank: 1,
-              contributor: 'by Michelle Obama',
-              dagger: 0
-            }]
+      title: 'Becoming', 
+      description: 'The former first lady describes how she balanced work',
+      primary_isbn10: 1234,
+      weeks_on_list: 20,
+      book_image: 'cool.com',
+      rank: 1,
+      contributor: 'by Michelle Obama',
+      dagger: 0
+    }]
   }
-}
+};
 
 export const cleanBooks = [{
   id: 1234,
@@ -21,8 +21,8 @@ export const cleanBooks = [{
   description: 'The former first lady describes how she balanced work',
   title: 'Becoming',
   weeksOnList: 20,
-  isFavorited: false,
-}]
+  isFavorited: false
+}];
 
 export const mockTopNews = [
   {
@@ -31,34 +31,34 @@ export const mockTopNews = [
   }, {
     titel: 'Trump loses hair',
     id: 45
-  }]
+  }];
 
-  export const mockNewsError = ''
+export const mockNewsError = '';
 
-  export const mockRealNewsError = 'something went wrong'
+export const mockRealNewsError = 'something went wrong';
 
-  export const mockTravel = [{title:'New York'},{title:'Boston'}]
+export const mockTravel = [{title:'New York'}, {title:'Boston'}];
 
-  export const mockRealTravelError = 'No Travel Here'
+export const mockRealTravelError = 'No Travel Here';
 
   
-  export const uncleanResponse = 
+export const uncleanResponse = 
       {
-      articles: [
-        {
-          source: { name: 'ESPN'},
-          urlToImage: "espn.com",
-          content: "Warriors lose again!",
-          title: 'KD Leaves',
-          author: 'ESPN',
-          description: 'KD fueds with team',
-          test: 'hmm!'
-        }
+        articles: [
+          {
+            source: { name: 'ESPN'},
+            urlToImage: "espn.com",
+            content: "Warriors lose again!",
+            title: 'KD Leaves',
+            author: 'ESPN',
+            description: 'KD fueds with team',
+            test: 'hmm!'
+          }
 
-      ]
-    }
+        ]
+      };
   
-  export const cleanResponse = 
+export const cleanResponse = 
     [{
       id: 1,
       source: 'ESPN',
@@ -68,7 +68,7 @@ export const mockTopNews = [
       title: 'KD Leaves',
       content: "Warriors lose again!",
       isfavorited: false
-    }]
+    }];
 
     
    

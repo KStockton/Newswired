@@ -22,8 +22,8 @@ const Item = ({bookImage, author, id, description, title, articleImage, content}
         </section>
       </article >
     </section>
-  )
-} 
+  );
+}; 
 
 Item.propTypes = {
   id: PropTypes.string,
@@ -34,5 +34,5 @@ Item.propTypes = {
   source: PropTypes.string,
   description: PropTypes.string,
   content: PropTypes.string
-}
-export default Item
+};
+export default Item;
