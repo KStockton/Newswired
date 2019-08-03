@@ -7,7 +7,7 @@ Fetch News Data for a user and allow them to favorite the latest news articles.
 
 ## Installing / Lets Get Started
 ```bash
-git clone [https://github.com/KStockton/Newswired] [what you want to name the repo]
+git clone https://github.com/KStockton/Newswired
 ```
 
 Once you have cloned the repo, install the library dependencies. Run:
