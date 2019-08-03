@@ -31,7 +31,7 @@
   },
   "homepage": "http://KStockton.github.io/Newswired",
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
