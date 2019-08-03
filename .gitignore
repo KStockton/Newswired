@@ -13,7 +13,6 @@
 /build
 
 # API keys
-src/Utility/Config/Key.js
 .env
 
 # misc

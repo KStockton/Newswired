@@ -6,14 +6,13 @@ import Loading from '../../Components/Loading/Loading';
 import {Link} from 'react-router-dom'
 import Card from '../../Components/Card/Card';
 const shortid = require('shortid')
-const API_KEY =`${process.env.REACT_APP_NEWSAPI_API_KEY}`
 
 
 export class TopNewsContainer extends Component {
 
    componentDidMount() {
     if(this.props.allTopNews.length === 0){
-       const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
+       const topNewsUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWSAPI_API_KEY}`
        this.props.fetchTopNews(topNewsUrl)
     };
   };

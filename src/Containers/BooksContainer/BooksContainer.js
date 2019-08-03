@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { fetchAllBooks } from './../../Thunks/fetchAllBooks';
 import {Link} from 'react-router-dom';
 import Loading from '../../Components/Loading/Loading';
-import {NYT_KEY} from '../../Utility/Config/Key';
 const shortid = require('shortid');
 
  export class BooksContainer extends Component {
@@ -13,7 +12,7 @@ const shortid = require('shortid');
   
 componentDidMount() {
   if(this.props.allBooks.length === 0){
-     const topBooks = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?&api-key=${NYT_KEY}`
+     const topBooks = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?&api-key=${process.env.REACT_APP_NYT_API_KEY}`
      this.props.fetchAllBooks(topBooks)
   }
 }
