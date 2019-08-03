@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Options, mapStateToProps, mapDispatchToProps} from './Options';
 import { shallow } from 'enzyme';
-import { setCategories } from '../../actions/index';
+import { setCategories } from '../../actions/index'
 
 
 const mockSelectTopic = jest.fn()
