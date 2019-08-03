@@ -2,9 +2,9 @@
 
 ## The Goals and Objectives of this project is as below:
 
-Fetch News Data for a user and allow them to favorite the latest news articles. 
+A user can retrieve news or the New York Times latest books. Also a user can click on a article to view more information.  
 
-
+View the website here  https://kstockton.github.io/Newswired
 ## Installing / Lets Get Started
 ```bash
 git clone https://github.com/KStockton/Newswired

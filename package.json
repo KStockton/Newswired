@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "gh-pages": "^2.0.1",
+    "lodash.template": "^4.5.0",
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
@@ -26,12 +27,14 @@
     "shortid": "^2.2.14",
     "styled-components": "^4.2.1"
   },
+  "homepage": "http://KStockton.github.io/Newswired",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
