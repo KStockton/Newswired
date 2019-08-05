@@ -1,4 +1,3 @@
-
 {
   "name": "newswired",
   "version": "0.1.0",
@@ -13,7 +12,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "eslint": "^5.16.0",
-    "express": "^4.17.1",
     "gh-pages": "^2.0.1",
     "lodash.template": "^4.5.0",
     "node-sass": "^4.12.0",
@@ -38,7 +36,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/",
-    "deploy": "gh-pages -d build",
     "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
