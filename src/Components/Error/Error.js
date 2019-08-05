@@ -10,7 +10,7 @@ export const Error = () => {
   return (
     <section className="error" >
       <div className="error-wrapper">
-        <h5 className="Error-title">404 Page Not Found</h5>
+        <h5 className="Error-title">404 Page Not Found!!!!</h5>
         <NavLink className="error-back"to="/Options">
           <FontAwesomeIcon className="Error-fontawesome" icon={faHome}/>
           Home
