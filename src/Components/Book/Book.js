@@ -17,14 +17,13 @@ export class Book extends Component{
     return (
       <article className="book-tile" id={id}>
         <Link to={`/card/${id}`}>
-          {/*Future iteration */}
-          {/* <img className={isfavorited ? 'book-favorite' : 'book-nofavorite'}
+          <img className={isfavorited ? 'book-favorite' : 'book-nofavorite'}
             src={isfavorited ? love : nolove} 
             alt="emoji favorite icon"
             onClick={() => this.props.toggleFavorite(id)}
             role="button"
             id="img-test"
-          /> */}
+          />
           <img className="book-img" src={bookImage} alt="book"/>
         </Link>
         <p className="author">{author}</p>
