@@ -27,7 +27,11 @@ Front End:
 * Clone this repo: https://github.com/KStockton/Newswired
 * Run ```npm install``` from the root directory
 * Request an API key from the [New York Times](https://developer.nytimes.com/get-started)
+  * Navigate to src/Containers/BookContainer/BookContainer.js at line 15 replace your api key over this text ```${process.env.REACT_APP_NYT_API_KEY}```
 * Request an API key from the [News Api](https://newsapi.org/docs/get-started)
+  *   * Navigate to src/Containers/BookContainer/BookContainer.js at line 15 replace your api key over this text ```${process.env.REACT_APP_NYT_API_KEY}```
+
+
 
 Open http://localhost:3000/
 
