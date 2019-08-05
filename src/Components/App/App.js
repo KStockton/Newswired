@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Begin from '../Begin/Begin';
 import Options from '../../Containers/Options/Options';
 import Main from '../../Containers/Main/Main';
@@ -7,7 +7,7 @@ import Error from  '../Error/Error';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Item from './../Item/Item';
-
+import NewsWired from '../NewsWired/Newswired';
 
 export const App = (props) => { 
   
@@ -17,6 +17,7 @@ export const App = (props) => {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Begin}/>
+        <Route path='/Newswired' render={() => <Redirect to="/"/>} />
         <Route exact path="/Options" component={Options}/>
         <Route path="/Main" component={Main}/>
         <Route path='/card/:id' render={({ match }) => {
