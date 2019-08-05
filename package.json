@@ -26,17 +26,20 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "serve": "^11.1.0",
     "shortid": "^2.2.14",
     "styled-components": "^4.2.1"
   },
   "homepage": "http://KStockton.github.io/Newswired",
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -61,7 +64,7 @@
     "ignore-loader": "^0.1.2",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1"
-},
+  },
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"

@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import love from '../../Assets/love.svg';
 import nolove from '../../Assets/nolove.svg';
 import { connect } from 'react-redux';
-import {toggleFavorite} from '../../actions/index';
-import {Link} from 'react-router-dom';
+import { toggleFavorite } from '../../actions/index';
+import { Link } from 'react-router-dom';
 
 
 export class Book extends Component{
 
 
   render() {
-    const {bookImage, rank, author, id, description, title, weeksOnList, isfavorited} = this.props;
+    const { bookImage, rank, author, id, description, title, weeksOnList, isfavorited} = this.props;
     
 
     return (
       <article className="book-tile" id={id}>
         <Link to={`/card/${id}`}>
-          <img className={isfavorited ? 'book-favorite' : 'book-nofavorite'}
+          <img className={ isfavorited ? 'book-favorite' : 'book-nofavorite'}
             src={isfavorited ? love : nolove} 
             alt="emoji favorite icon"
             onClick={() => this.props.toggleFavorite(id)}
