@@ -1,7 +1,7 @@
 # News Wire Project - Featuring New York Times Bestsellers and Top News
 
-### The Goals and Objectives of this project is as below:
-Newswored was created to showcase and promote New York Times Best Sellers as well as Sports News, Top News and Travel News. The carousel allows users to easily swipe through the latest stories one by one while viewing some detail. One major learning goal of this project was to use React Router and Redux. 
+### Goals and Objectives:
+Newswired was created to showcase and promote New York Times Best Sellers as well as Sports News, Top News and Travel News. The carousel allows users to easily swipe through the latest stories one by one while viewing some detail. One major learning goal of this project was to use React Router and Redux. 
 
 ### Website Link
 
@@ -31,6 +31,7 @@ Front End:
   * Search with src for ```${process.env.REACT_APP_NEWSAPI_API_KEY}``` and replace with your News Api key.
 
 * Run npm start http://localhost:3000/ in your browser.
+
 
 BackEnd:
 
