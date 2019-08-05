@@ -17,6 +17,7 @@ export class Book extends Component{
     return (
       <article className="book-tile" id={id}>
         <Link to={`/card/${id}`}>
+          {/*Future iteration */}
           {/* <img className={isfavorited ? 'book-favorite' : 'book-nofavorite'}
             src={isfavorited ? love : nolove} 
             alt="emoji favorite icon"
