@@ -26,15 +26,14 @@ Front End:
 
 * Clone this repo: https://github.com/KStockton/Newswired
 * Run ```npm install``` from the root directory
-* Request an API key from the [New York Times] (https://developer.nytimes.com/get-started)
+* Request an API key from the [New York Times](https://developer.nytimes.com/get-started)
 
-Once you have cloned the repo, install the library dependencies. Run:
 
-```bash
-npm install
-npm start
-```
 Open http://localhost:3000/
+
+BackEnd:
+
+* New York Times
 
 ### Built With
 This project was built with the following
