@@ -16,7 +16,6 @@ View the website here  https://kstockton.github.io/Newswired
 
 ![Screen Shot 2019-06-10 at 2 55 33 PM](https://user-images.githubusercontent.com/34406483/59230053-7757a300-8b99-11e9-9f3f-85fe708eca99.png)
 
-<img width="1679" alt="Screen Shot 2019-06-10 at 5 40 47 PM" src="https://user-images.githubusercontent.com/34406483/59233743-eedfff00-8ba6-11e9-9a7c-02a971db00e9.png">
 
 ### WireFrame:
 
