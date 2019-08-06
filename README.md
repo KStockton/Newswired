@@ -7,17 +7,24 @@ Newswired was created to showcase and promote New York Times Best Sellers as wel
 
 View the website here  https://kstockton.github.io/Newswired
 
+### WireFrame:
+
+![Page_1](https://user-images.githubusercontent.com/34406483/62578400-48d70b00-b85e-11e9-9609-3ccc5d191bdd.png)
+
+![Page_2](https://user-images.githubusercontent.com/34406483/62578417-55f3fa00-b85e-11e9-84c8-87ff0c97a8f1.png)
+
+
 ### Preview:
 <img width="840" alt="Screen Shot 2019-06-05 at 11 00 22 AM" src="https://user-images.githubusercontent.com/34406483/58975768-fd7f7e00-8782-11e9-9675-894965e4f018.png">
 
-<img width="1679" alt="Screen Shot 2019-06-10 at 3 18 14 PM" src="https://user-images.githubusercontent.com/34406483/59230071-8a6a7300-8b99-11e9-817a-89e3a3844fd9.png">
+![Screen Shot 2019-08-06 at 3 10 37 PM](https://user-images.githubusercontent.com/34406483/62577864-0d880c80-b85d-11e9-9383-362e227e327f.png)
 
-<img width="1679" alt="Screen Shot 2019-06-10 at 3 09 13 PM" src="https://user-images.githubusercontent.com/34406483/59230043-71fa5880-8b99-11e9-8321-c0f4f2b09e86.png">
+![Screen Shot 2019-08-06 at 3 12 11 PM](https://user-images.githubusercontent.com/34406483/62577911-2b557180-b85d-11e9-80dc-d2d420d28185.png)
 
 ![Screen Shot 2019-06-10 at 2 55 33 PM](https://user-images.githubusercontent.com/34406483/59230053-7757a300-8b99-11e9-9f3f-85fe708eca99.png)
 
 
-### WireFrame:
+
 
 #### Setup
 
