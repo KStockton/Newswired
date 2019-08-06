@@ -8,7 +8,7 @@ const Begin = () => {
       <section>
         <h1>
           <span id="welcome">Welcome</span> 
-          <span id="news-wire">to News Wire</span>
+          <span id="news-wire">to News Wired</span>
         </h1>  
       </section>
       <Link to="/Options" className="start">
