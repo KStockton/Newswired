@@ -57,6 +57,7 @@
     color: white;
     background: black;
     box-shadow: inset -1px 0px 8px 2px white;
+    cursor: pointer;
 }
 
 .begin-btn::before {
@@ -73,7 +74,7 @@
   box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
 }
 
-.begin-btn::active {
+.begin-btn:active {
   padding-bottom: 9px;
   padding-left: 10px;
   padding-right: 10px;

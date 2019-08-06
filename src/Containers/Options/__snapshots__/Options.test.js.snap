@@ -11,7 +11,7 @@ exports[`Option should match the snapshot 1`] = `
       <h1
         className="Options-title"
       >
-        News Wire  
+        News Wired
       </h1>
     </div>
     <header
@@ -230,7 +230,7 @@ exports[`Option should only render topSports icon its true 1`] = `
       <h1
         className="Options-title"
       >
-        News Wire  
+        News Wired
       </h1>
     </div>
     <header
@@ -449,7 +449,7 @@ exports[`Option should render books if its true 1`] = `
       <h1
         className="Options-title"
       >
-        News Wire  
+        News Wired
       </h1>
     </div>
     <header
@@ -668,7 +668,7 @@ exports[`Option should render next arrow when one category is selected 1`] = `
       <h1
         className="Options-title"
       >
-        News Wire  
+        News Wired
       </h1>
     </div>
     <header
@@ -887,7 +887,7 @@ exports[`Option should render topNews if its true 1`] = `
       <h1
         className="Options-title"
       >
-        News Wire  
+        News Wired
       </h1>
     </div>
     <header
@@ -1106,7 +1106,7 @@ exports[`Option should render travel if its true 1`] = `
       <h1
         className="Options-title"
       >
-        News Wire  
+        News Wired
       </h1>
     </div>
     <header

@@ -23,7 +23,7 @@ export class Options extends Component {
       <section>
         <div className="Options-background">
           <div className="Options-header">
-            <h1 className="Options-title">News Wire  </h1>
+            <h1 className="Options-title">News Wired</h1>
           </div>
           <header className="Options-news">
             <h4 className="Options-select-choice">Select News</h4>
