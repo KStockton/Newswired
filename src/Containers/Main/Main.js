@@ -20,7 +20,7 @@ export class Main extends Component {
         <div className="Main-header">
           <Link to="/Options" className="news-title">
             <h1 className="Main-title">
-            News Wire
+            News Wired
             </h1>
           </Link>
           {/* <Nav/> */}
