@@ -15,10 +15,12 @@ import { Link } from 'react-router-dom';
 export class Main extends Component {
 
   
-  
+ 
 
   render() {
     const { categories } = this.props;
+
+    // const categories = JSON.parse(localStorage.getItem('reduxState'))
 
     return (
       <div className="Main-background">
@@ -32,6 +34,7 @@ export class Main extends Component {
           {/* <Nav/> */}
           {/* <Time/> */}
         </div>
+      
         { categories.books && <BooksContainer /> }
         { categories.sportsNews && <SportContainer /> }
         { categories.travel && <TravelContainer  /> }

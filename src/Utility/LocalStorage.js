@@ -3,6 +3,6 @@ export const loadState = () => {
 };
 
 export const saveState = (state) => {
-  const categoriesState = JSON.stringify(state.categories);
-  localStorage.setItem('reduxState', categoriesState);
+  const reduxStateTree = JSON.stringify(state);
+  localStorage.setItem('reduxState', reduxStateTree);
 };
