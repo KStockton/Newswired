@@ -12,14 +12,9 @@ import { Link } from 'react-router-dom';
 
 export class Main extends Component {
 
-  
- 
-
   render() {
     const { categories } = this.props;
-
-    // const categories = JSON.parse(localStorage.getItem('reduxState'))
-
+    
     return (
       <div className="Main-background">
         <div className="Main-header">
