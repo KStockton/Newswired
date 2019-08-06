@@ -3,20 +3,25 @@ import { connect } from 'react-redux';
 import BooksContainer from '../../Containers/BooksContainer/BooksContainer';
 import TravelContainer from '../TravelContainer/TravelContainer';
 // import Nav from '../../Components/Nav/Nav'; coming soon
-import Time from '../../Components/Time/Time';
+// import Time from '../../Components/Time/Time'; coming soon
 import SportContainer from '../SportContainer/SportContainer';
 import TopNewsContainer from '../TopNewsContainer/TopNewsContainer';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export class Main extends Component {
+
   
+ 
 
   render() {
-    const {categories} = this.props;
+    const { categories } = this.props;
+
+    // const categories = JSON.parse(localStorage.getItem('reduxState'))
+
     return (
       <div className="Main-background">
         <div className="Main-header">
@@ -27,12 +32,13 @@ export class Main extends Component {
             </h1>
           </Link>
           {/* <Nav/> */}
-          <Time/>
+          {/* <Time/> */}
         </div>
-        {categories.books && <BooksContainer />}
-        {categories.sportsNews && <SportContainer />}
-        {categories.travel && <TravelContainer  />}
-        {categories.topNews && <TopNewsContainer />}
+      
+        { categories.books && <BooksContainer /> }
+        { categories.sportsNews && <SportContainer /> }
+        { categories.travel && <TravelContainer  /> }
+        { categories.topNews && <TopNewsContainer /> }
       </div>
     );
   }

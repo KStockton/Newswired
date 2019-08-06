@@ -11,6 +11,10 @@ exports[`App should match the snapshot 1`] = `
       path="/"
     />
     <Route
+      path="/Newswired"
+      render={[Function]}
+    />
+    <Route
       component={
         Object {
           "$$typeof": Symbol(react.memo),

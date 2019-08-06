@@ -9,10 +9,15 @@ import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import  rootReducer  from './reducers/index';
 import thunk from 'redux-thunk';
+import { loadState, saveState } from './Utility/LocalStorage'; 
 
-const store = createStore(rootReducer, 
+const persistedState = loadState();
+const store = createStore(rootReducer, persistedState,
   composeWithDevTools(applyMiddleware(thunk))
 );
+store.subscribe(() => {
+  saveState(store.getState())
+})
 
 
 const router = (
