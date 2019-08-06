@@ -7,7 +7,6 @@ import Error from  '../Error/Error';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Item from './../Item/Item';
-import NewsWired from '../NewsWired/Newswired';
 
 export const App = (props) => { 
   

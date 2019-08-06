@@ -22,7 +22,7 @@ describe('Main', () => {
   describe('MSTP', () =>{
 
     it('should map state from mockstate', () => {
-      const mockState ={ categories:{books: true, travel: true, topNews: true, sportsNews: true}};
+      const mockState ={ categories:{ books: true, travel: true, topNews: true, sportsNews: true}};
       const result = mapStateToProps(mockState);
       expect(result).toEqual(mockState);
     });

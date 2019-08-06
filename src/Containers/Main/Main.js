@@ -10,13 +10,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export class Main extends Component {
+
+  
   
 
   render() {
-    const {categories} = this.props;
+    const { categories } = this.props;
+
     return (
       <div className="Main-background">
         <div className="Main-header">
