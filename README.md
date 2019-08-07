@@ -9,9 +9,9 @@ View the website here  https://kstockton.github.io/Newswired
 
 ### WireFrame:
 
-![Page_1](https://user-images.githubusercontent.com/34406483/62578400-48d70b00-b85e-11e9-9609-3ccc5d191bdd.png)
+![Page_1](https://user-images.githubusercontent.com/34406483/62656805-40480880-b922-11e9-9835-ebee2a537dc4.png)
 
-![Page_2](https://user-images.githubusercontent.com/34406483/62578417-55f3fa00-b85e-11e9-84c8-87ff0c97a8f1.png)
+![Page_2](https://user-images.githubusercontent.com/34406483/62656808-4211cc00-b922-11e9-9254-b68693a11232.png)
 
 
 ### Preview:
