@@ -73,12 +73,12 @@
 }
 .Options-btn:hover {
   padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 11px;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2cffc9), color-stop(1, #ffffff));
-    color: white;
-    background: black;
-    cursor:pointer;
+  padding-right: 10px;
+  padding-top: 11px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2cffc9), color-stop(1, #ffffff));
+  color: white;
+  background: black;
+  cursor:pointer;
 }
 
 .Options-btn::before {
@@ -153,26 +153,31 @@
     flex-direction: row;
     min-height: 106px;
   }
+
+  label {
+    padding: 0px;
+  }
   .Options-btn {
-    background: none;
-    border: none;
-    color: white;
-    text-decoration: underline;
-    box-shadow: none;
+  //   background: none;
+  //   border: none;
+  //   color: white;
+  //   text-decoration: underline;
+  //   box-shadow: none;
+  width: 163px;
   }
 
-  .Options-btn::before {
-    content: none;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-    left: -8px;
-    top: -8px;
-    border-radius: 5px;
-    box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff; 
-  }
+  // .Options-btn::before {
+  //   content: none;
+  //   display: block;
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   padding: 8px;
+  //   left: -8px;
+  //   top: -8px;
+  //   border-radius: 5px;
+  //   box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff; 
+  // }
 
   #next{
     width: 100px;

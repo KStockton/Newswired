@@ -1,19 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Begin = () => {
     
   return (
     <div className="begin-wrapper">
-      <section>
-        <h1>
-          <span id="welcome">Welcome</span> 
-          <span id="news-wire">to News Wired</span>
-        </h1>  
+      <section id='welcome-container'>
+        <h1 id="welcome">Welcome</h1>  
+        <h3 id="news-wire">to News Wired</h3>
+        <Link to="/Options" className="start">
+          <button className="begin-btn">Get Started</button>
+        </Link>
       </section>
-      <Link to="/Options" className="start">
-        <button className="begin-btn">Get Started</button>
-      </Link>
     </div>
   );
 };
