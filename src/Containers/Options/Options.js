@@ -17,7 +17,7 @@ export class Options extends Component {
   render() {
     let numOfCategories = Object.values(this.props.categories).filter(item=> item === true).length;
 
-    const {topNews, books, sportsNews, travel} = this.props.categories;
+    const { topNews, books, sportsNews, travel } = this.props.categories;
 
     return (
       <section>
@@ -37,14 +37,15 @@ export class Options extends Component {
                 Top News
                 </label>
               </button>
-              {topNews && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
+              { topNews && 
+              <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
             </div>
 
             <div className="Options-btn-wrapper">
               <button className="Options-btn" name="books" onClick={this.selectTopic}>
                 <label htmlFor="new-york-times-books">
                   <FontAwesomeIcon id="new-york-times-books" className="Options-fontawesome" icon={faBookOpen}/>
-                  NY Times Books
+                  NYT Best Sellers
                 </label>
               </button>
               {books && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}

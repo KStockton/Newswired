@@ -36,6 +36,7 @@
   right: 14%;
   margin: auto;
   z-index: 2;
+  cursor: pointer;
 }
 
 .begin-btn {
@@ -119,7 +120,7 @@ and (max-width: 760px) {
   }
   #news-wire {
     font-size: 6vw;
-    // background-color: white;
+    background-color: white;
   }
 
   .begin-btn {
