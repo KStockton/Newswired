@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100vw;
   z-index: -1;
 
@@ -29,33 +30,35 @@
 
   section {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(123px, 1fr));
     // display: flex;
     // flex-direction: column;
-    align-items: center;
+    width: calc(100% - 48%);
     justify-content: center;
-    height: 617px;
+    // height: 617px;
     position: relative;
     z-index: 2;
 
-    &:nth-child(1) {
-      color:white;
-      padding: 8px;
-      max-width: 544px;
-      font-weight: 200;
-      font-size: 21px;
-      font-family: 'Old Standard TT', serif;
-    }
-
-    &:nth-child(3-5) {
-      color: white;
-      padding: 8px;
-      font-size: 13px;
-      font-style: italic;
-      text-align: left;
+  .Item-title, .Item-author, .Item-description, .Item-content {
+    color:white;
+    padding: 8px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-weight: 200;
+    font-family: 'Old Standard TT', serif;
   }
-
+  
+  img {
+    max-height: 263px;
+    max-width: 306px;
+    padding: 12px 0px;
+    margin: auto;
+  }
+  .Item-description, .Item-content {
+    font-size: 16px;
+    word-break: break-word;
+  }
 }
   .Item-back {
     display: flex;
@@ -75,39 +78,5 @@
     p {
       text-transform: capitalize;
     }
-}
-  
-  
-
-
-// .Item-author {
-// }
-// .Item-rank {
-//   color: white;
-//   padding: 8px;
-// }
-// .Item-weeks {
-//   color: white;
-//   padding: 8px;
-// }
-.Item-description{
-  // color: white;
-  // padding: 8px;
-  max-width: 500px;
-  text-align: left;
-  padding-top: 20px;
-  font-family: 'Old Standard TT', serif;
-}
-
-.Item-img {
-  max-height: 300px;
-  max-width: 500px;
-  padding: 12px 0px;
-}
-.Item-content {
-  color: white;
-  max-width: 500px;
-  text-align: left;
-  font-family: 'Old Standard TT', serif;
 }
 }

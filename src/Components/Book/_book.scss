@@ -33,12 +33,14 @@
   border-radius: 1px;
   min-width: 172px;
 }
+
 .author {
   @include authors( 12px, left, 5px);
   font-family: 'Noto Sans', sans-serif;
   padding-bottom: 16px;
   color:white;
 }
+
 .book-weeks {
   font-size: 0.8rem;
   text-align: left;
