@@ -11,14 +11,14 @@ export class Book extends Component{
 
 
   render() {
-    const { bookImage, rank, author, id, description, title, weeksOnList, isfavorited} = this.props;
+    const { bookImage, rank, author, id, description, title, weeksOnList, isFavorited} = this.props;
     
 
     return (
       <article className="book-tile" id={id}>
         <Link to={`/card/${id}`}>
-          <img className={ isfavorited ? 'book-favorite' : 'book-nofavorite'}
-            src={isfavorited ? love : nolove} 
+          <img className={ isFavorited ? 'book-favorite' : 'book-nofavorite'}
+            src={ isFavorited ? love : nolove} 
             alt="emoji favorite icon"
             onClick={() => this.props.toggleFavorite(id)}
             role="button"

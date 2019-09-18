@@ -39,8 +39,7 @@
 
 .Options-news {
   margin: 0 auto;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  margin: 52px;
 }
 .Options-select {
   font-family: 'Noto Sans', sans-serif;
@@ -62,7 +61,7 @@
   color: #000000;
   border: solid 1px #186f8f;
   border-radius: 5px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   z-index: auto;
   box-shadow: 3px 3px 2px #837a7a;
   height: 70px;
@@ -70,16 +69,18 @@
   font-size: 0.8rem;
   display: flex;
   justify-content: space-evenly;
+
+  &:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 11px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2cffc9), color-stop(1, #ffffff));
+    color: #ffffff;
+    background: #000000;
+    cursor:pointer;
+  }
 }
-.Options-btn:hover {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 11px;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2cffc9), color-stop(1, #ffffff));
-  color: #ffffff;
-  background: #000000;
-  cursor:pointer;
-}
+
 
 .Options-btn::before {
   background-color: #ccd0d56b;
@@ -104,11 +105,6 @@
   background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(62,184,229)), color-stop(1, rgb(44,160,202)) );
 }
 
-.Options-fontawesome {
-  padding-right: 9px;
-  font-size: 23px;
-}
-
 .Options-btn-wrapper {
   display: flex;
   flex-direction: column;
@@ -122,21 +118,59 @@
   color: #008000;
 }
 
-#next{
-  width: 100px;
-  height: 49px;
-  display: flex;
-  align-items: center;
-  background-color: #f6f8fb;
-  &:hover {
-    color: green;
-    cursor: pointer;
-  }
-}
-
 .Options-continue {
   display: flex;
   justify-content: center;
+
+  .Options-fontawesome {
+    padding-right: 9px;
+    font-size: 23px;
+    -webkit-animation: bounceRight 1s infinite; 
+    animation: bounceRight 1s infinite;
+    color: #008000;
+
+  }
+
+  #next-container {
+    display: flex;
+    align-content: center;
+  }
+      #next {
+        width: 100px;
+        height: 49px;
+        display: flex;
+        justify-content: center;
+        text-decoration-color: green;
+        
+        &:hover {
+          cursor: pointer;
+        }
+
+        p {
+          color: green;
+          font-size: inherit;
+          text-transform: capitalize;
+        }
+      }
+}
+
+@keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  60% {
+    -ms-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
 }
 
 @media screen and(max-width: 1100px) {
@@ -144,78 +178,32 @@
   .Options-wrapper {
     grid-template-columns: 250px;
     grid-template-rows: repeat(4, 1fr);
-    // max-height: 516px;
-    // flex-direction: column;
-    // top: 24%;
-    // left: 15%;
+    justify-items: center;
+    margin-left: 29px;
   }
 
-  .Options-btn-wrapper{
+  .Options-btn-wrapper {
     flex-direction: row;
     min-height: 106px;
   }
 
   label {
     padding: 0px;
+    font-size: 14px;
   }
   .Options-btn {
-  //   background: none;
-  //   border: none;
-  //   color: white;
-  //   text-decoration: underline;
-  //   box-shadow: none;
-  width: 163px;
-  }
-
-  // .Options-btn::before {
-  //   content: none;
-  //   display: block;
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   padding: 8px;
-  //   left: -8px;
-  //   top: -8px;
-  //   border-radius: 5px;
-  //   box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff; 
-  // }
-
-  #next{
-    width: 49px;
-    height: 15px;
-  }
-
-  // .Options-check {
-  //   min-height: 34px;
-  //   margin-left: 80px;
-  //   font-size: 2rem;
-  // }
-
-  // .Options-continue {
-  //   display: flex;
-  //   flex-direction: row;
-  //   align-content: center;
-  //   margin: 0 auto;
-  // }
-
-}
-
-@media screen and(max-width: 903px) {
-
-  .Options-btn {
-    // width: 111px;
-    // height: 15px;
+    height: 45px;
+    width: 155px;
+    box-shadow: none; 
   }
 
   .Options-fontawesome{
-    // font-size: 14px;
-    // min-width: 5rem;
+    font-size: 14px;
+    padding-right: 5px;
   }
 
   #next {
-  // margin: auto 0;
-    // right: 35%;
-    // top: 90%;
+    width: 49px;
+    height: 15px;
   }
-
 }

@@ -5,23 +5,23 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 
-const Item = ({bookImage, author, id, description, title, articleImage, content}) => {
+const Item = ( {
+  bookImage, author, id, description, title, articleImage, content}) => {
 
   return (
-    <section>
+    <article className="Item-wrapper" id={id}>
+      <section>
+        <p className="Item-title">{title}</p>
+        <img className="Item-img" src={bookImage|| articleImage} alt="book"/>
+        <p className="Item-author">{author}</p>
+        <p className="Item-description">{description}</p>
+        <p className="Item-content">{content || null}</p>
+      </section>
       <Link to={`/main`} className="Item-back">
+        <p>back</p>
         <FontAwesomeIcon id="latest-news" className="Item-fontawesome" icon={faArrowLeft}/>
       </Link>
-      <article className="Item-wrapper" id={id}>
-        <section className="Item-content-wrapper">
-          <p className="Item-title">{title}</p>
-          <img className="Item-img" src={bookImage|| articleImage} alt="book"/>
-          <p className="Item-author">{author}</p>
-          <p className="Item-description">{description}</p>
-          <p className="Item-content">{content || null}</p>
-        </section>
-      </article >
-    </section>
+    </article>
   );
 }; 
 

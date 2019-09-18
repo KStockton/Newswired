@@ -121,80 +121,14 @@ and (max-width: 760px) {
   #news-wire {
     font-size: 6vw;
     background-color: white;
+    padding: 8px;
   }
 
   .begin-btn {
     margin-top: 179px;
+    font-size: 15px;
   }
 }
-
-@media screen and (max-width: 760px){
-
-  .begin-wrapper {
-    // background-position-x: 25%;
-  }
-
-  #welcome{
-    // font-size: 4em;
-    // position: fixed;
-    // right: 23%;
-    // top: 30%;
-  }
-
-}
-
-// @media screen and (max-width: 760px){
-
-//   .begin-wrapper {
-//     background-position-x: 40%;
-//   }
-
-//   #welcome{
-//     font-size: 3.5em;
-//     position: fixed;
-//     right: 23%;
-//     top: 25%;
-//   }
-
-//   #news-wire{
-//     font-size: 3rem;
-//     position: fixed;
-//     top: 45%;
-//   }
-
-//   .start{
-//     position: fixed;
-//     bottom: 29%;
-//   }
-// }
-
-// @media screen and(max-width: 620px){
-
-//   .begin-wrapper {
-//     background-position-x: 48%;
-//   }
-
-//   #welcome{
-//     font-size: 3em;
-//     position: fixed;
-//     right: 18%;
-//     top: 25%;
-//   }
-
-//   #news-wire{
-//     font-size: 2.8rem;
-//     position: fixed;
-//     top: 37%;
-//     right: 19%;
-//   }
-
-//   .start{
-//     position: fixed;
-//     bottom: 40%;
-//     right: 35%;
-//   }
-  
-// }
 
 @media screen and(max-width: 320px){
 

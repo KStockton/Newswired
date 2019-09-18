@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Card = ({id, author, source, articleImage, description, title}) =>{
+const Card = ({ id, author, source, articleImage, description, title}) =>{
   return (
     <section className="CardCard-tile" id={id}>
       <Link to={`/card/${id}`}>
