@@ -33,7 +33,7 @@ export class Options extends Component {
             <div className="Options-btn-wrapper">
               <button className="Options-btn" name="topNews" onClick={(event) => this.selectTopic(event)}>
                 <label htmlFor="top-news">
-                  <FontAwesomeIcon id="top-news" className="Options-fontawesome" icon={faFire}/>
+                  <FontAwesomeIcon id="top-news" className="Options-fontawesome select-options" icon={faFire}/>
                 Top News
                 </label>
               </button>
@@ -44,7 +44,7 @@ export class Options extends Component {
             <div className="Options-btn-wrapper">
               <button className="Options-btn" name="books" onClick={this.selectTopic}>
                 <label htmlFor="new-york-times-books">
-                  <FontAwesomeIcon id="new-york-times-books" className="Options-fontawesome" icon={faBookOpen}/>
+                  <FontAwesomeIcon id="new-york-times-books" className="Options-fontawesome select-options" icon={faBookOpen}/>
                   NYT Best Sellers
                 </label>
               </button>
@@ -54,16 +54,16 @@ export class Options extends Component {
             <div className="Options-btn-wrapper">
               <button className="Options-btn"  name="sportsNews" onClick={this.selectTopic}>
                 <label htmlFor="sports-news">
-                  <FontAwesomeIcon id="sports-news" className="Options-fontawesome" icon={faRunning}/>
+                  <FontAwesomeIcon id="sports-news" className="Options-fontawesome select-options" icon={faRunning}/>
                   Sports 
                 </label>
               </button>
-              {sportsNews && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
+              {sportsNews && <FontAwesomeIcon  className="Options-check select-options" icon={faCheck}/>}
             </div>
             <div className="Options-btn-wrapper">
               <button className="Options-btn" name="travel" onClick={this.selectTopic}>
                 <label htmlFor="latest-news">
-                  <FontAwesomeIcon id="latest-news" className="Options-fontawesome" icon={faGlobeAfrica}/>
+                  <FontAwesomeIcon id="latest-news" className="Options-fontawesome select-options" icon={faGlobeAfrica}/>
                   Travel
                 </label>
               </button>
