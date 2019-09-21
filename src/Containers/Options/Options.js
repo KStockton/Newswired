@@ -29,7 +29,6 @@ export class Options extends Component {
             <h4 className="Options-select-choice">Select News</h4>
           </header>
           <div className="Options-wrapper">
-
             <div className="Options-btn-wrapper">
               <button className="Options-btn" name="topNews" onClick={(event) => this.selectTopic(event)}>
                 <label htmlFor="top-news">
@@ -37,10 +36,9 @@ export class Options extends Component {
                 Top News
                 </label>
               </button>
-              { topNews && 
-              <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
+              { topNews ? 
+              <FontAwesomeIcon  className="Options-check" icon={faCheck}/> : <FontAwesomeIcon  className="Options-uncheck" icon={faCheck}/> }
             </div>
-
             <div className="Options-btn-wrapper">
               <button className="Options-btn" name="books" onClick={this.selectTopic}>
                 <label htmlFor="new-york-times-books">
@@ -48,9 +46,8 @@ export class Options extends Component {
                   NYT Best Sellers
                 </label>
               </button>
-              {books && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
+              { books ?  <FontAwesomeIcon  className="Options-check" icon={faCheck}/> : <FontAwesomeIcon  className="Options-uncheck" icon={faCheck}/>}
             </div>
-
             <div className="Options-btn-wrapper">
               <button className="Options-btn"  name="sportsNews" onClick={this.selectTopic}>
                 <label htmlFor="sports-news">
@@ -58,7 +55,7 @@ export class Options extends Component {
                   Sports 
                 </label>
               </button>
-              {sportsNews && <FontAwesomeIcon  className="Options-check select-options" icon={faCheck}/>}
+              { sportsNews ? <FontAwesomeIcon  className="Options-check select-options" icon={faCheck}/> : <FontAwesomeIcon  className="Options-uncheck" icon={faCheck}/>}
             </div>
             <div className="Options-btn-wrapper">
               <button className="Options-btn" name="travel" onClick={this.selectTopic}>
@@ -67,7 +64,7 @@ export class Options extends Component {
                   Travel
                 </label>
               </button>
-              {travel && <FontAwesomeIcon  className="Options-check" icon={faCheck}/>}
+              { travel ? <FontAwesomeIcon  className="Options-check" icon={faCheck}/> : <FontAwesomeIcon  className="Options-uncheck" icon={faCheck}/> }
             </div>
           </div>
           <div className="Options-continue" role="button">

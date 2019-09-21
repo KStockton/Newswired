@@ -20,7 +20,7 @@
 }
 
 .Card-img {
-  height: 199px;
+  height: 162px;
   box-shadow: 2px 4px 6px 2px #a99a9a;
   border-radius: 2px;
   min-width: 304px;
@@ -31,19 +31,19 @@
   padding-bottom: 16px;
   font-size: 13px;
   font-style: italic;
-  color: white;
+  color: #ffffff;
 }
 
 .Card-title{
   @include titles(.9rem, 1.1875rem, 700, left, 3px);
   padding-bottom: 18px;
-  color: white;
+  color: #ffffff;
 }
 
 .Card-description{
   @include tiles(left, 1rem, 6px );
   font-family: 'Old Standard TT', serif;
-  color: white;
+  color: #ffffff;
 }
 
 

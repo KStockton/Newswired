@@ -39,7 +39,7 @@ exports[`Option should match the snapshot 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -71,6 +71,36 @@ exports[`Option should match the snapshot 1`] = `
             Top News
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -85,7 +115,7 @@ exports[`Option should match the snapshot 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -114,9 +144,39 @@ exports[`Option should match the snapshot 1`] = `
               title=""
               transform={null}
             />
-            NY Times Books
+            NYT Best Sellers
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -131,7 +191,7 @@ exports[`Option should match the snapshot 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -163,6 +223,36 @@ exports[`Option should match the snapshot 1`] = `
             Sports
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -177,7 +267,7 @@ exports[`Option should match the snapshot 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -209,6 +299,36 @@ exports[`Option should match the snapshot 1`] = `
             Travel
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
     </div>
     <div
@@ -258,7 +378,7 @@ exports[`Option should only render topSports icon its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -290,6 +410,36 @@ exports[`Option should only render topSports icon its true 1`] = `
             Top News
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -304,7 +454,7 @@ exports[`Option should only render topSports icon its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -333,9 +483,39 @@ exports[`Option should only render topSports icon its true 1`] = `
               title=""
               transform={null}
             />
-            NY Times Books
+            NYT Best Sellers
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -350,7 +530,7 @@ exports[`Option should only render topSports icon its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -382,6 +562,36 @@ exports[`Option should only render topSports icon its true 1`] = `
             Sports
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -396,7 +606,7 @@ exports[`Option should only render topSports icon its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -428,6 +638,36 @@ exports[`Option should only render topSports icon its true 1`] = `
             Travel
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
     </div>
     <div
@@ -477,7 +717,7 @@ exports[`Option should render books if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -509,6 +749,36 @@ exports[`Option should render books if its true 1`] = `
             Top News
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -523,7 +793,7 @@ exports[`Option should render books if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -552,9 +822,39 @@ exports[`Option should render books if its true 1`] = `
               title=""
               transform={null}
             />
-            NY Times Books
+            NYT Best Sellers
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -569,7 +869,7 @@ exports[`Option should render books if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -601,6 +901,36 @@ exports[`Option should render books if its true 1`] = `
             Sports
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -615,7 +945,7 @@ exports[`Option should render books if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -647,6 +977,36 @@ exports[`Option should render books if its true 1`] = `
             Travel
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
     </div>
     <div
@@ -696,7 +1056,7 @@ exports[`Option should render next arrow when one category is selected 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -728,6 +1088,36 @@ exports[`Option should render next arrow when one category is selected 1`] = `
             Top News
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -742,7 +1132,7 @@ exports[`Option should render next arrow when one category is selected 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -771,9 +1161,39 @@ exports[`Option should render next arrow when one category is selected 1`] = `
               title=""
               transform={null}
             />
-            NY Times Books
+            NYT Best Sellers
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -788,7 +1208,7 @@ exports[`Option should render next arrow when one category is selected 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -820,6 +1240,36 @@ exports[`Option should render next arrow when one category is selected 1`] = `
             Sports
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -834,7 +1284,7 @@ exports[`Option should render next arrow when one category is selected 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -866,6 +1316,36 @@ exports[`Option should render next arrow when one category is selected 1`] = `
             Travel
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
     </div>
     <div
@@ -915,7 +1395,7 @@ exports[`Option should render topNews if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -947,6 +1427,36 @@ exports[`Option should render topNews if its true 1`] = `
             Top News
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -961,7 +1471,7 @@ exports[`Option should render topNews if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -990,9 +1500,39 @@ exports[`Option should render topNews if its true 1`] = `
               title=""
               transform={null}
             />
-            NY Times Books
+            NYT Best Sellers
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -1007,7 +1547,7 @@ exports[`Option should render topNews if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -1039,6 +1579,36 @@ exports[`Option should render topNews if its true 1`] = `
             Sports
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -1053,7 +1623,7 @@ exports[`Option should render topNews if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -1085,6 +1655,36 @@ exports[`Option should render topNews if its true 1`] = `
             Travel
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
     </div>
     <div
@@ -1134,7 +1734,7 @@ exports[`Option should render travel if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -1166,6 +1766,36 @@ exports[`Option should render travel if its true 1`] = `
             Top News
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -1180,7 +1810,7 @@ exports[`Option should render travel if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -1209,9 +1839,39 @@ exports[`Option should render travel if its true 1`] = `
               title=""
               transform={null}
             />
-            NY Times Books
+            NYT Best Sellers
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -1226,7 +1886,7 @@ exports[`Option should render travel if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -1258,6 +1918,36 @@ exports[`Option should render travel if its true 1`] = `
             Sports
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
       <div
         className="Options-btn-wrapper"
@@ -1272,7 +1962,7 @@ exports[`Option should render travel if its true 1`] = `
           >
             <FontAwesomeIcon
               border={false}
-              className="Options-fontawesome"
+              className="Options-fontawesome select-options"
               fixedWidth={false}
               flip={null}
               icon={
@@ -1304,6 +1994,36 @@ exports[`Option should render travel if its true 1`] = `
             Travel
           </label>
         </button>
+        <FontAwesomeIcon
+          border={false}
+          className="Options-uncheck"
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f00c",
+                "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+              ],
+              "iconName": "check",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
       </div>
     </div>
     <div

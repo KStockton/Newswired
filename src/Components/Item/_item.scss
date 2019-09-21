@@ -30,17 +30,14 @@
 
   section {
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(123px, 1fr));
-    // display: flex;
-    // flex-direction: column;
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
     width: calc(100% - 48%);
     justify-content: center;
-    // height: 617px;
     position: relative;
     z-index: 2;
 
   .Item-title, .Item-author, .Item-description, .Item-content {
-    color:white;
+    color:#ffffff;
     padding: 8px;
     width: 100%;
     margin: auto;
@@ -60,6 +57,7 @@
     word-break: break-word;
   }
 }
+
   .Item-back {
     display: flex;
     flex-direction: row;

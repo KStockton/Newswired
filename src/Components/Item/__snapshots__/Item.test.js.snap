@@ -1,11 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Item should match the snapshot 1`] = `
-<section>
+<article
+  className="Item-wrapper"
+>
+  <section>
+    <p
+      className="Item-title"
+    />
+    <img
+      alt="book"
+      className="Item-img"
+    />
+    <p
+      className="Item-author"
+    />
+    <p
+      className="Item-description"
+    />
+    <p
+      className="Item-content"
+    />
+  </section>
   <Link
     className="Item-back"
     to="/main"
   >
+    <p>
+      back
+    </p>
     <FontAwesomeIcon
       border={false}
       className="Item-fontawesome"
@@ -38,29 +61,5 @@ exports[`Item should match the snapshot 1`] = `
       transform={null}
     />
   </Link>
-  <article
-    className="Item-wrapper"
-  >
-    <section
-      className="Item-content-wrapper"
-    >
-      <p
-        className="Item-title"
-      />
-      <img
-        alt="book"
-        className="Item-img"
-      />
-      <p
-        className="Item-author"
-      />
-      <p
-        className="Item-description"
-      />
-      <p
-        className="Item-content"
-      />
-    </section>
-  </article>
-</section>
+</article>
 `;

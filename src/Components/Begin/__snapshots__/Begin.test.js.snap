@@ -4,29 +4,29 @@ exports[`Begin should match the snapshot 1`] = `
 <div
   className="begin-wrapper"
 >
-  <section>
-    <h1>
-      <span
-        id="welcome"
-      >
-        Welcome
-      </span>
-      <span
-        id="news-wire"
-      >
-        to News Wire
-      </span>
-    </h1>
-  </section>
-  <Link
-    className="start"
-    to="/Options"
+  <section
+    id="welcome-container"
   >
-    <button
-      className="begin-btn"
+    <h1
+      id="welcome"
     >
-      Get Started
-    </button>
-  </Link>
+      Welcome
+    </h1>
+    <h3
+      id="news-wire"
+    >
+      to News Wired
+    </h3>
+    <Link
+      className="start"
+      to="/Options"
+    >
+      <button
+        className="begin-btn"
+      >
+        Get Started
+      </button>
+    </Link>
+  </section>
 </div>
 `;

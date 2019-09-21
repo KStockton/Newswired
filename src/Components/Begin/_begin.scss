@@ -11,17 +11,17 @@
   background-position-y: center;
 }
 
-#welcome{
+#welcome {
   font-size: 16vw;
   font-family: 'Old Standard TT', serif;
   margin: auto;
   position: fixed;
   right: 25%;
   top: 25%;
-  color: white;
+  color: #ffffff;
 }
 
-#news-wire{
+#news-wire {
   font-size: 3rem;
   margin: auto;
   position: fixed;
@@ -30,7 +30,7 @@
   color: #837a7a;
 }
 
-.start{
+.start {
   position: fixed;
   bottom: 22%;
   right: 14%;
@@ -46,11 +46,13 @@
   color: #000;
   border: solid 1px #186f8f;
   border-radius: 5px;
+  background-color: #ffffff;
   text-transform: uppercase;
   z-index: auto;
   box-shadow: 3px 3px 2px #52000000;
 }
-.begin-btn:hover{
+
+.begin-btn:hover {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 11px;

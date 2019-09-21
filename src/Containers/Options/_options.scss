@@ -69,6 +69,7 @@
   width: 224px;
   font-size: 16px;
   display: flex;
+  background-color: #ffffff;
   justify-content: space-evenly;
 
   &:hover {
@@ -110,11 +111,18 @@
   align-items: center;
 }
 
-.Options-check {
+.Options-check, .Options-uncheck {
   min-height: 34px;
   margin: 2rem;
   font-size: 1.5rem;
+}
+
+.Options-check {
   color: #008000;
+}
+
+.Options-uncheck {
+  color: #343434;
 }
 
 .Options-continue {
@@ -160,6 +168,7 @@
     grid-template-rows: repeat(4, 1fr);
     justify-items: center;
     margin-left: 29px;
+    position: relative;
   }
 
   .Options-news {
