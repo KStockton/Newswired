@@ -5,7 +5,7 @@ News Wired was created to showcase and promote New York Times Best Sellers as we
 
 ### Website Link
 
-View the website here  https://kstockton.github.io/Newswired
+View the website here  https://news-wired.herokuapp.com/
 
 ### WireFrame:
 
