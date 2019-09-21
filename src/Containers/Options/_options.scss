@@ -162,6 +162,11 @@
     margin-left: 29px;
   }
 
+  .Options-news {
+    margin: 0 auto;
+    margin: 10px;
+  }
+
   .Options-btn-wrapper {
     flex-direction: row;
     min-height: 106px;
@@ -171,10 +176,15 @@
     padding: 0px;
     font-size: 14px;
   }
+
   .Options-btn {
     height: 45px;
     width: 155px;
     box-shadow: none; 
+
+    &::before {
+      background-color: #ccd0d500;
+    }
   }
 
   .Options-fontawesome{

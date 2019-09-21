@@ -127,23 +127,9 @@ and (max-width: 760px) {
   .begin-btn {
     margin-top: 179px;
     font-size: 15px;
+
+    &::before {
+      background-color: #ccd0d500;
+    }
   }
-}
-
-@media screen and(max-width: 320px){
-
-  // #welcome{
-  //   font-size: 1.5em;
-  // }
-
-  // #news-wire{
-  //   font-size: 1.5rem;
-  //   top: 35%;
-  // }
-
-  // .start{
-  //   font-size: 14px;
-  //   bottom: 16%;
-  //   right: 32%;
-  // }
 }
