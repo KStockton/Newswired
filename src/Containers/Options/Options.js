@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faFire, faRunning, faGlobeAfrica, faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faBookOpen, 
+  faFire, 
+  faRunning, 
+  faGlobeAfrica, 
+  faCheck, 
+  faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setCategories } from '../../actions/index';
@@ -37,7 +43,7 @@ export class Options extends Component {
                 </label>
               </button>
               { topNews ? 
-              <FontAwesomeIcon  className="Options-check" icon={faCheck}/> : <FontAwesomeIcon  className="Options-uncheck" icon={faCheck}/> }
+                <FontAwesomeIcon  className="Options-check" icon={faCheck}/> : <FontAwesomeIcon  className="Options-uncheck" icon={faCheck}/> }
             </div>
             <div className="Options-btn-wrapper">
               <button className="Options-btn" name="books" onClick={this.selectTopic}>
