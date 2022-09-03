@@ -13,7 +13,7 @@ describe('Option', () => {
   let mockSetCategories;
 
   beforeEach(() => { 
-    mockSetCategories =jest.fn();
+    mockSetCategories = jest.fn();
     wrapper = shallow(<Options 
       selectTopic ={mockSelectTopic}
       categories={mockcategories} 

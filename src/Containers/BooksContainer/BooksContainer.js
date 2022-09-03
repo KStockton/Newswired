@@ -17,14 +17,12 @@ export class BooksContainer extends Component {
     }
   }
 
-
-
   displayBooks = () => {
     const {allBooks} =this.props;
     
     if (allBooks.length > 0) {
       return allBooks.map(book => {
-        return (<Book {...book} key={shortid.generate() } />);
+        return <Book {...book} key={shortid.generate() } />;
       }); 
     }
   }
@@ -35,7 +33,7 @@ export class BooksContainer extends Component {
     const errorMsg = 
                     <div>
                       <h2>{error}</h2>
-                      <Link to="/Options">Back</Link>
+                       <Link to="/Options">Back</Link>
                     </div>;
     const displayBooks = this.displayBooks();    
 

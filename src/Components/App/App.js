@@ -11,7 +11,7 @@ import Item from './../Item/Item';
 export const App = (props) => { 
   
   const {allBooks, allTravel, allTopNews, allSports} =props;
-
+  console.log(props);
   return (
     <div className="App">
       <Switch>
